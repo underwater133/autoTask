@@ -4,6 +4,8 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.VibrationEffect
+import android.os.Vibrator
 import com.autotask.app.log.AppLogger
 import com.autotask.app.permission.PermissionHelper
 import com.autotask.app.schedule.Scheduler
@@ -84,12 +86,22 @@ object TaskExecutor {
         val nextAttempt = attempt + 1
         if (nextAttempt > RetryPolicy.MAX_ATTEMPTS) {
             AppLogger.log(context, "【${task.name}】已达最大尝试次数 ${RetryPolicy.MAX_ATTEMPTS}，放弃。原因：$reason")
+            // 达到失败次数：震动提醒用户（双段脉冲）
+            vibrateFailure(context)
             onTerminal(context, task, success = false)
         } else {
             val delay = RetryPolicy.delayForAttempt(attempt)
             AppLogger.log(context, "【${task.name}】${delay / 1000} 秒后进行第 $nextAttempt 次重试")
             scheduleRetry(context, task, nextAttempt, delay)
         }
+    }
+
+    /** 失败震动提醒：300ms 双脉冲（震-停-震） */
+    private fun vibrateFailure(context: Context) {
+        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator ?: return
+        if (!vibrator.hasVibrator()) return
+        val pattern = longArrayOf(0, 300, 200, 300)
+        vibrator.vibrate(VibrationEffect.createWaveform(pattern, -1))
     }
 
     private fun scheduleRetry(context: Context, task: Task, attempt: Int, delayMs: Long) {

@@ -92,7 +92,7 @@ class TaskExecutorFlowTest {
     }
 
     @Test
-    fun retriesExhausted_logsGiveUp_andDisablesOnceTask() {
+    fun retriesExhausted_logsGiveUp_vibrates_andDisablesOnceTask() {
         val id = insertOnceTask()
         fireAlarm(id)
         fireRetry(id, 2)
@@ -102,6 +102,10 @@ class TaskExecutorFlowTest {
         assertTrue(logs.any { it.contains("已达最大尝试次数") })
         assertTrue(logs.any { it.contains("单次任务已结束并停用") })
         assertFalse(dao.getById(id)!!.enabled)
+
+        // 达到失败次数后应触发震动提醒
+        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as android.os.Vibrator
+        assertTrue("重试耗尽后应震动提醒", shadowOf(vibrator).isVibrating)
     }
 
     @Test
