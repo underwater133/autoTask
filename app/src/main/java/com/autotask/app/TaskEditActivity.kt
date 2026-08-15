@@ -52,6 +52,8 @@ class TaskEditActivity : AppCompatActivity() {
         if (taskId == NEW_TASK_ID) {
             supportActionBar?.setTitle(R.string.task_new)
             binding.btnDelete.visibility = View.GONE
+            // 新任务默认启用（布局中开关默认未勾选，必须显式初始化）
+            binding.swEnabled.isChecked = true
         } else {
             supportActionBar?.setTitle(R.string.task_edit)
             loadTask(taskId)

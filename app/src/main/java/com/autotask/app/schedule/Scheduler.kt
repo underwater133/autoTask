@@ -5,6 +5,7 @@ import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
+import android.util.Log
 import com.autotask.app.calendar.HolidayCalendar
 import com.autotask.app.task.Task
 import com.autotask.app.task.TaskDao
@@ -17,6 +18,7 @@ import com.autotask.app.task.TaskDao
 object Scheduler {
 
     const val EXTRA_TASK_ID = "task_id"
+    private const val TAG = "AutoTask"
 
     /** 全量重排：启用的任务注册闹钟，停用的取消 */
     fun rescheduleAll(context: Context) {
@@ -32,12 +34,15 @@ object Scheduler {
         val next = NextTriggerCalculator.compute(task, System.currentTimeMillis(), HolidayCalendar)
         val am = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
         val pi = pendingIntent(context, task.id)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && !am.canScheduleExactAlarms()) {
+        val canExact = Build.VERSION.SDK_INT < Build.VERSION_CODES.S || am.canScheduleExactAlarms()
+        Log.i(TAG, "schedule task=${task.id} next=$next canExact=$canExact")
+        if (!canExact) {
             // Android 12+ 未授予"闹钟和提醒"权限时降级为非精确闹钟
             am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, next, pi)
         } else {
             am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, next, pi)
         }
+        Log.i(TAG, "alarm set done task=${task.id}")
         if (task.nextTriggerAt != next) {
             TaskDao(context).update(task.copy(nextTriggerAt = next))
         }
