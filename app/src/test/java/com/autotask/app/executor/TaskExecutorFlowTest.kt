@@ -10,6 +10,7 @@ import com.autotask.app.schedule.TaskRetryReceiver
 import com.autotask.app.task.ScheduleMode
 import com.autotask.app.task.Task
 import com.autotask.app.task.TaskDao
+import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -68,7 +69,7 @@ class TaskExecutorFlowTest {
     }
 
     @Test
-    fun trigger_withoutOverlayPermission_logsFailure_andSchedulesRetry() {
+    fun trigger_withoutOverlayPermission_logsFailure_andSchedulesExactRetry() {
         // 目标应用用自身包名（Robolectric 中已"安装"），但未授予悬浮窗
         val id = insertOnceTask(targetPackage = context.packageName)
         fireAlarm(id)
@@ -78,8 +79,15 @@ class TaskExecutorFlowTest {
         assertTrue("日志应含启动失败+悬浮窗:\n${logs.joinToString("\n")}", logs.any { it.contains("启动失败") && it.contains("悬浮窗权限") })
         assertTrue("日志应含重试计划:\n${logs.joinToString("\n")}", logs.any { it.contains("30 秒后进行第 2 次重试") })
 
+        // 重试闹钟：RTC_WAKEUP + allowWhileIdle（唤醒设备，Doze 下不被挂起），触发时间 ≈ 30s 后
         val am = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
-        assertTrue(shadowOf(am).scheduledAlarms.isNotEmpty())
+        val alarms = shadowOf(am).scheduledAlarms
+        assertTrue("应已调度重试闹钟", alarms.isNotEmpty())
+        val retryAlarm = alarms[0]
+        assertTrue("重试闹钟应 allowWhileIdle（Doze 下不被无限挂起）", retryAlarm.allowWhileIdle)
+        assertEquals(AlarmManager.RTC_WAKEUP, retryAlarm.type)
+        val expected = System.currentTimeMillis() + 30_000
+        assertTrue("重试触发时间应约为 30 秒后", Math.abs(retryAlarm.triggerAtTime - expected) < 5_000)
     }
 
     @Test

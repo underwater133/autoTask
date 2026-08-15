@@ -4,6 +4,7 @@ import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
 import com.autotask.app.log.AppLogger
@@ -75,6 +76,9 @@ object TaskExecutor {
 
     private fun waitForForeground(context: Context, packageName: String, timeoutMs: Long): Boolean {
         if (!PermissionHelper.isUsageAccessGranted(context)) return true // 无法验证 → 视为成功
+        // 屏幕关闭时前台事件不会产生（app 无法"显示"），直接按进程存活判定
+        val pm = context.getSystemService(Context.POWER_SERVICE) as android.os.PowerManager
+        if (!pm.isInteractive) return isProcessRunning(context, packageName)
         val deadline = System.currentTimeMillis() + timeoutMs
         while (System.currentTimeMillis() < deadline) {
             if (ForegroundDetector.isAppInForeground(context, packageName)) return true
@@ -115,7 +119,15 @@ object TaskExecutor {
                 .putExtra(EXTRA_ATTEMPT, attempt),
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
-        am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + delayMs, pi)
+        val triggerAt = System.currentTimeMillis() + delayMs
+        // 必须用精确闹钟：非精确闹钟在 Doze 下会被挂起到设备唤醒（实测延迟数分钟），
+        // 导致重试形同虚设；精确闹钟至少会在 Doze 维护窗口内触发
+        val canExact = Build.VERSION.SDK_INT < Build.VERSION_CODES.S || am.canScheduleExactAlarms()
+        if (canExact) {
+            am.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAt, pi)
+        } else {
+            am.setAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAt, pi)
+        }
     }
 
     /** 终态：按用户设置震动提醒 + 单次任务停用 + 全量重排下一次触发 */
