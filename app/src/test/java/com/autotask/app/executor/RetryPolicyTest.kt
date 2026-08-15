@@ -11,15 +11,15 @@ class RetryPolicyTest {
     }
 
     @Test
-    fun delays_increase() {
+    fun delays_uniform30s() {
         assertEquals(30_000L, RetryPolicy.delayForAttempt(1))
-        assertEquals(60_000L, RetryPolicy.delayForAttempt(2))
-        assertEquals(120_000L, RetryPolicy.delayForAttempt(3))
+        assertEquals(30_000L, RetryPolicy.delayForAttempt(2))
+        assertEquals(30_000L, RetryPolicy.delayForAttempt(3))
     }
 
     @Test
     fun delay_outOfRange_fallsBackToLast() {
-        // 超出数组时回退到最长间隔
-        assertEquals(120_000L, RetryPolicy.delayForAttempt(4))
+        // 超出数组时回退到最后一个间隔
+        assertEquals(30_000L, RetryPolicy.delayForAttempt(4))
     }
 }
