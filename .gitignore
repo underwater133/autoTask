@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+build/
+
+# Android
+local.properties
+*.apk
+*.aab
+captures/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# 本地工具链（JDK/SDK/Gradle，不入库）
+.tools/
+
+# harness 基础设施目录
+dsh-deep-whale/
+
+# OS
+Thumbs.db
+.DS_Store

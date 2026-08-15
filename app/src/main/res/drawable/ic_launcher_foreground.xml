@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 简易时钟图标：表盘 + 指针 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,30 a24,24 0 1,0 0.001,0 z" />
+    <path
+        android:strokeColor="#1565C0"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:pathData="M54,54 L54,40 M54,54 L63,60" />
+</vector>

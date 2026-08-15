@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">autoTask</string>
+
+    <!-- 任务列表 -->
+    <string name="task_list_title">任务列表</string>
+    <string name="task_add">新建任务</string>
+    <string name="menu_permissions">权限检测</string>
+    <string name="menu_logs">执行日志</string>
+
+    <!-- 执行日志 -->
+    <string name="log_title">执行日志</string>
+    <string name="log_clear">清空</string>
+
+    <!-- 任务编辑 -->
+    <string name="task_new">新建任务</string>
+    <string name="task_edit">编辑任务</string>
+    <string name="task_name_label">任务名称</string>
+    <string name="task_target_empty">未选择应用</string>
+    <string name="task_target_pick">选择应用</string>
+    <string name="task_mode_label">调度模式</string>
+    <string name="task_time_pick">选择时间</string>
+    <string name="task_weekday_label">执行星期</string>
+    <string name="task_enabled">启用</string>
+    <string name="task_save">保存</string>
+    <string name="task_delete">删除</string>
+    <string name="task_delete_confirm">确认删除该任务？此操作不可撤销。</string>
+    <string name="task_validate_name">请输入任务名称</string>
+    <string name="task_validate_target">请先选择目标应用</string>
+    <string name="task_validate_weekday">请至少选择一个执行星期</string>
+
+    <!-- 星期简称 -->
+    <string name="weekday_1">一</string>
+    <string name="weekday_2">二</string>
+    <string name="weekday_3">三</string>
+    <string name="weekday_4">四</string>
+    <string name="weekday_5">五</string>
+    <string name="weekday_6">六</string>
+    <string name="weekday_7">日</string>
+
+    <!-- 权限引导页 -->
+    <string name="perm_page_title">权限检测</string>
+    <string name="perm_status_granted">已开启</string>
+    <string name="perm_status_missing">未开启</string>
+    <string name="perm_action_setting">去设置</string>
+    <string name="perm_action_done">已开启</string>
+
+    <string name="perm_overlay_title">悬浮窗权限</string>
+    <string name="perm_overlay_desc">Android 10+ 从后台自动打开 App 必需</string>
+    <string name="perm_battery_title">忽略电池优化</string>
+    <string name="perm_battery_desc">防止系统深度休眠导致定时任务延迟</string>
+    <string name="perm_notification_title">通知权限</string>
+    <string name="perm_notification_desc">用于常驻通知与任务执行结果提醒</string>
+    <string name="perm_usage_title">使用情况访问</string>
+    <string name="perm_usage_desc">用于检测目标 App 是否被成功打开</string>
+    <string name="perm_service_title">常驻服务</string>
+    <string name="perm_service_desc">前台服务常驻，防止后台清理</string>
+
+    <!-- 系统引导区 -->
+    <string name="perm_guide_title">系统引导（防清理）</string>
+    <string name="guide_status_advice">建议</string>
+    <string name="guide_action_setting">去设置</string>
+    <string name="guide_action_view">查看</string>
+    <string name="guide_autostart_title">自启动管理</string>
+    <string name="guide_autostart_desc">允许 autoTask 自启动（部分国产 ROM 默认禁止后台启动）</string>
+    <string name="guide_lock_title">最近任务锁定</string>
+    <string name="guide_lock_desc">在多任务界面锁定本应用，防止一键清理</string>
+    <string name="guide_lock_dialog">操作步骤：\n1. 打开最近任务（多任务）界面\n2. 找到 autoTask 卡片\n3. 长按或下拉卡片，点击锁图标锁定</string>
+
+    <!-- 常驻服务通知 -->
+    <string name="keeper_channel_name">常驻服务</string>
+    <string name="keeper_channel_desc">保持 autoTask 后台运行</string>
+    <string name="keeper_notif_title">autoTask 正在运行</string>
+    <string name="keeper_notif_text">定时任务服务已就绪，点击查看</string>
+</resources>
