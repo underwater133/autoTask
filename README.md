@@ -30,5 +30,5 @@ APK 输出：`app/build/outputs/apk/debug/app-debug.apk`
 - [ ] M4 打开 App + 前台检测 + 重试
 - [ ] M5 日志模块
 - [ ] M6 防清理完整方案
-- [ ] M7 真机测试矩阵（需真机：Android 10/13/14 + 小米/华为/OPPO/vivo）
-- [ ] M8 发布（R8 压缩、签名、release APK）
+- [x] M7 准备：真机测试清单 `docs/真机测试清单.md` + 冒烟脚本 `scripts/smoke-test.ps1`（**待真机执行**）
+- [x] M8 发布（R8 压缩 + 签名，release APK 1.64 MB）

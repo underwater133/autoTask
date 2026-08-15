@@ -17,7 +17,11 @@ class TaskDao(context: Context) {
     // ---------- 增 ----------
     fun insert(task: Task): Long {
         val values = toValues(task)
-        values.put(TaskDbHelper.COL_ID, task.id) // 保留上层生成的 id
+        // 新任务（id=0）不写 id，交给 AUTOINCREMENT 分配；
+        // 显式写 0 会被 SQLite 当作 rowid=0 存储，导致后续插入覆盖同一行
+        if (task.id > 0) {
+            values.put(TaskDbHelper.COL_ID, task.id)
+        }
         return db.insertWithOnConflict(TaskDbHelper.TABLE_TASKS, null, values, SQLiteDatabase.CONFLICT_REPLACE)
     }
 
