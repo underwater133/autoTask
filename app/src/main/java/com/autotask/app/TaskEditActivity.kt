@@ -139,10 +139,32 @@ class TaskEditActivity : AppCompatActivity() {
                 android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
             setSingleLine(true)
         }
+        val btnCommon = com.google.android.material.button.MaterialButton(this).apply {
+            text = getString(R.string.task_target_common)
+            textSize = 14f
+        }
+        val container = android.widget.LinearLayout(this).apply {
+            orientation = android.widget.LinearLayout.VERTICAL
+            addView(
+                input,
+                android.widget.LinearLayout.LayoutParams(
+                    android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
+                    android.widget.LinearLayout.LayoutParams.WRAP_CONTENT
+                )
+            )
+            addView(
+                btnCommon,
+                android.widget.LinearLayout.LayoutParams(
+                    android.widget.LinearLayout.LayoutParams.WRAP_CONTENT,
+                    android.widget.LinearLayout.LayoutParams.WRAP_CONTENT
+                ).apply { topMargin = (8 * resources.displayMetrics.density).toInt() }
+            )
+        }
+        btnCommon.setOnClickListener { showCommonPackagesDialog(input) }
         AlertDialog.Builder(this)
             .setTitle(R.string.task_target_input_pkg)
             .setMessage(R.string.task_target_pkg_desc)
-            .setView(input)
+            .setView(container)
             .setPositiveButton(android.R.string.ok) { _, _ ->
                 val pkg = input.text?.toString()?.trim().orEmpty()
                 if (pkg.isEmpty() || !pkg.contains(".")) {
@@ -152,6 +174,20 @@ class TaskEditActivity : AppCompatActivity() {
                 targetPackage = pkg
                 targetActivity = ""
                 renderTarget()
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
+    /** 常用应用包名速查：不知道包名时一键选择 */
+    private fun showCommonPackagesDialog(input: android.widget.EditText) {
+        val labels = COMMON_PACKAGES.map { (name, pkg) -> "$name（$pkg）" }
+        AlertDialog.Builder(this)
+            .setTitle(R.string.task_target_common)
+            .setItems(labels.toTypedArray()) { _, which ->
+                val pkg = COMMON_PACKAGES.values.elementAt(which)
+                input.setText(pkg)
+                input.setSelection(pkg.length)
             }
             .setNegativeButton(android.R.string.cancel, null)
             .show()
@@ -167,6 +203,43 @@ class TaskEditActivity : AppCompatActivity() {
                     .loadLabel(packageManager).toString()
             }.getOrElse { targetPackage }
         }
+    }
+
+    companion object {
+        const val NEW_TASK_ID = -1L
+        private const val EXTRA_TASK_ID = "task_id"
+
+        fun intent(context: Context, taskId: Long): Intent =
+            Intent(context, TaskEditActivity::class.java).putExtra(EXTRA_TASK_ID, taskId)
+
+        /** 常用应用包名速查表（按名称排序） */
+        private val COMMON_PACKAGES = linkedMapOf(
+            "WPS Office" to "cn.wps.moffice_eng",
+            "QQ" to "com.tencent.mobileqq",
+            "QQ音乐" to "com.tencent.qqmusic",
+            "Chrome" to "com.android.chrome",
+            "Keep" to "com.gotokeep.keep",
+            "京东" to "com.jingdong.app.mall",
+            "今日头条" to "com.ss.android.article.news",
+            "哔哩哔哩" to "tv.danmaku.bili",
+            "小红书" to "com.xingin.xhs",
+            "微博" to "com.sina.weibo",
+            "微信" to "com.tencent.mm",
+            "拼多多" to "com.xunmeng.pinduoduo",
+            "支付宝" to "com.eg.android.AlipayGphone",
+            "百度网盘" to "com.baidu.netdisk",
+            "百度地图" to "com.baidu.BaiduMap",
+            "知乎" to "com.zhihu.android",
+            "网易云音乐" to "com.netease.cloudmusic",
+            "美团" to "com.sankuai.meituan",
+            "饿了么" to "me.ele",
+            "飞书" to "com.ss.android.lark",
+            "高德地图" to "com.autonavi.minimap",
+            "钉钉" to "com.alibaba.android.dingtalk",
+            "闲鱼" to "com.taobao.idlefish",
+            "淘宝" to "com.taobao.taobao",
+            "抖音" to "com.ss.android.ugc.aweme",
+        )
     }
 
     private fun renderTime() {
@@ -227,14 +300,6 @@ class TaskEditActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
-    }
-
-    companion object {
-        const val NEW_TASK_ID = -1L
-        private const val EXTRA_TASK_ID = "task_id"
-
-        fun intent(context: Context, taskId: Long): Intent =
-            Intent(context, TaskEditActivity::class.java).putExtra(EXTRA_TASK_ID, taskId)
     }
 }
 

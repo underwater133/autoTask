@@ -20,7 +20,8 @@
     <string name="task_target_pick">选择应用</string>
     <string name="task_target_input_pkg">输入包名</string>
     <string name="task_target_pkg_hint">例如：com.ss.android.lark</string>
-    <string name="task_target_pkg_desc">部分系统（如 vivo）会隐藏应用，导致列表中不显示。可直接输入目标应用的包名来创建任务。</string>
+    <string name="task_target_pkg_desc">部分系统（如 vivo）会隐藏应用，导致列表中不显示，可用包名直接创建任务。\n\n包名怎么找？\n1. 下方"常用应用"列表直接选择；\n2. 应用选择器列表中每个应用下方会显示包名；\n3. 搜索"应用名 + 包名"（如：飞书 包名）。</string>
+    <string name="task_target_common">常用应用（点选自动填入包名）</string>
     <string name="task_target_pkg_invalid">包名格式不正确（应包含至少一个点）</string>
     <string name="task_mode_label">调度模式</string>
     <string name="task_time_pick">选择时间</string>

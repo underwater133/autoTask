@@ -24,6 +24,8 @@ class PermissionActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar)
         supportActionBar?.setTitle(R.string.perm_page_title)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // 显式绑定返回按钮（部分 ROM 上 supportActionBar 的 home 点击路由失效）
+        binding.toolbar.setNavigationOnClickListener { finish() }
     }
 
     override fun onResume() {
