@@ -1,0 +1,237 @@
+﻿Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        bf014b1 com.launchrecorder.app/.MainActivity filter d6ced96
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        fc90d17 com.launchrecorder.app/androidx.profileinstaller.ProfileInstallReceiver filter a024d22
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        fc90d17 com.launchrecorder.app/androidx.profileinstaller.ProfileInstallReceiver filter 161c504
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      androidx.profileinstaller.action.SKIP_FILE:
+        fc90d17 com.launchrecorder.app/androidx.profileinstaller.ProfileInstallReceiver filter 5c04aed
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        fc90d17 com.launchrecorder.app/androidx.profileinstaller.ProfileInstallReceiver filter c763b3
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
+
+Domain verification status:
+
+Permissions:
+  Permission [com.launchrecorder.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (36bbd84):
+    sourcePackage=com.launchrecorder.app
+    uid=10428 gids=[] type=0 prot=signature
+    perm=PermissionInfo{8d6693c com.launchrecorder.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Registered ContentProviders:
+  com.launchrecorder.app/androidx.startup.InitializationProvider:
+    Provider{7c346c5 com.launchrecorder.app/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [com.launchrecorder.app.androidx-startup]:
+    Provider{7c346c5 com.launchrecorder.app/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{b6196d com.launchrecorder.app}
+
+Key Set Manager:
+  [com.launchrecorder.app]
+      Signing KeySets: 241
+
+Packages:
+  Package [com.launchrecorder.app] (63b4f15):
+    appId=10428
+    pkg=Package{d6a283b com.launchrecorder.app}
+    codePath=/data/app/~~4a9dk2FAoErAJSMTG1H7Mw==/com.launchrecorder.app-4v7C9zIPc0TvyE581v6BgQ==
+    resourcePath=/data/app/~~4a9dk2FAoErAJSMTG1H7Mw==/com.launchrecorder.app-4v7C9zIPc0TvyE581v6BgQ==
+    legacyNativeLibraryDir=/data/app/~~4a9dk2FAoErAJSMTG1H7Mw==/com.launchrecorder.app-4v7C9zIPc0TvyE581v6BgQ==/lib
+    extractNativeLibs=false
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=1 minSdk=26 targetSdk=34
+    minExtensionVersions=[]
+    versionName=1.0.0
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=2
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    dataDir=/data/user/0/com.launchrecorder.app
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2026-08-15 22:59:58
+    lastUpdateTime=2026-08-15 23:00:14
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    signatures=PackageSignatures{e1e3283 version:2, signatures:[c26f052e], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      com.launchrecorder.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      com.launchrecorder.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      com.launchrecorder.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+    User 0: ceDataInode=3491313 installed=true hidden=false vHidden=1 suspended=false distractionFlags=0 stopped=false notLaunched=false enabled=0 instant=false virtual=false
+      installReason=0
+      firstInstallTime=2026-08-15 19:32:50
+      uninstallReason=0
+      overlay paths:
+        /data/resource-cache/com.android.systemui-neutral-JhmV.frro
+        /data/resource-cache/com.android.systemui-accent-xdZD.frro
+        /data/resource-cache/com.android.systemui-dynamic-Jx4v.frro
+      runtime permissions:
+    User 999: ceDataInode=0 installed=false hidden=false vHidden=1 suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false
+      installReason=0
+      firstInstallTime=2026-08-15 19:32:50
+      uninstallReason=0
+      runtime permissions:
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    [com.qti.snapdragon.qdcm_ff,com.vivo.setupwizard,com.vivo.networkstate,com.qualcomm.qti.xrvd.service,com.android.server.telecom,com.vivo.smartshot,com.vivo.aiengine,com.android.networkstack.tethering.inprocess,com.vivo.hover,com.vivo.upslide,com.vivo.vibrator4d,com.vivo.multinlp,com.vivo.accessibilityenhance,com.android.wallpaperbackup,com.vivo.healthservice,com.vivo.permissionmanager,com.android.settings,com.vivo.vdfs,com.vivo.doubleinstance,com.vivo.abe,com.vivo.epm,com.vivo.faceunlock,com.vivo.assistant,com.bbk.SuperPowerSave,com.android.location.fused,com.vivo.gamecube,android,com.vivo.appfilter,com.vivo.fingerprintui,vendor.qti.qesdk.sysservice,com.android.inputdevices,com.vivo.fuzzylocationmanager,com.bbk.facewake,com.vivo.fingerprint,com.qti.diagservices,com.wapi.wapicertmanage,com.android.localtransport,com.vivo.vms,com.android.providers.settings,com.vivo.nightpearl,com.mobile.cos.iroaming,com.vivo.floatingball,com.vivo.vivokaraoke,com.android.bbklog,com.vivo.car.networking,com.vivo.sps,com.vivo.daemonService,com.android.keychain,com.vivo.pem,com.vivo.smartmultiwindow,com.iqoo.powersaving,com.vivo.smartunlock,com.vivo.pie,com.vos.as.vit,com.vivo.basemanager,com.vivo.voicerecognition,com.vivo.vtouch,com.android.BBKCrontab,com.novatek.novavis,com.android.dynsystem,com.vivo.fingerprintvit,com.vivo.voicewakeup,com.vivo.ai.gptagent,com.vivo.dr,com.vivo.globalanimation,com.vivo.faceui,com.vivo.gamewatch,com.vivo.fuelsummary,com.vivo.audiofx,com.vivo.minscreen]:
+      com.launchrecorder.app
+    com.vivo.browser:
+      com.launchrecorder.app
+    com.vivo.hiboard:
+      com.launchrecorder.app
+    com.vivo.hybrid:
+      com.launchrecorder.app
+    com.vivo.upnpserver:
+      com.launchrecorder.app
+    com.taobao.taobao:
+      com.launchrecorder.app
+    com.vivo.ai.copilot:
+      com.launchrecorder.app
+    com.android.VideoPlayer:
+      com.launchrecorder.app
+    com.chaozh.iReader:
+      com.launchrecorder.app
+    com.sankuai.meituan:
+      com.launchrecorder.app
+    com.MobileTicket:
+      com.launchrecorder.app
+    com.taobao.idlefish:
+      com.launchrecorder.app
+    com.zhihu.android:
+      com.launchrecorder.app
+    com.xiaomi.smarthome:
+      com.launchrecorder.app
+    com.ynwtandroid.fork.xl:
+      com.launchrecorder.app
+    com.jingdong.app.mall:
+      com.launchrecorder.app
+    com.sina.weibo:
+      com.launchrecorder.app
+    com.tencent.mm:
+      com.launchrecorder.app
+    com.suning.mobile.ebuy:
+      com.launchrecorder.app
+    com.baidu.tieba:
+      com.launchrecorder.app
+    com.cainiao.wireless:
+      com.launchrecorder.app
+    com.tencent.wework:
+      com.launchrecorder.app
+    com.copymanga.app:
+      com.launchrecorder.app
+    com.taptap:
+      com.launchrecorder.app
+    com.wuba.zhuanzhuan:
+      com.launchrecorder.app
+    com.quark.browser:
+      com.launchrecorder.app
+    com.nn.accelerator.box:
+      com.launchrecorder.app
+    com.xingin.xhs:
+      com.launchrecorder.app
+    com.xunmeng.pinduoduo:
+      com.launchrecorder.app
+    com.greenpoint.android.mc10086.activity:
+      com.launchrecorder.app
+    com.clggjv.xcjfmd.ffo:
+      com.launchrecorder.app
+    com.kurogame.kjq:
+      com.launchrecorder.app
+    com.bitlingqi.mcapp:
+      com.launchrecorder.app
+    jp.pxv.android:
+      com.launchrecorder.app
+    com.koudai.weidian.buyer:
+      com.launchrecorder.app
+    com.autonavi.minimap:
+      com.launchrecorder.app
+    com.proximabeta.nikke:
+      com.launchrecorder.app
+    pxb7.com:
+      com.launchrecorder.app
+    com.baidu.netdisk:
+      com.launchrecorder.app
+    com.evans.idiom:
+      com.launchrecorder.app
+    com.netease.uuremote:
+      com.launchrecorder.app
+    com.gotokeep.keep:
+      com.launchrecorder.app
+    ctrip.android.view:
+      com.launchrecorder.app
+    club.beiyou:
+      com.launchrecorder.app
+    com.twtapp:
+      com.launchrecorder.app
+    com.moonshot.kimichat:
+      com.launchrecorder.app
+    com.Qunar:
+      com.launchrecorder.app
+    im.xingzhe:
+      com.launchrecorder.app
+    com.oray.sunlogin:
+      com.launchrecorder.app
+    com.xigua.reader:
+      com.launchrecorder.app
+    com.moji.mjweather:
+      com.launchrecorder.app
+    com.aliyun.tongyi:
+      com.launchrecorder.app
+    net.hpoi:
+      com.launchrecorder.app
+    com.instagram.android:
+      com.launchrecorder.app
+    com.tmri.app.main:
+      com.launchrecorder.app
+    com.mi.health:
+      com.launchrecorder.app
+  queryable via interaction:
+    User 0:
+      [com.qti.snapdragon.qdcm_ff,com.vivo.setupwizard,com.vivo.networkstate,com.qualcomm.qti.xrvd.service,com.android.server.telecom,com.vivo.smartshot,com.vivo.aiengine,com.android.networkstack.tethering.inprocess,com.vivo.hover,com.vivo.upslide,com.vivo.vibrator4d,com.vivo.multinlp,com.vivo.accessibilityenhance,com.android.wallpaperbackup,com.vivo.healthservice,com.vivo.permissionmanager,com.android.settings,com.vivo.vdfs,com.vivo.doubleinstance,com.vivo.abe,com.vivo.epm,com.vivo.faceunlock,com.vivo.assistant,com.bbk.SuperPowerSave,com.android.location.fused,com.vivo.gamecube,android,com.vivo.appfilter,com.vivo.fingerprintui,vendor.qti.qesdk.sysservice,com.android.inputdevices,com.vivo.fuzzylocationmanager,com.bbk.facewake,com.vivo.fingerprint,com.qti.diagservices,com.wapi.wapicertmanage,com.android.localtransport,com.vivo.vms,com.android.providers.settings,com.vivo.nightpearl,com.mobile.cos.iroaming,com.vivo.floatingball,com.vivo.vivokaraoke,com.android.bbklog,com.vivo.car.networking,com.vivo.sps,com.vivo.daemonService,com.android.keychain,com.vivo.pem,com.vivo.smartmultiwindow,com.iqoo.powersaving,com.vivo.smartunlock,com.vivo.pie,com.vos.as.vit,com.vivo.basemanager,com.vivo.voicerecognition,com.vivo.vtouch,com.android.BBKCrontab,com.novatek.novavis,com.android.dynsystem,com.vivo.fingerprintvit,com.vivo.voicewakeup,com.vivo.ai.gptagent,com.vivo.dr,com.vivo.globalanimation,com.vivo.faceui,com.vivo.gamewatch,com.vivo.fuelsummary,com.vivo.audiofx,com.vivo.minscreen]:
+        com.launchrecorder.app
+      com.baidu.input_vivo:
+        com.launchrecorder.app
+      [com.google.android.gms,com.google.android.gsf]:
+        com.launchrecorder.app
+    User 999:
+  queryable via uses-library:
+
+Dexopt state:
+  [com.launchrecorder.app]
+    path: /data/app/~~4a9dk2FAoErAJSMTG1H7Mw==/com.launchrecorder.app-4v7C9zIPc0TvyE581v6BgQ==/base.apk
+      arm64: [status=verify] [reason=start-app] [primary-abi]
+        [location is /data/app/~~4a9dk2FAoErAJSMTG1H7Mw==/com.launchrecorder.app-4v7C9zIPc0TvyE581v6BgQ==/oat/arm64/base.odex]
+
+Compiler stats:
+  [com.launchrecorder.app]
+    (No recorded stats)

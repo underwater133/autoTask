@@ -22,12 +22,16 @@ object AppLauncher {
 
     /**
      * 尝试启动目标 App。
-     * 返回 ok=false 时 reason 给出失败原因（未安装 / 权限缺失 / 启动异常）。
+     * @param requireOverlay 是否要求悬浮窗权限（后台启动必需；前台手动测试时传 false）
+     * 返回 ok=false 时 reason 给出失败原因（权限缺失 / 启动异常等）。
      */
-    fun launch(context: Context, task: Task): LaunchResult {
+    fun launch(context: Context, task: Task, requireOverlay: Boolean = true): LaunchResult {
         val pm = context.packageManager
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && !Settings.canDrawOverlays(context)) {
+        if (requireOverlay &&
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q &&
+            !Settings.canDrawOverlays(context)
+        ) {
             return LaunchResult(false, "缺少悬浮窗权限（Android 10+ 后台启动必需）")
         }
 
@@ -58,5 +62,27 @@ object AppLauncher {
         return Intent(Intent.ACTION_MAIN)
             .addCategory(Intent.CATEGORY_LAUNCHER)
             .setPackage(task.targetPackage)
+    }
+
+    /**
+     * 解析用户输入的组件字符串。
+     * 支持两种格式：
+     * - "com.example.app"             → 仅包名（走隐式启动）
+     * - "com.example.app/.Main"       → 包名 + 相对 Activity（自动补全为 com.example.app.Main）
+     * - "com.example.app/com.example.app.Main" → 包名 + 完整 Activity
+     *
+     * 显式组件启动不经过 intent 解析，可绕过 vivo 等系统对侧载应用的解析过滤。
+     */
+    fun parseComponentInput(input: String): Pair<String, String> {
+        val trimmed = input.trim()
+        val slash = trimmed.indexOf('/')
+        return if (slash > 0) {
+            val pkg = trimmed.substring(0, slash).trim()
+            var act = trimmed.substring(slash + 1).trim()
+            if (act.startsWith(".")) act = pkg + act
+            pkg to act
+        } else {
+            trimmed to ""
+        }
     }
 }

@@ -107,6 +107,7 @@ class TaskEditActivity : AppCompatActivity() {
             appPickerLauncher.launch(Intent(this, AppPickerActivity::class.java))
         }
         binding.btnInputPackage.setOnClickListener { showPackageInputDialog() }
+        binding.btnTestLaunch.setOnClickListener { testLaunch() }
         binding.btnPickTime.setOnClickListener {
             TimePickerDialog(this, { _, h, m ->
                 hour = h
@@ -166,13 +167,19 @@ class TaskEditActivity : AppCompatActivity() {
             .setMessage(R.string.task_target_pkg_desc)
             .setView(container)
             .setPositiveButton(android.R.string.ok) { _, _ ->
-                val pkg = input.text?.toString()?.trim().orEmpty()
+                val raw = input.text?.toString()?.trim().orEmpty()
+                if (raw.isEmpty() || !raw.contains(".")) {
+                    Toast.makeText(this, R.string.task_target_pkg_invalid, Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }
+                // 支持 "包名" 或 "包名/Activity"（显式组件可绕过 vivo 对侧载应用的解析过滤）
+                val (pkg, activity) = com.autotask.app.executor.AppLauncher.parseComponentInput(raw)
                 if (pkg.isEmpty() || !pkg.contains(".")) {
                     Toast.makeText(this, R.string.task_target_pkg_invalid, Toast.LENGTH_SHORT).show()
                     return@setPositiveButton
                 }
                 targetPackage = pkg
-                targetActivity = ""
+                targetActivity = activity
                 renderTarget()
             }
             .setNegativeButton(android.R.string.cancel, null)
@@ -193,6 +200,33 @@ class TaskEditActivity : AppCompatActivity() {
             .show()
     }
 
+    /**
+     * 测试启动：前台直接拉起目标应用（不检查悬浮窗权限，后台启动豁免仅后台需要），
+     * 用于保存前确认应用能否被成功打开。
+     */
+    private fun testLaunch() {
+        if (targetPackage.isEmpty()) {
+            Toast.makeText(this, R.string.task_validate_target, Toast.LENGTH_SHORT).show()
+            return
+        }
+        val testTask = Task(
+            id = -1L,
+            name = getString(R.string.task_test_launch_name),
+            targetPackage = targetPackage,
+            targetActivity = targetActivity,
+            scheduleMode = ScheduleMode.ONCE,
+            hour = 0,
+            minute = 0,
+        )
+        val result = com.autotask.app.executor.AppLauncher.launch(this, testTask, requireOverlay = false)
+        val msg = if (result.ok) {
+            getString(R.string.task_test_launch_success)
+        } else {
+            getString(R.string.task_test_launch_fail, result.reason)
+        }
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
+    }
+
     private fun renderTarget() {
         binding.tvTarget.text = if (targetPackage.isEmpty()) {
             getString(R.string.task_target_empty)
@@ -203,6 +237,8 @@ class TaskEditActivity : AppCompatActivity() {
                     .loadLabel(packageManager).toString()
             }.getOrElse { targetPackage }
         }
+        // 选中目标后才允许测试启动
+        binding.btnTestLaunch.isEnabled = targetPackage.isNotEmpty()
     }
 
     companion object {
