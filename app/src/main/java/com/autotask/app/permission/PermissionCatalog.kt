@@ -73,6 +73,12 @@ object GuidanceCatalog {
             action = { activity -> VendorAutostart.openSettings(activity) },
         ),
         GuidanceItem(
+            title = context.getString(R.string.guide_popup_title),
+            description = context.getString(R.string.guide_popup_desc),
+            actionLabel = context.getString(R.string.guide_action_setting),
+            action = { activity -> VendorAutostart.openBackgroundPopupSettings(activity) },
+        ),
+        GuidanceItem(
             title = context.getString(R.string.guide_lock_title),
             description = context.getString(R.string.guide_lock_desc),
             actionLabel = context.getString(R.string.guide_action_view),

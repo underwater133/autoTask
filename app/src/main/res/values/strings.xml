@@ -76,6 +76,8 @@
     <string name="guide_action_view">查看</string>
     <string name="guide_autostart_title">自启动管理</string>
     <string name="guide_autostart_desc">允许 autoTask 自启动（部分国产 ROM 默认禁止后台启动）</string>
+    <string name="guide_popup_title">后台弹出界面</string>
+    <string name="guide_popup_desc">允许 autoTask 在后台直接打开目标 App（vivo 等系统默认禁止，拦截时不报错但启动无效）</string>
     <string name="guide_lock_title">最近任务锁定</string>
     <string name="guide_lock_desc">在多任务界面锁定本应用，防止一键清理</string>
     <string name="guide_lock_dialog">操作步骤：\n1. 打开最近任务（多任务）界面\n2. 找到 autoTask 卡片\n3. 长按或下拉卡片，点击锁图标锁定</string>

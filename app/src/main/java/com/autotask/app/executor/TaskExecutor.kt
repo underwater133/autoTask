@@ -25,7 +25,7 @@ import com.autotask.app.task.TaskDao
 object TaskExecutor {
 
     const val EXTRA_ATTEMPT = "attempt"
-    private const val VERIFY_TIMEOUT_MS = 5_000L
+    private const val VERIFY_TIMEOUT_MS = 8_000L
 
     /** 由 TaskAlarmReceiver 在触发时调用 */
     fun execute(context: Context, task: Task) {
@@ -79,7 +79,17 @@ object TaskExecutor {
             if (ForegroundDetector.isAppInForeground(context, packageName)) return true
             Thread.sleep(500)
         }
-        return false
+        // 兜底：UsageStats 在部分 ROM 上记录不可靠（如 vivo 隐藏应用/后台场景），
+        // 若目标应用进程已被拉起，视为启动成功（防止误判失败导致无谓重试）
+        return isProcessRunning(context, packageName)
+    }
+
+    /** 目标应用进程是否存活（ActivityManager 查询，不受 ROM 包查询过滤影响） */
+    private fun isProcessRunning(context: Context, packageName: String): Boolean {
+        val am = context.getSystemService(Context.ACTIVITY_SERVICE) as android.app.ActivityManager
+        @Suppress("DEPRECATION")
+        return am.getRunningAppProcesses()
+            .any { it.processName == packageName || it.processName.startsWith("$packageName:") }
     }
 
     private fun handleFailure(context: Context, task: Task, attempt: Int, reason: String) {
