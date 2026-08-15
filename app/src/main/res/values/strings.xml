@@ -18,6 +18,10 @@
     <string name="task_name_label">任务名称</string>
     <string name="task_target_empty">未选择应用</string>
     <string name="task_target_pick">选择应用</string>
+    <string name="task_target_input_pkg">输入包名</string>
+    <string name="task_target_pkg_hint">例如：com.ss.android.lark</string>
+    <string name="task_target_pkg_desc">部分系统（如 vivo）会隐藏应用，导致列表中不显示。可直接输入目标应用的包名来创建任务。</string>
+    <string name="task_target_pkg_invalid">包名格式不正确（应包含至少一个点）</string>
     <string name="task_mode_label">调度模式</string>
     <string name="task_time_pick">选择时间</string>
     <string name="task_weekday_label">执行星期</string>
@@ -28,6 +32,14 @@
     <string name="task_validate_name">请输入任务名称</string>
     <string name="task_validate_target">请先选择目标应用</string>
     <string name="task_validate_weekday">请至少选择一个执行星期</string>
+
+    <!-- 应用选择器 -->
+    <string name="app_picker_title">选择应用</string>
+    <string name="app_picker_search_hint">搜索应用（名称或拼音）</string>
+    <string name="app_picker_clear">清空</string>
+    <string name="app_picker_empty">无匹配应用</string>
+    <string name="app_picker_not_launchable">该应用无启动入口，无法作为任务目标</string>
+    <string name="app_picker_disabled">该应用已停用，请先在系统设置中启用</string>
 
     <!-- 星期简称 -->
     <string name="weekday_1">一</string>

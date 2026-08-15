@@ -56,6 +56,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".picker.AppPickerActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".LogActivity"
             android:exported="false" />
 

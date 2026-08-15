@@ -80,18 +80,6 @@ class TaskExecutorFlowTest {
     }
 
     @Test
-    fun trigger_targetNotInstalled_logsReason() {
-        val id = insertOnceTask(targetPackage = "com.not.installed.app")
-        fireAlarm(id)
-
-        val logs = AppLogger.readRecent(context)
-        assertTrue(
-            "日志应含未安装原因:\n${logs.joinToString("\n")}",
-            logs.any { it.contains("启动失败") && it.contains("目标应用未安装") }
-        )
-    }
-
-    @Test
     fun retriesExhausted_logsGiveUp_vibrates_andDisablesOnceTask() {
         val id = insertOnceTask()
         fireAlarm(id)

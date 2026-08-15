@@ -68,4 +68,7 @@ dependencies {
 
     testImplementation("junit:junit:4.13.2")
     testImplementation("org.robolectric:robolectric:4.12.2")
+
+    // 拼音转换（应用名排序/搜索；纯 Java 轻量实现）
+    implementation("com.github.promeg:tinypinyin:2.0.3")
 }

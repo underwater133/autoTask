@@ -3,7 +3,6 @@ package com.autotask.app
 import android.app.TimePickerDialog
 import android.content.Context
 import android.content.Intent
-import android.content.pm.ResolveInfo
 import android.os.Bundle
 import android.view.View
 import android.widget.ArrayAdapter
@@ -12,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.autotask.app.databinding.ActivityTaskEditBinding
+import com.autotask.app.picker.AppPickerActivity
 import com.autotask.app.schedule.Scheduler
 import com.autotask.app.task.ScheduleMode
 import com.autotask.app.task.Task
@@ -32,12 +32,17 @@ class TaskEditActivity : AppCompatActivity() {
     private var hour: Int = 8
     private var minute: Int = 0
 
-    /** 可启动应用列表（用于选择器） */
-    private val launchableApps: List<ResolveInfo> by lazy {
-        val intent = Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_LAUNCHER)
-        packageManager.queryIntentActivities(intent, 0)
-            .sortedBy { runCatching { it.loadLabel(packageManager).toString().lowercase() }.getOrDefault("") }
-    }
+    /** 应用选择器（全量应用 + 拼音排序 + 搜索） */
+    private val appPickerLauncher =
+        registerForActivityResult(androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult()) { result ->
+            if (result.resultCode == RESULT_OK) {
+                val pkg = result.data?.getStringExtra(AppPickerActivity.EXTRA_PACKAGE) ?: return@registerForActivityResult
+                val act = result.data?.getStringExtra(AppPickerActivity.EXTRA_ACTIVITY).orEmpty()
+                targetPackage = pkg
+                targetActivity = act
+                renderTarget()
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -98,7 +103,10 @@ class TaskEditActivity : AppCompatActivity() {
     }
 
     private fun setupListeners() {
-        binding.btnPickTarget.setOnClickListener { showAppPicker() }
+        binding.btnPickTarget.setOnClickListener {
+            appPickerLauncher.launch(Intent(this, AppPickerActivity::class.java))
+        }
+        binding.btnInputPackage.setOnClickListener { showPackageInputDialog() }
         binding.btnPickTime.setOnClickListener {
             TimePickerDialog(this, { _, h, m ->
                 hour = h
@@ -120,18 +128,32 @@ class TaskEditActivity : AppCompatActivity() {
         }
     }
 
-    private fun showAppPicker() {
-        val labels = launchableApps.map {
-            runCatching { it.loadLabel(packageManager).toString() }.getOrDefault(it.activityInfo.packageName)
+    /**
+     * 手动输入包名：vivo 等系统的隐藏应用无法在列表中显示，
+     * 可通过包名直接作为任务目标（启动由系统解析，不受隐藏过滤影响）。
+     */
+    private fun showPackageInputDialog() {
+        val input = android.widget.EditText(this).apply {
+            hint = getString(R.string.task_target_pkg_hint)
+            inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+            setSingleLine(true)
         }
         AlertDialog.Builder(this)
-            .setTitle(R.string.task_target_pick)
-            .setItems(labels.toTypedArray()) { _, which ->
-                val info = launchableApps[which]
-                targetPackage = info.activityInfo.packageName
-                targetActivity = info.activityInfo.name
+            .setTitle(R.string.task_target_input_pkg)
+            .setMessage(R.string.task_target_pkg_desc)
+            .setView(input)
+            .setPositiveButton(android.R.string.ok) { _, _ ->
+                val pkg = input.text?.toString()?.trim().orEmpty()
+                if (pkg.isEmpty() || !pkg.contains(".")) {
+                    Toast.makeText(this, R.string.task_target_pkg_invalid, Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }
+                targetPackage = pkg
+                targetActivity = ""
                 renderTarget()
             }
+            .setNegativeButton(android.R.string.cancel, null)
             .show()
     }
 
@@ -139,7 +161,11 @@ class TaskEditActivity : AppCompatActivity() {
         binding.tvTarget.text = if (targetPackage.isEmpty()) {
             getString(R.string.task_target_empty)
         } else {
-            TaskFormat.appLabel(this, targetPackage)
+            // 隐藏应用解析不到 label 时直接显示包名
+            runCatching {
+                packageManager.getApplicationInfo(targetPackage, 0)
+                    .loadLabel(packageManager).toString()
+            }.getOrElse { targetPackage }
         }
     }
 
