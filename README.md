@@ -23,12 +23,23 @@ APK 输出：`app/build/outputs/apk/debug/app-debug.apk`
 - [x] M0 项目骨架（构建环境 + 最小可运行 App）
 - [x] M1 权限引导框架（悬浮窗/电池优化/通知/使用情况访问，一键跳转系统设置）
 - [x] M2 任务 CRUD + SQLite（6 种调度模式字段，列表 + 编辑页）
-- [x] M3 调度引擎（AlarmManager 精确闹钟 + 开机恢复 + 智能模式日期推算 + 2025 节假日日历，14 个单元测试通过）
-- [x] M4 打开 App + 前台检测 + 重试（悬浮窗豁免后台启动 + UsageStats 前台判定 + 3 次递增重试，17 个单元测试通过）
+- [x] M3 调度引擎（AlarmManager 精确闹钟 + 开机恢复 + 智能模式日期推算 + 2025 节假日日历）
+- [x] M4 打开 App + 前台检测 + 重试（悬浮窗豁免后台启动 + UsageStats 前台判定 + 3 次递增重试）
 - [x] M5 日志模块（环形 1MB 文件日志 + 执行日志页 + 清空）
 - [x] M6 防清理完整方案（KeeperService 前台服务 dataSync + 厂商自启动引导 + 最近任务锁定引导 + 常驻服务状态项）
-- [ ] M4 打开 App + 前台检测 + 重试
-- [ ] M5 日志模块
-- [ ] M6 防清理完整方案
 - [x] M7 准备：真机测试清单 `docs/真机测试清单.md` + 冒烟脚本 `scripts/smoke-test.ps1`（**待真机执行**）
 - [x] M8 发布（R8 压缩 + 签名，release APK 1.64 MB）
+
+## 测试
+
+**40 个单元测试全部通过**（JVM 纯逻辑 + Robolectric 运行时验证）：
+
+| 测试类 | 覆盖 |
+|---|---|
+| NextTriggerCalculatorTest (14) | 6 种调度模式的日期推算（含调休补班、春节连休、工作日/节假日互斥） |
+| RetryPolicyTest (3) | 重试次数与递增间隔 |
+| TaskDaoTest (5) | SQLite 真实增删改查、启用开关（Robolectric） |
+| SchedulerTest (5) | AlarmManager 注册/更新/取消、nextTriggerAt 持久化（Robolectric） |
+| HolidayCalendarTest (5) | assets 节假日 JSON 加载、调休/节假日判定、无数据年份回退（Robolectric） |
+| AppLoggerTest (4) | 文件日志写入/读取/清空/条数限制（Robolectric） |
+| TaskExecutorFlowTest (4) | 端到端：触发→拉起→失败原因→重试调度→重试耗尽→停用；成功路径（Robolectric） |
