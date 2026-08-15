@@ -38,6 +38,9 @@ class TaskExecutorFlowTest {
         dao = TaskDao(context)
         AppLogger.clear(context)
         ShadowAlarmManager.setCanScheduleExactAlarms(true)
+        // 重置震动设置（SharedPreferences 在测试间会保留）
+        com.autotask.app.settings.SettingsStore.setVibrateOnSuccess(context, false)
+        com.autotask.app.settings.SettingsStore.setVibrateOnFailure(context, true)
     }
 
     private fun insertOnceTask(targetPackage: String = "com.tencent.mm"): Long =
@@ -94,6 +97,60 @@ class TaskExecutorFlowTest {
         // 达到失败次数后应触发震动提醒
         val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as android.os.Vibrator
         assertTrue("重试耗尽后应震动提醒", shadowOf(vibrator).isVibrating)
+    }
+
+    @Test
+    fun retriesExhausted_failureVibrationDisabled_noVibration() {
+        com.autotask.app.settings.SettingsStore.setVibrateOnFailure(context, false)
+        val id = insertOnceTask()
+        fireAlarm(id)
+        fireRetry(id, 2)
+        fireRetry(id, 3)
+
+        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as android.os.Vibrator
+        assertFalse("关闭失败震动后不应震动", shadowOf(vibrator).isVibrating)
+    }
+
+    @Test
+    fun successPath_successVibrationEnabled_vibrates() {
+        com.autotask.app.settings.SettingsStore.setVibrateOnSuccess(context, true)
+        ShadowSettings.setCanDrawOverlays(true)
+        val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as android.app.usage.UsageStatsManager
+        (shadowOf(usm) as org.robolectric.shadows.ShadowUsageStatsManager)
+            .addEvent(context.packageName, System.currentTimeMillis(), android.app.usage.UsageEvents.Event.MOVE_TO_FOREGROUND)
+        val id = insertOnceTask(targetPackage = context.packageName)
+
+        fireAlarm(id)
+
+        val deadline = System.currentTimeMillis() + 10_000
+        while (System.currentTimeMillis() < deadline && dao.getById(id)!!.enabled) {
+            Thread.sleep(100)
+        }
+        assertFalse(dao.getById(id)!!.enabled)
+
+        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as android.os.Vibrator
+        assertTrue("开启成功震动后，执行成功应震动", shadowOf(vibrator).isVibrating)
+    }
+
+    @Test
+    fun successPath_successVibrationDisabled_noVibration() {
+        // 默认关闭成功震动
+        ShadowSettings.setCanDrawOverlays(true)
+        val usm = context.getSystemService(Context.USAGE_STATS_SERVICE) as android.app.usage.UsageStatsManager
+        (shadowOf(usm) as org.robolectric.shadows.ShadowUsageStatsManager)
+            .addEvent(context.packageName, System.currentTimeMillis(), android.app.usage.UsageEvents.Event.MOVE_TO_FOREGROUND)
+        val id = insertOnceTask(targetPackage = context.packageName)
+
+        fireAlarm(id)
+
+        val deadline = System.currentTimeMillis() + 10_000
+        while (System.currentTimeMillis() < deadline && dao.getById(id)!!.enabled) {
+            Thread.sleep(100)
+        }
+        assertFalse(dao.getById(id)!!.enabled)
+
+        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as android.os.Vibrator
+        assertFalse("默认不应成功震动", shadowOf(vibrator).isVibrating)
     }
 
     @Test

@@ -7,6 +7,14 @@
     <string name="task_add">新建任务</string>
     <string name="menu_permissions">权限检测</string>
     <string name="menu_logs">执行日志</string>
+    <string name="menu_settings">设置</string>
+
+    <!-- 设置页 -->
+    <string name="settings_title">设置</string>
+    <string name="settings_vibrate_success">执行成功时震动</string>
+    <string name="settings_vibrate_success_desc">目标应用打开成功后震动提醒</string>
+    <string name="settings_vibrate_failure">失败时震动</string>
+    <string name="settings_vibrate_failure_desc">重试达到最大次数后震动提醒</string>
 
     <!-- 执行日志 -->
     <string name="log_title">执行日志</string>

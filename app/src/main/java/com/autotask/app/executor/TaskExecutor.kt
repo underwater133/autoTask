@@ -10,6 +10,7 @@ import com.autotask.app.log.AppLogger
 import com.autotask.app.permission.PermissionHelper
 import com.autotask.app.schedule.Scheduler
 import com.autotask.app.schedule.TaskRetryReceiver
+import com.autotask.app.settings.SettingsStore
 import com.autotask.app.task.ScheduleMode
 import com.autotask.app.task.Task
 import com.autotask.app.task.TaskDao
@@ -96,22 +97,12 @@ object TaskExecutor {
         val nextAttempt = attempt + 1
         if (nextAttempt > RetryPolicy.MAX_ATTEMPTS) {
             AppLogger.log(context, "【${task.name}】已达最大尝试次数 ${RetryPolicy.MAX_ATTEMPTS}，放弃。原因：$reason")
-            // 达到失败次数：震动提醒用户（双段脉冲）
-            vibrateFailure(context)
             onTerminal(context, task, success = false)
         } else {
             val delay = RetryPolicy.delayForAttempt(attempt)
             AppLogger.log(context, "【${task.name}】${delay / 1000} 秒后进行第 $nextAttempt 次重试")
             scheduleRetry(context, task, nextAttempt, delay)
         }
-    }
-
-    /** 失败震动提醒：300ms 双脉冲（震-停-震） */
-    private fun vibrateFailure(context: Context) {
-        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator ?: return
-        if (!vibrator.hasVibrator()) return
-        val pattern = longArrayOf(0, 300, 200, 300)
-        vibrator.vibrate(VibrationEffect.createWaveform(pattern, -1))
     }
 
     private fun scheduleRetry(context: Context, task: Task, attempt: Int, delayMs: Long) {
@@ -127,13 +118,33 @@ object TaskExecutor {
         am.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + delayMs, pi)
     }
 
-    /** 终态：单次任务停用 + 全量重排下一次触发 */
+    /** 终态：按用户设置震动提醒 + 单次任务停用 + 全量重排下一次触发 */
     private fun onTerminal(context: Context, task: Task, success: Boolean) {
+        if (success) {
+            if (SettingsStore.vibrateOnSuccess(context)) vibrateSuccess(context)
+        } else {
+            if (SettingsStore.vibrateOnFailure(context)) vibrateFailure(context)
+        }
         val dao = TaskDao(context)
         if (task.scheduleMode == ScheduleMode.ONCE) {
             dao.setEnabled(task.id, false)
             AppLogger.log(context, "【${task.name}】单次任务已${if (success) "完成" else "结束"}并停用")
         }
         Scheduler.rescheduleAll(context)
+    }
+
+    /** 成功震动提醒：单脉冲 200ms */
+    private fun vibrateSuccess(context: Context) {
+        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator ?: return
+        if (!vibrator.hasVibrator()) return
+        vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE))
+    }
+
+    /** 失败震动提醒：300ms 双脉冲（震-停-震） */
+    private fun vibrateFailure(context: Context) {
+        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator ?: return
+        if (!vibrator.hasVibrator()) return
+        val pattern = longArrayOf(0, 300, 200, 300)
+        vibrator.vibrate(VibrationEffect.createWaveform(pattern, -1))
     }
 }

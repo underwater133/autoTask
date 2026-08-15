@@ -67,6 +67,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menu.add(Menu.NONE, MENU_LOGS, 0, R.string.menu_logs)
         menu.add(Menu.NONE, MENU_PERMISSIONS, 1, R.string.menu_permissions)
+        menu.add(Menu.NONE, MENU_SETTINGS, 2, R.string.menu_settings)
         return true
     }
 
@@ -80,6 +81,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(Intent(this, LogActivity::class.java))
                 return true
             }
+            MENU_SETTINGS -> {
+                startActivity(Intent(this, SettingsActivity::class.java))
+                return true
+            }
         }
         return super.onOptionsItemSelected(item)
     }
@@ -91,6 +96,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val MENU_PERMISSIONS = 1
         private const val MENU_LOGS = 2
+        private const val MENU_SETTINGS = 3
     }
 }
 
