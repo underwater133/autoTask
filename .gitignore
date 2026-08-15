@@ -19,6 +19,13 @@ captures/
 # harness 基础设施目录
 dsh-deep-whale/
 
+# 真机调试产物
+ui_*.xml
+alarm*.txt
+M7_*.png
+smoke.png
+*.html
+
 # OS
 Thumbs.db
 .DS_Store
