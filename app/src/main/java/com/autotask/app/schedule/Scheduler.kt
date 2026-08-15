@@ -26,6 +26,8 @@ object Scheduler {
         dao.getAll().forEach { task ->
             if (task.enabled) schedule(context, task) else cancel(context, task.id)
         }
+        // 任务变化后刷新系统通知栏的"即将执行"信息
+        com.autotask.app.service.KeeperService.updateTaskNotification(context)
     }
 
     /** 注册（或更新）一个任务的闹钟，返回下一次触发时间戳 */

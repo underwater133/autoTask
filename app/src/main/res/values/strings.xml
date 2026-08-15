@@ -99,4 +99,6 @@
     <string name="keeper_channel_desc">保持 autoTask 后台运行</string>
     <string name="keeper_notif_title">autoTask 正在运行</string>
     <string name="keeper_notif_text">定时任务服务已就绪，点击查看</string>
+    <string name="keeper_notif_next_title">即将执行：%1$s</string>
+    <string name="keeper_notif_next_text">%1$s · %2$s · %3$s</string>
 </resources>

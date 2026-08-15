@@ -61,55 +61,32 @@ class MainActivity : AppCompatActivity() {
             startActivity(TaskEditActivity.intent(this, TaskEditActivity.NEW_TASK_ID))
         }
 
-        binding.llNextTask.setOnClickListener {
-            val next = TaskFormat.nextUpTask(dao.getEnabled())
-            if (next != null) {
-                startActivity(TaskEditActivity.intent(this, next.id))
-            }
+        // 首次启动标记（实际请求在 onResume 执行，确保系统弹窗时机正确）
+        if (SettingsStore.isFirstRun(this)) {
+            SettingsStore.setFirstRunDone(this)
+            pendingFirstRunPermissions = true
         }
-
-        maybeRequestPermissionsOnFirstRun()
     }
 
     override fun onResume() {
         super.onResume()
         refresh()
-        refreshNextTask()
+        // 常驻通知刷新：有启用任务时在系统通知栏显示"即将执行"详情
+        KeeperService.updateTaskNotification(this)
+        if (pendingFirstRunPermissions) {
+            pendingFirstRunPermissions = false
+            requestNotificationPermission()
+            requestBatteryOptimizationExemption()
+        }
     }
 
     private fun refresh() {
         adapter?.submit(dao.getAll())
     }
 
-    /** 即将执行卡片：悬浮窗权限已开启且有启用任务时显示最近任务详情 */
-    private fun refreshNextTask() {
-        val overlayGranted = com.autotask.app.permission.PermissionHelper.isOverlayGranted(this)
-        val next = if (overlayGranted) TaskFormat.nextUpTask(dao.getEnabled()) else null
-        if (next == null) {
-            binding.llNextTask.visibility = View.GONE
-            return
-        }
-        binding.llNextTask.visibility = View.VISIBLE
-        binding.tvNextName.text = next.name
-        val date = java.text.SimpleDateFormat("MM-dd HH:mm", java.util.Locale.getDefault())
-            .format(java.util.Date(next.nextTriggerAt))
-        binding.tvNextTime.text = date
-        val target = TaskFormat.appLabel(this, next.targetPackage)
-        binding.tvNextDetail.text = "${TaskFormat.summary(next)} · $target"
-    }
+    private var pendingFirstRunPermissions = false
 
-    /** 首次启动：自动请求需要的所有权限 */
-    private fun maybeRequestPermissionsOnFirstRun() {
-        if (!SettingsStore.isFirstRun(this)) return
-        SettingsStore.setFirstRunDone(this)
-        requestNotificationPermission()
-        requestBatteryOptimizationExemption()
-        // 悬浮窗 / 使用情况访问无系统请求对话框，打开权限引导页由用户一键跳转
-        binding.root.postDelayed({
-            if (!isFinishing) startActivity(Intent(this, PermissionActivity::class.java))
-        }, 1200)
-    }
-
+    /** 首次启动：自动请求需要的所有权限（在 onResume 中执行，弹窗时机可靠） */
     private fun requestNotificationPermission() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) return
         if (checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) ==

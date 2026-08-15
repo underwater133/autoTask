@@ -81,5 +81,58 @@ class KeeperService : Service() {
             return am.getRunningServices(200)
                 .any { it.service.className == KeeperService::class.java.name }
         }
+
+        /**
+         * 刷新常驻通知内容：
+         * 悬浮窗权限已开启且存在启用任务时，显示"即将执行"的任务详情；
+         * 否则显示默认文案。
+         */
+        fun updateTaskNotification(context: Context) {
+            val overlayGranted = com.autotask.app.permission.PermissionHelper.isOverlayGranted(context)
+            val next = if (overlayGranted) {
+                com.autotask.app.task.TaskFormat.nextUpTask(
+                    com.autotask.app.task.TaskDao(context).getEnabled()
+                )
+            } else {
+                null
+            }
+            val title: String
+            val text: String
+            if (next != null) {
+                title = context.getString(R.string.keeper_notif_next_title, next.name)
+                val time = java.text.SimpleDateFormat(
+                    "MM-dd HH:mm", java.util.Locale.getDefault()
+                ).format(java.util.Date(next.nextTriggerAt))
+                val target = com.autotask.app.task.TaskFormat.appLabel(context, next.targetPackage)
+                text = context.getString(
+                    R.string.keeper_notif_next_text,
+                    time, com.autotask.app.task.TaskFormat.summary(next), target
+                )
+            } else {
+                title = context.getString(R.string.keeper_notif_title)
+                text = context.getString(R.string.keeper_notif_text)
+            }
+            val pi = PendingIntent.getActivity(
+                context,
+                0,
+                Intent(context, MainActivity::class.java),
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
+            val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_stat_alarm)
+                .setContentTitle(title)
+                .setContentText(text)
+                .setStyle(androidx.core.app.NotificationCompat.BigTextStyle().bigText(text))
+                .setContentIntent(pi)
+                .setOngoing(true)
+                .setPriority(NotificationCompat.PRIORITY_MIN)
+                .build()
+            val nm = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            try {
+                nm.notify(NOTIFICATION_ID, notification)
+            } catch (_: SecurityException) {
+                // 通知权限未授予：前台服务通知由系统兜底展示，忽略
+            }
+        }
     }
 }
