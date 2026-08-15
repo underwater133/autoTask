@@ -36,4 +36,12 @@ class SettingsStoreTest {
         assertFalse(SettingsStore.vibrateOnSuccess(context))
         assertTrue(SettingsStore.vibrateOnFailure(context))
     }
+
+    @Test
+    fun firstRun_flag() {
+        // 默认是首次启动
+        assertTrue(SettingsStore.isFirstRun(context))
+        SettingsStore.setFirstRunDone(context)
+        assertFalse(SettingsStore.isFirstRun(context))
+    }
 }

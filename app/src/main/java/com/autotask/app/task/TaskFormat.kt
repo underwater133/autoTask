@@ -55,4 +55,17 @@ object TaskFormat {
         runCatching {
             context.packageManager.getApplicationInfo(packageName, 0)
         }.isSuccess
+
+    /** 完整组件串（"包名" 或 "包名/Activity"），用于展示 */
+    fun componentText(task: Task): String =
+        if (task.targetActivity.isNotBlank()) {
+            "${task.targetPackage}/${task.targetActivity.removePrefix(task.targetPackage)}"
+        } else {
+            task.targetPackage
+        }
+
+    /** 下一个即将执行的任务（启用且触发时间在未来），无则返回 null */
+    fun nextUpTask(tasks: List<Task>, now: Long = System.currentTimeMillis()): Task? =
+        tasks.filter { it.enabled && it.nextTriggerAt > now }
+            .minByOrNull { it.nextTriggerAt }
 }

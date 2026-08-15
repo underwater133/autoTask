@@ -2,20 +2,23 @@ package com.autotask.app
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.autotask.app.databinding.ActivityMainBinding
 import com.autotask.app.databinding.ItemTaskBinding
 import com.autotask.app.schedule.Scheduler
 import com.autotask.app.service.KeeperService
+import com.autotask.app.settings.SettingsStore
 import com.autotask.app.task.Task
 import com.autotask.app.task.TaskDao
 import com.autotask.app.task.TaskFormat
@@ -57,11 +60,76 @@ class MainActivity : AppCompatActivity() {
         binding.fabAdd.setOnClickListener {
             startActivity(TaskEditActivity.intent(this, TaskEditActivity.NEW_TASK_ID))
         }
+
+        binding.llNextTask.setOnClickListener {
+            val next = TaskFormat.nextUpTask(dao.getEnabled())
+            if (next != null) {
+                startActivity(TaskEditActivity.intent(this, next.id))
+            }
+        }
+
+        maybeRequestPermissionsOnFirstRun()
     }
 
     override fun onResume() {
         super.onResume()
         refresh()
+        refreshNextTask()
+    }
+
+    private fun refresh() {
+        adapter?.submit(dao.getAll())
+    }
+
+    /** 即将执行卡片：悬浮窗权限已开启且有启用任务时显示最近任务详情 */
+    private fun refreshNextTask() {
+        val overlayGranted = com.autotask.app.permission.PermissionHelper.isOverlayGranted(this)
+        val next = if (overlayGranted) TaskFormat.nextUpTask(dao.getEnabled()) else null
+        if (next == null) {
+            binding.llNextTask.visibility = View.GONE
+            return
+        }
+        binding.llNextTask.visibility = View.VISIBLE
+        binding.tvNextName.text = next.name
+        val date = java.text.SimpleDateFormat("MM-dd HH:mm", java.util.Locale.getDefault())
+            .format(java.util.Date(next.nextTriggerAt))
+        binding.tvNextTime.text = date
+        val target = TaskFormat.appLabel(this, next.targetPackage)
+        binding.tvNextDetail.text = "${TaskFormat.summary(next)} · $target"
+    }
+
+    /** 首次启动：自动请求需要的所有权限 */
+    private fun maybeRequestPermissionsOnFirstRun() {
+        if (!SettingsStore.isFirstRun(this)) return
+        SettingsStore.setFirstRunDone(this)
+        requestNotificationPermission()
+        requestBatteryOptimizationExemption()
+        // 悬浮窗 / 使用情况访问无系统请求对话框，打开权限引导页由用户一键跳转
+        binding.root.postDelayed({
+            if (!isFinishing) startActivity(Intent(this, PermissionActivity::class.java))
+        }, 1200)
+    }
+
+    private fun requestNotificationPermission() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.TIRAMISU) return
+        if (checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) ==
+            android.content.pm.PackageManager.PERMISSION_GRANTED
+        ) return
+        notificationPermissionLauncher.launch(android.Manifest.permission.POST_NOTIFICATIONS)
+    }
+
+    private val notificationPermissionLauncher =
+        registerForActivityResult(androidx.activity.result.contract.ActivityResultContracts.RequestPermission()) { }
+
+    private fun requestBatteryOptimizationExemption() {
+        if (com.autotask.app.permission.PermissionHelper.isBatteryOptimizationExempt(this)) return
+        val intent = Intent(
+            android.provider.Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS,
+            android.net.Uri.parse("package:$packageName")
+        )
+        if (intent.resolveActivity(packageManager) != null) {
+            runCatching { startActivity(intent) }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -87,10 +155,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    private fun refresh() {
-        adapter?.submit(dao.getAll())
     }
 
     companion object {

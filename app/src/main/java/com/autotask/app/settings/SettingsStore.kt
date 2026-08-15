@@ -10,6 +10,15 @@ object SettingsStore {
     private const val PREFS = "settings"
     private const val KEY_VIBRATE_ON_SUCCESS = "vibrate_on_success"
     private const val KEY_VIBRATE_ON_FAILURE = "vibrate_on_failure"
+    private const val KEY_FIRST_RUN = "first_run"
+
+    /** 是否首次启动（用于自动请求权限） */
+    fun isFirstRun(context: Context): Boolean =
+        prefs(context).getBoolean(KEY_FIRST_RUN, true)
+
+    fun setFirstRunDone(context: Context) {
+        prefs(context).edit().putBoolean(KEY_FIRST_RUN, false).apply()
+    }
 
     /** 执行成功时震动（默认关闭，避免打扰） */
     fun vibrateOnSuccess(context: Context): Boolean =

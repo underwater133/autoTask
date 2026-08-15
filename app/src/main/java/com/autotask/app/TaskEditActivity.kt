@@ -139,6 +139,16 @@ class TaskEditActivity : AppCompatActivity() {
             inputType = android.text.InputType.TYPE_CLASS_TEXT or
                 android.text.InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
             setSingleLine(true)
+            // 已输入过时预填当前值（需求：再次点击默认显示已输入的）
+            if (targetPackage.isNotEmpty()) {
+                val current = if (targetActivity.isNotBlank()) {
+                    "$targetPackage/$targetActivity"
+                } else {
+                    targetPackage
+                }
+                setText(current)
+                setSelection(current.length)
+            }
         }
         val btnCommon = com.google.android.material.button.MaterialButton(this).apply {
             text = getString(R.string.task_target_common)
@@ -236,6 +246,23 @@ class TaskEditActivity : AppCompatActivity() {
                 packageManager.getApplicationInfo(targetPackage, 0)
                     .loadLabel(packageManager).toString()
             }.getOrElse { targetPackage }
+        }
+        // 包名/组件单独一行小字展示
+        if (targetPackage.isEmpty()) {
+            binding.tvTargetComponent.visibility = View.GONE
+        } else {
+            binding.tvTargetComponent.visibility = View.VISIBLE
+            binding.tvTargetComponent.text = TaskFormat.componentText(
+                Task(
+                    id = -1L,
+                    name = "",
+                    targetPackage = targetPackage,
+                    targetActivity = targetActivity,
+                    scheduleMode = ScheduleMode.ONCE,
+                    hour = 0,
+                    minute = 0,
+                )
+            )
         }
         // 选中目标后才允许测试启动
         binding.btnTestLaunch.isEnabled = targetPackage.isNotEmpty()
