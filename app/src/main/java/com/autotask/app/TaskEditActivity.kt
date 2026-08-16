@@ -61,10 +61,13 @@ class TaskEditActivity : AppCompatActivity() {
             binding.swEnabled.isChecked = true
         } else {
             supportActionBar?.setTitle(R.string.task_edit)
-            loadTask(taskId)
         }
 
+        // 先初始化 Spinner 的 adapter，再加载任务数据（否则 setSelection 无效，模式显示默认项）
         setupModeSpinner()
+        if (taskId != NEW_TASK_ID) {
+            loadTask(taskId)
+        }
         setupListeners()
         renderTime()
         renderWeekdays()
@@ -311,6 +314,8 @@ class TaskEditActivity : AppCompatActivity() {
 
     private fun renderWeekdays() {
         val isWeekly = currentMode() == ScheduleMode.WEEKLY
+        // 标签与选择框同步显隐（非每周模式下不显示"执行星期"）
+        binding.tvWeekdayLabel.visibility = if (isWeekly) View.VISIBLE else View.GONE
         binding.llWeekdays.visibility = if (isWeekly) View.VISIBLE else View.GONE
     }
 

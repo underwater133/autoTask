@@ -109,9 +109,11 @@ class KeeperService : Service() {
                     "MM-dd HH:mm", java.util.Locale.getDefault()
                 ).format(java.util.Date(next.nextTriggerAt))
                 val target = com.autotask.app.task.TaskFormat.appLabel(context, next.targetPackage)
+                // 只显示一次时间（触发时间），模式只显示名称不含时间
+                val mode = com.autotask.app.task.TaskFormat.modeLabel(next.scheduleMode)
                 text = context.getString(
                     R.string.keeper_notif_next_text,
-                    time, com.autotask.app.task.TaskFormat.summary(next), target
+                    time, mode, target
                 )
             } else {
                 title = context.getString(R.string.keeper_notif_title)
