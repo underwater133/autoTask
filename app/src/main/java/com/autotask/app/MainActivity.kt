@@ -71,6 +71,9 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         refresh()
+        // 全量重建闹钟：部分 ROM（vivo 速冻/一键清理）会清掉第三方应用的闹钟，
+        // 打开 app 时恢复所有启用任务的调度（幂等，已过期的单次任务自动顺延）
+        Scheduler.rescheduleAll(this)
         // 常驻通知刷新：有启用任务时在系统通知栏显示"即将执行"详情
         KeeperService.updateTaskNotification(this)
         if (pendingFirstRunPermissions) {

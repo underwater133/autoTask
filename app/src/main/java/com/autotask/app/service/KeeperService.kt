@@ -38,7 +38,12 @@ class KeeperService : Service() {
         }
     }
 
-    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int = START_STICKY
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        // 服务被系统重建（START_STICKY）时恢复闹钟：
+        // 部分 ROM 的后台管理（速冻/清理）会清掉第三方应用的闹钟
+        runCatching { com.autotask.app.schedule.Scheduler.rescheduleAll(this) }
+        return START_STICKY
+    }
 
     override fun onBind(intent: Intent?): IBinder? = null
 

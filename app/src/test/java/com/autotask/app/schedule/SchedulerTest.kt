@@ -108,4 +108,43 @@ class SchedulerTest {
 
         assertEquals(2, shadowOf(am).scheduledAlarms.size)
     }
+
+    @Test
+    fun rescheduleAll_restoresLostAlarms() {
+        // 模拟"闹钟被系统清掉"（vivo 速冻/清理）：任务启用但无闹钟注册
+        val task = insertTask(ScheduleMode.DAILY)
+        Scheduler.schedule(context, task)
+        Scheduler.cancel(context, task.id) // 清掉闹钟（模拟被系统清理）
+        val am = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+        assertTrue(shadowOf(am).scheduledAlarms.isEmpty())
+
+        // 打开 app（onResume）重排后闹钟恢复
+        Scheduler.rescheduleAll(context)
+        assertEquals("闹钟丢失后应恢复注册", 1, shadowOf(am).scheduledAlarms.size)
+    }
+
+    @Test
+    fun rescheduleAll_onceTaskPastDue_rollsForward() {
+        // 单次任务时间已过且闹钟丢失：重排后自动顺延到下一次（不永久丢失）
+        val id = dao.insert(
+            Task(
+                name = "过期单次",
+                targetPackage = "com.example.app",
+                scheduleMode = ScheduleMode.ONCE,
+                hour = 6,
+                minute = 30,
+                enabled = true,
+                nextTriggerAt = 0, // 闹钟丢失后 nextTriggerAt 未知
+            )
+        )
+        val am = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
+
+        Scheduler.rescheduleAll(context)
+
+        val alarms = shadowOf(am).scheduledAlarms
+        assertEquals(1, alarms.size)
+        assertTrue("过期单次任务应顺延到未来", alarms[0].triggerAtTime > System.currentTimeMillis())
+        val updated = dao.getById(id)!!
+        assertTrue("nextTriggerAt 应更新为未来", updated.nextTriggerAt > System.currentTimeMillis())
+    }
 }
