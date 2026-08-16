@@ -52,7 +52,7 @@ object TaskExecutor {
         Thread {
             val inForeground = waitForForeground(appContext, task.targetPackage, VERIFY_TIMEOUT_MS)
             if (inForeground) {
-                AppLogger.log(appContext, "【${task.name}】目标应用已进入前台，执行成功")
+                AppLogger.log(appContext, "【${task.name}】目标应用已启动，执行成功")
                 onTerminal(appContext, task, success = true)
             } else {
                 val reason = if (PermissionHelper.isUsageAccessGranted(appContext)) {
@@ -76,9 +76,19 @@ object TaskExecutor {
 
     private fun waitForForeground(context: Context, packageName: String, timeoutMs: Long): Boolean {
         if (!PermissionHelper.isUsageAccessGranted(context)) return true // 无法验证 → 视为成功
-        // 屏幕关闭时前台事件不会产生（app 无法"显示"），直接按进程存活判定
         val pm = context.getSystemService(Context.POWER_SERVICE) as android.os.PowerManager
-        if (!pm.isInteractive) return isProcessRunning(context, packageName)
+        if (!pm.isInteractive) {
+            // 屏幕关闭：前台事件不会产生（app 无法"显示"）。
+            // 轮询等待目标进程出现（startActivity 是异步的，进程可能还在创建）；
+            // 轮询超时仍检测不到时信任启动（启动调用已成功）：
+            // vivo 可能过滤隐藏应用的进程查询导致假阴性，而假阴性会触发无谓重试。
+            val deadline = System.currentTimeMillis() + timeoutMs
+            while (System.currentTimeMillis() < deadline) {
+                if (isProcessRunning(context, packageName)) return true
+                Thread.sleep(500)
+            }
+            return true
+        }
         val deadline = System.currentTimeMillis() + timeoutMs
         while (System.currentTimeMillis() < deadline) {
             if (ForegroundDetector.isAppInForeground(context, packageName)) return true

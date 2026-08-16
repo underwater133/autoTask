@@ -42,6 +42,9 @@ class TaskExecutorFlowTest {
         // 重置震动设置（SharedPreferences 在测试间会保留）
         com.autotask.app.settings.SettingsStore.setVibrateOnSuccess(context, false)
         com.autotask.app.settings.SettingsStore.setVibrateOnFailure(context, true)
+        // 重置屏幕状态为亮屏
+        val pm = context.getSystemService(Context.POWER_SERVICE) as android.os.PowerManager
+        (shadowOf(pm) as org.robolectric.shadows.ShadowPowerManager).setIsInteractive(true)
     }
 
     private fun insertOnceTask(targetPackage: String = "com.tencent.mm"): Long =
@@ -184,6 +187,28 @@ class TaskExecutorFlowTest {
 
         val logs = AppLogger.readRecent(context)
         // 无使用情况访问权限时按成功处理
-        assertTrue("日志应含成功/无法验证前台:\n${logs.joinToString("\n")}", logs.any { it.contains("无法验证前台") || it.contains("已进入前台") })
+        assertTrue("日志应含成功/无法验证前台:\n${logs.joinToString("\n")}", logs.any { it.contains("无法验证前台") || it.contains("已进入前台") || it.contains("执行成功") })
+    }
+
+    @Test
+    fun screenOff_launchSucceeds_trustsLaunch() {
+        // 息屏场景：前台事件不会产生（UsageStats 无记录），启动未抛异常即信任成功
+        // （修复：vivo 可能过滤隐藏应用的进程查询导致假阴性 + 无谓重试）
+        ShadowSettings.setCanDrawOverlays(true)
+        val pm = context.getSystemService(Context.POWER_SERVICE) as android.os.PowerManager
+        (shadowOf(pm) as org.robolectric.shadows.ShadowPowerManager).setIsInteractive(false)
+        val id = insertOnceTask(targetPackage = context.packageName)
+
+        fireAlarm(id)
+
+        val deadline = System.currentTimeMillis() + 10_000
+        while (System.currentTimeMillis() < deadline && dao.getById(id)!!.enabled) {
+            Thread.sleep(100)
+        }
+        assertFalse("息屏启动应判定成功并停用单次任务", dao.getById(id)!!.enabled)
+
+        val logs = AppLogger.readRecent(context)
+        assertTrue("日志应含执行成功:\n${logs.joinToString("\n")}", logs.any { it.contains("执行成功") })
+        assertTrue("息屏信任启动后不应安排重试:\n${logs.joinToString("\n")}", logs.none { it.contains("进行第 2 次重试") })
     }
 }
