@@ -42,22 +42,38 @@ class KeeperService : Service() {
         // 服务被系统重建（START_STICKY）时恢复闹钟：
         // 部分 ROM 的后台管理（速冻/清理）会清掉第三方应用的闹钟
         runCatching { com.autotask.app.schedule.Scheduler.rescheduleAll(this) }
-        // 周期自检：发现"触发时间已过但未执行"的任务时只记录日志（不重排，
-        // 避免睡眠延迟投递导致重复执行）
-        scheduleSelfCheck()
+        // 周期任务：3 小时自检（到点未执行任务仅记日志）+ 2 小时心跳（确认服务存活）
+        schedulePeriodicTasks()
         return START_STICKY
     }
 
     override fun onDestroy() {
-        selfCheckHandler.removeCallbacksAndMessages(null)
+        periodicHandler.removeCallbacksAndMessages(null)
         super.onDestroy()
     }
 
-    private val selfCheckHandler = android.os.Handler(android.os.Looper.getMainLooper())
+    private val periodicHandler = android.os.Handler(android.os.Looper.getMainLooper())
 
-    private fun scheduleSelfCheck() {
-        selfCheckHandler.removeCallbacksAndMessages(null)
-        selfCheckHandler.postDelayed({ runSelfCheck(); scheduleSelfCheck() }, SELF_CHECK_INTERVAL_MS)
+    private fun schedulePeriodicTasks() {
+        periodicHandler.removeCallbacksAndMessages(null)
+        periodicHandler.postDelayed(
+            object : Runnable {
+                override fun run() {
+                    runSelfCheck()
+                    periodicHandler.postDelayed(this, SELF_CHECK_INTERVAL_MS)
+                }
+            },
+            SELF_CHECK_INTERVAL_MS
+        )
+        periodicHandler.postDelayed(
+            object : Runnable {
+                override fun run() {
+                    runHeartbeat()
+                    periodicHandler.postDelayed(this, HEARTBEAT_INTERVAL_MS)
+                }
+            },
+            HEARTBEAT_INTERVAL_MS
+        )
     }
 
     /** 每 3 小时自检：记录"到点未执行"的任务，便于定位系统拦截问题 */
@@ -75,6 +91,17 @@ class KeeperService : Service() {
                 "⚠ 自检：${stale.size} 个启用任务到点未执行（可能被系统睡眠/后台拦截）：$detail"
             )
         }
+    }
+
+    /** 每 2 小时心跳：确认服务进程仍在运行 */
+    private fun runHeartbeat() {
+        val tasks = com.autotask.app.task.TaskDao(this).getEnabled()
+        val next = com.autotask.app.task.TaskFormat.nextUpTask(tasks)
+        val nextText = next?.let { "${it.name}@${it.timeText()}" } ?: "无"
+        com.autotask.app.log.AppLogger.log(
+            this,
+            "❤ 心跳：服务运行正常，启用任务 ${tasks.size} 个，最近任务：$nextText"
+        )
     }
 
     override fun onBind(intent: Intent?): IBinder? = null
@@ -112,6 +139,8 @@ class KeeperService : Service() {
         private const val NOTIFICATION_ID = 1
         /** 自检周期：3 小时 */
         private const val SELF_CHECK_INTERVAL_MS = 3 * 60 * 60 * 1000L
+        /** 心跳周期：2 小时 */
+        private const val HEARTBEAT_INTERVAL_MS = 2 * 60 * 60 * 1000L
 
         /** 服务是否正在运行 */
         fun isRunning(context: Context): Boolean {
