@@ -56,7 +56,11 @@ object TaskExecutor {
                 onTerminal(appContext, task, success = true)
             } else {
                 val reason = if (PermissionHelper.isUsageAccessGranted(appContext)) {
-                    "前台验证超时（${VERIFY_TIMEOUT_MS / 1000} 秒内未检测到目标应用）"
+                    // 记录屏幕与目标进程状态，便于定位误判场景
+                    val pm = appContext.getSystemService(Context.POWER_SERVICE) as android.os.PowerManager
+                    val screenState = if (pm.isInteractive) "屏幕亮" else "屏幕灭"
+                    val processState = if (isProcessRunning(appContext, task.targetPackage)) "进程在运行" else "进程未检测到"
+                    "前台验证超时（${VERIFY_TIMEOUT_MS / 1000} 秒内未检测到目标应用；$screenState，$processState）"
                 } else {
                     "无法验证前台（未授予使用情况访问权限，按启动成功处理）"
                 }

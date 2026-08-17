@@ -68,4 +68,15 @@ object TaskFormat {
     fun nextUpTask(tasks: List<Task>, now: Long = System.currentTimeMillis()): Task? =
         tasks.filter { it.enabled && it.nextTriggerAt > now }
             .minByOrNull { it.nextTriggerAt }
+
+    /**
+     * 触发时间已过且明显未执行的启用任务（可能被系统拦截/闹钟丢失）。
+     * 用于周期自检的日志记录（不自动重排，避免睡眠延迟投递导致重复执行）。
+     */
+    fun findStaleTasks(
+        tasks: List<Task>,
+        now: Long = System.currentTimeMillis(),
+        thresholdMs: Long = 5 * 60_000L,
+    ): List<Task> =
+        tasks.filter { it.enabled && it.nextTriggerAt > 0 && now - it.nextTriggerAt > thresholdMs }
 }
