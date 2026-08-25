@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
         // 拉起常驻前台服务（M6，防后台清理）
         ContextCompat.startForegroundService(this, Intent(this, KeeperService::class.java))
 
+        handleNotificationIntent(intent)
+
         binding.recycler.layoutManager = LinearLayoutManager(this)
         adapter = TaskAdapter(
             onToggle = { task, checked ->
@@ -98,6 +100,23 @@ class MainActivity : AppCompatActivity() {
             }
             .setNegativeButton(R.string.perm_remind_later, null)
             .show()
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        // singleTask 复用实例时走这里（如从通知栏再次进入）
+        setIntent(intent)
+        handleNotificationIntent(intent)
+    }
+
+    /** 通知栏点击进入：按需跳转权限页（在 singleTask 主页面之上，避免栈叠加） */
+    private fun handleNotificationIntent(intent: Intent?) {
+        if (intent?.getBooleanExtra(
+                com.autotask.app.service.KeeperService.EXTRA_OPEN_PERMISSIONS, false
+            ) == true
+        ) {
+            startActivity(Intent(this, PermissionActivity::class.java))
+        }
     }
 
     private fun refresh() {

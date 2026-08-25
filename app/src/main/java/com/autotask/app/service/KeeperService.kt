@@ -137,6 +137,8 @@ class KeeperService : Service() {
     companion object {
         private const val CHANNEL_ID = "keeper"
         private const val NOTIFICATION_ID = 1
+        /** 通知点击后是否打开权限页（经 MainActivity 转发，避免栈叠加） */
+        const val EXTRA_OPEN_PERMISSIONS = "extra_open_permissions"
         /** 自检周期：3 小时 */
         private const val SELF_CHECK_INTERVAL_MS = 3 * 60 * 60 * 1000L
         /** 心跳周期：2 小时 */
@@ -152,9 +154,10 @@ class KeeperService : Service() {
 
         /**
          * 刷新常驻通知内容：
-         * 1. 缺失关键权限时 → 优先提示缺失权限（点击前往权限页）；
+         * 1. 缺失关键权限时 → 优先提示缺失权限（点击经 MainActivity 跳转权限页）；
          * 2. 悬浮窗权限已开启且存在启用任务 → 显示"即将执行"的任务详情；
          * 3. 否则显示默认文案。
+         * 统一由 MainActivity（singleTask）接收通知点击，避免 Activity 栈重复叠加。
          */
         fun updateTaskNotification(context: Context) {
             val missing = com.autotask.app.permission.PermissionHelper.missingCriticalPermissionTitles(context)
@@ -168,11 +171,11 @@ class KeeperService : Service() {
             }
             val title: String
             val text: String
-            val clickTarget: Class<*>
+            val openPermissions: Boolean
             if (missing.isNotEmpty()) {
                 title = context.getString(R.string.keeper_notif_perm_title)
                 text = context.getString(R.string.keeper_notif_perm_text, missing.joinToString("、"))
-                clickTarget = com.autotask.app.PermissionActivity::class.java
+                openPermissions = true
             } else if (next != null) {
                 title = context.getString(R.string.keeper_notif_next_title, next.name)
                 val time = java.text.SimpleDateFormat(
@@ -185,16 +188,17 @@ class KeeperService : Service() {
                     R.string.keeper_notif_next_text,
                     time, mode, target
                 )
-                clickTarget = com.autotask.app.MainActivity::class.java
+                openPermissions = false
             } else {
                 title = context.getString(R.string.keeper_notif_title)
                 text = context.getString(R.string.keeper_notif_text)
-                clickTarget = com.autotask.app.MainActivity::class.java
+                openPermissions = false
             }
             val pi = PendingIntent.getActivity(
                 context,
                 0,
-                Intent(context, clickTarget),
+                Intent(context, com.autotask.app.MainActivity::class.java)
+                    .putExtra(EXTRA_OPEN_PERMISSIONS, openPermissions),
                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
             )
             val notification = NotificationCompat.Builder(context, CHANNEL_ID)
