@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">autoTask</string>
+    <string name="app_name">AutoTask</string>
 
     <!-- 任务列表 -->
     <string name="task_list_title">任务列表</string>
@@ -87,18 +87,26 @@
     <string name="guide_action_setting">去设置</string>
     <string name="guide_action_view">查看</string>
     <string name="guide_autostart_title">自启动管理</string>
-    <string name="guide_autostart_desc">允许 autoTask 自启动（部分国产 ROM 默认禁止后台启动）</string>
+    <string name="guide_autostart_desc">允许 AutoTask 自启动（部分国产 ROM 默认禁止后台启动）</string>
     <string name="guide_popup_title">后台弹出界面</string>
-    <string name="guide_popup_desc">允许 autoTask 在后台直接打开目标 App（vivo 等系统默认禁止，拦截时不报错但启动无效）</string>
+    <string name="guide_popup_desc">允许 AutoTask 在后台直接打开目标 App（vivo 等系统默认禁止，拦截时不报错但启动无效）</string>
     <string name="guide_lock_title">最近任务锁定</string>
     <string name="guide_lock_desc">在多任务界面锁定本应用，防止一键清理</string>
-    <string name="guide_lock_dialog">操作步骤：\n1. 打开最近任务（多任务）界面\n2. 找到 autoTask 卡片\n3. 长按或下拉卡片，点击锁图标锁定</string>
+    <string name="guide_lock_dialog">操作步骤：\n1. 打开最近任务（多任务）界面\n2. 找到 AutoTask 卡片\n3. 长按或下拉卡片，点击锁图标锁定</string>
+
+    <!-- 权限缺失提醒 -->
+    <string name="perm_remind_title">缺少必要权限</string>
+    <string name="perm_remind_msg">以下权限缺失，可能导致定时任务无法执行：%1$s</string>
+    <string name="perm_remind_go">去开启</string>
+    <string name="perm_remind_later">稍后</string>
 
     <!-- 常驻服务通知 -->
     <string name="keeper_channel_name">常驻服务</string>
-    <string name="keeper_channel_desc">保持 autoTask 后台运行</string>
-    <string name="keeper_notif_title">autoTask 正在运行</string>
+    <string name="keeper_channel_desc">保持 AutoTask 后台运行</string>
+    <string name="keeper_notif_title">AutoTask 正在运行</string>
     <string name="keeper_notif_text">定时任务服务已就绪，点击查看</string>
+    <string name="keeper_notif_perm_title">AutoTask 缺少必要权限</string>
+    <string name="keeper_notif_perm_text">缺失：%1$s，定时任务可能无法执行，点击前往开启</string>
     <string name="keeper_notif_next_title">即将执行：%1$s</string>
     <string name="keeper_notif_next_text">%1$s · %2$s · %3$s</string>
 </resources>

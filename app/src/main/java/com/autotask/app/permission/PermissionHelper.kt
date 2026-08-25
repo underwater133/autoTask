@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.PowerManager
 import android.provider.Settings
 import androidx.core.app.NotificationManagerCompat
+import com.autotask.app.R
 
 /**
  * 权限检测与系统设置跳转工具（M1）。
@@ -95,4 +96,21 @@ object PermissionHelper {
 
     fun usageAccessSettingsIntent(context: Context): Intent =
         Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
+
+    // ---------- 关键权限缺失检测 ----------
+
+    /**
+     * 缺失的关键权限（影响定时任务执行）标题列表。
+     * 当前判定：悬浮窗（后台启动必需）+ 电池优化豁免（防 Doze 延迟/丢失）。
+     */
+    fun missingCriticalPermissionTitles(context: Context): List<String> {
+        val missing = mutableListOf<String>()
+        if (!isOverlayGranted(context)) {
+            missing.add(context.getString(R.string.perm_overlay_title))
+        }
+        if (!isBatteryOptimizationExempt(context)) {
+            missing.add(context.getString(R.string.perm_battery_title))
+        }
+        return missing
+    }
 }

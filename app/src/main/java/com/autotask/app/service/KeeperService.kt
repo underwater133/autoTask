@@ -152,10 +152,12 @@ class KeeperService : Service() {
 
         /**
          * 刷新常驻通知内容：
-         * 悬浮窗权限已开启且存在启用任务时，显示"即将执行"的任务详情；
-         * 否则显示默认文案。
+         * 1. 缺失关键权限时 → 优先提示缺失权限（点击前往权限页）；
+         * 2. 悬浮窗权限已开启且存在启用任务 → 显示"即将执行"的任务详情；
+         * 3. 否则显示默认文案。
          */
         fun updateTaskNotification(context: Context) {
+            val missing = com.autotask.app.permission.PermissionHelper.missingCriticalPermissionTitles(context)
             val overlayGranted = com.autotask.app.permission.PermissionHelper.isOverlayGranted(context)
             val next = if (overlayGranted) {
                 com.autotask.app.task.TaskFormat.nextUpTask(
@@ -166,7 +168,12 @@ class KeeperService : Service() {
             }
             val title: String
             val text: String
-            if (next != null) {
+            val clickTarget: Class<*>
+            if (missing.isNotEmpty()) {
+                title = context.getString(R.string.keeper_notif_perm_title)
+                text = context.getString(R.string.keeper_notif_perm_text, missing.joinToString("、"))
+                clickTarget = com.autotask.app.PermissionActivity::class.java
+            } else if (next != null) {
                 title = context.getString(R.string.keeper_notif_next_title, next.name)
                 val time = java.text.SimpleDateFormat(
                     "MM-dd HH:mm", java.util.Locale.getDefault()
@@ -178,14 +185,16 @@ class KeeperService : Service() {
                     R.string.keeper_notif_next_text,
                     time, mode, target
                 )
+                clickTarget = com.autotask.app.MainActivity::class.java
             } else {
                 title = context.getString(R.string.keeper_notif_title)
                 text = context.getString(R.string.keeper_notif_text)
+                clickTarget = com.autotask.app.MainActivity::class.java
             }
             val pi = PendingIntent.getActivity(
                 context,
                 0,
-                Intent(context, MainActivity::class.java),
+                Intent(context, clickTarget),
                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
             )
             val notification = NotificationCompat.Builder(context, CHANNEL_ID)

@@ -81,6 +81,23 @@ class MainActivity : AppCompatActivity() {
             requestNotificationPermission()
             requestBatteryOptimizationExemption()
         }
+        // 关键权限缺失提醒（每天一次，避开首次启动的权限请求流程）
+        maybeShowPermissionDialog()
+    }
+
+    /** 关键权限缺失时弹窗引导（每次打开 app 都检测，首次启动流程中不弹避免冲突） */
+    private fun maybeShowPermissionDialog() {
+        if (pendingFirstRunPermissions) return // 首次启动流程中，系统弹窗已覆盖
+        val missing = com.autotask.app.permission.PermissionHelper.missingCriticalPermissionTitles(this)
+        if (missing.isEmpty()) return
+        androidx.appcompat.app.AlertDialog.Builder(this)
+            .setTitle(R.string.perm_remind_title)
+            .setMessage(getString(R.string.perm_remind_msg, missing.joinToString("、")))
+            .setPositiveButton(R.string.perm_remind_go) { _, _ ->
+                startActivity(Intent(this, PermissionActivity::class.java))
+            }
+            .setNegativeButton(R.string.perm_remind_later, null)
+            .show()
     }
 
     private fun refresh() {
