@@ -1,0 +1,1243 @@
+﻿--------- beginning of crash
+08-30 10:39:23.781 24994 24994 E tango_translator: === Tango internal error ===
+08-30 10:39:23.781 24994 24994 E tango_translator: pid = 24994, tid = 24994
+08-30 10:39:23.781 24994 24994 E tango_translator: Version: v2.0.4
+08-30 10:39:23.781 24994 24994 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:39:23.781 24994 24994 E tango_translator: Comm: app_process32
+08-30 10:39:23.781 24994 24994 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:39:23.781 24994 24994 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:39:23.781 24994 24994 E tango_translator: 
+08-30 10:39:23.781 24994 24994 E tango_translator: Backtrace:
+08-30 10:39:23.781 24994 24994 E tango_translator:   0x869c7
+08-30 10:39:23.781 24994 24994 E tango_translator:   0x1b42f
+08-30 10:39:23.781 24994 24994 E tango_translator:   0x45223
+08-30 10:39:23.781 24994 24994 E tango_translator:   0x586c3
+08-30 10:39:23.781 24994 24994 E tango_translator:   0x71bcf
+08-30 10:39:23.781 24994 24994 E tango_translator:   0x8b2b3
+08-30 10:39:28.797 25000 25000 E tango_translator: === Tango internal error ===
+08-30 10:39:28.797 25000 25000 E tango_translator: pid = 25000, tid = 25000
+08-30 10:39:28.797 25000 25000 E tango_translator: Version: v2.0.4
+08-30 10:39:28.797 25000 25000 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:39:28.797 25000 25000 E tango_translator: Comm: app_process32
+08-30 10:39:28.797 25000 25000 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:39:28.797 25000 25000 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:39:28.797 25000 25000 E tango_translator: 
+08-30 10:39:28.797 25000 25000 E tango_translator: Backtrace:
+08-30 10:39:28.797 25000 25000 E tango_translator:   0x869c7
+08-30 10:39:28.797 25000 25000 E tango_translator:   0x1b42f
+08-30 10:39:28.797 25000 25000 E tango_translator:   0x45223
+08-30 10:39:28.797 25000 25000 E tango_translator:   0x586c3
+08-30 10:39:28.797 25000 25000 E tango_translator:   0x71bcf
+08-30 10:39:28.797 25000 25000 E tango_translator:   0x8b2b3
+08-30 10:39:33.818 25013 25013 E tango_translator: === Tango internal error ===
+08-30 10:39:33.818 25013 25013 E tango_translator: pid = 25013, tid = 25013
+08-30 10:39:33.818 25013 25013 E tango_translator: Version: v2.0.4
+08-30 10:39:33.818 25013 25013 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:39:33.818 25013 25013 E tango_translator: Comm: app_process32
+08-30 10:39:33.818 25013 25013 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:39:33.818 25013 25013 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:39:33.818 25013 25013 E tango_translator: 
+08-30 10:39:33.818 25013 25013 E tango_translator: Backtrace:
+08-30 10:39:33.818 25013 25013 E tango_translator:   0x869c7
+08-30 10:39:33.818 25013 25013 E tango_translator:   0x1b42f
+08-30 10:39:33.818 25013 25013 E tango_translator:   0x45223
+08-30 10:39:33.818 25013 25013 E tango_translator:   0x586c3
+08-30 10:39:33.818 25013 25013 E tango_translator:   0x71bcf
+08-30 10:39:33.818 25013 25013 E tango_translator:   0x8b2b3
+08-30 10:39:38.839 25029 25029 E tango_translator: === Tango internal error ===
+08-30 10:39:38.839 25029 25029 E tango_translator: pid = 25029, tid = 25029
+08-30 10:39:38.839 25029 25029 E tango_translator: Version: v2.0.4
+08-30 10:39:38.839 25029 25029 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:39:38.839 25029 25029 E tango_translator: Comm: app_process32
+08-30 10:39:38.839 25029 25029 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:39:38.839 25029 25029 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:39:38.839 25029 25029 E tango_translator: 
+08-30 10:39:38.839 25029 25029 E tango_translator: Backtrace:
+08-30 10:39:38.839 25029 25029 E tango_translator:   0x869c7
+08-30 10:39:38.839 25029 25029 E tango_translator:   0x1b42f
+08-30 10:39:38.839 25029 25029 E tango_translator:   0x45223
+08-30 10:39:38.839 25029 25029 E tango_translator:   0x586c3
+08-30 10:39:38.839 25029 25029 E tango_translator:   0x71bcf
+08-30 10:39:38.839 25029 25029 E tango_translator:   0x8b2b3
+08-30 10:39:43.845 25040 25040 E tango_translator: === Tango internal error ===
+08-30 10:39:43.845 25040 25040 E tango_translator: pid = 25040, tid = 25040
+08-30 10:39:43.845 25040 25040 E tango_translator: Version: v2.0.4
+08-30 10:39:43.845 25040 25040 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:39:43.845 25040 25040 E tango_translator: Comm: app_process32
+08-30 10:39:43.845 25040 25040 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:39:43.845 25040 25040 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:39:43.845 25040 25040 E tango_translator: 
+08-30 10:39:43.845 25040 25040 E tango_translator: Backtrace:
+08-30 10:39:43.845 25040 25040 E tango_translator:   0x869c7
+08-30 10:39:43.845 25040 25040 E tango_translator:   0x1b42f
+08-30 10:39:43.845 25040 25040 E tango_translator:   0x45223
+08-30 10:39:43.845 25040 25040 E tango_translator:   0x586c3
+08-30 10:39:43.845 25040 25040 E tango_translator:   0x71bcf
+08-30 10:39:43.845 25040 25040 E tango_translator:   0x8b2b3
+08-30 10:39:48.851 25059 25059 E tango_translator: === Tango internal error ===
+08-30 10:39:48.851 25059 25059 E tango_translator: pid = 25059, tid = 25059
+08-30 10:39:48.851 25059 25059 E tango_translator: Version: v2.0.4
+08-30 10:39:48.851 25059 25059 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:39:48.851 25059 25059 E tango_translator: Comm: app_process32
+08-30 10:39:48.851 25059 25059 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:39:48.851 25059 25059 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:39:48.851 25059 25059 E tango_translator: 
+08-30 10:39:48.851 25059 25059 E tango_translator: Backtrace:
+08-30 10:39:48.851 25059 25059 E tango_translator:   0x869c7
+08-30 10:39:48.851 25059 25059 E tango_translator:   0x1b42f
+08-30 10:39:48.851 25059 25059 E tango_translator:   0x45223
+08-30 10:39:48.851 25059 25059 E tango_translator:   0x586c3
+08-30 10:39:48.851 25059 25059 E tango_translator:   0x71bcf
+08-30 10:39:48.851 25059 25059 E tango_translator:   0x8b2b3
+08-30 10:39:53.865 25092 25092 E tango_translator: === Tango internal error ===
+08-30 10:39:53.865 25092 25092 E tango_translator: pid = 25092, tid = 25092
+08-30 10:39:53.865 25092 25092 E tango_translator: Version: v2.0.4
+08-30 10:39:53.865 25092 25092 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:39:53.865 25092 25092 E tango_translator: Comm: app_process32
+08-30 10:39:53.865 25092 25092 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:39:53.865 25092 25092 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:39:53.865 25092 25092 E tango_translator: 
+08-30 10:39:53.865 25092 25092 E tango_translator: Backtrace:
+08-30 10:39:53.865 25092 25092 E tango_translator:   0x869c7
+08-30 10:39:53.865 25092 25092 E tango_translator:   0x1b42f
+08-30 10:39:53.865 25092 25092 E tango_translator:   0x45223
+08-30 10:39:53.865 25092 25092 E tango_translator:   0x586c3
+08-30 10:39:53.865 25092 25092 E tango_translator:   0x71bcf
+08-30 10:39:53.865 25092 25092 E tango_translator:   0x8b2b3
+08-30 10:39:58.891 25101 25101 E tango_translator: === Tango internal error ===
+08-30 10:39:58.891 25101 25101 E tango_translator: pid = 25101, tid = 25101
+08-30 10:39:58.891 25101 25101 E tango_translator: Version: v2.0.4
+08-30 10:39:58.891 25101 25101 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:39:58.891 25101 25101 E tango_translator: Comm: app_process32
+08-30 10:39:58.891 25101 25101 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:39:58.891 25101 25101 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:39:58.891 25101 25101 E tango_translator: 
+08-30 10:39:58.891 25101 25101 E tango_translator: Backtrace:
+08-30 10:39:58.891 25101 25101 E tango_translator:   0x869c7
+08-30 10:39:58.891 25101 25101 E tango_translator:   0x1b42f
+08-30 10:39:58.891 25101 25101 E tango_translator:   0x45223
+08-30 10:39:58.891 25101 25101 E tango_translator:   0x586c3
+08-30 10:39:58.891 25101 25101 E tango_translator:   0x71bcf
+08-30 10:39:58.891 25101 25101 E tango_translator:   0x8b2b3
+08-30 10:40:03.912 25121 25121 E tango_translator: === Tango internal error ===
+08-30 10:40:03.912 25121 25121 E tango_translator: pid = 25121, tid = 25121
+08-30 10:40:03.912 25121 25121 E tango_translator: Version: v2.0.4
+08-30 10:40:03.912 25121 25121 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:03.912 25121 25121 E tango_translator: Comm: app_process32
+08-30 10:40:03.912 25121 25121 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:03.912 25121 25121 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:03.912 25121 25121 E tango_translator: 
+08-30 10:40:03.912 25121 25121 E tango_translator: Backtrace:
+08-30 10:40:03.912 25121 25121 E tango_translator:   0x869c7
+08-30 10:40:03.912 25121 25121 E tango_translator:   0x1b42f
+08-30 10:40:03.912 25121 25121 E tango_translator:   0x45223
+08-30 10:40:03.912 25121 25121 E tango_translator:   0x586c3
+08-30 10:40:03.912 25121 25121 E tango_translator:   0x71bcf
+08-30 10:40:03.912 25121 25121 E tango_translator:   0x8b2b3
+08-30 10:40:08.928 25139 25139 E tango_translator: === Tango internal error ===
+08-30 10:40:08.928 25139 25139 E tango_translator: pid = 25139, tid = 25139
+08-30 10:40:08.928 25139 25139 E tango_translator: Version: v2.0.4
+08-30 10:40:08.928 25139 25139 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:08.928 25139 25139 E tango_translator: Comm: app_process32
+08-30 10:40:08.928 25139 25139 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:08.928 25139 25139 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:08.928 25139 25139 E tango_translator: 
+08-30 10:40:08.928 25139 25139 E tango_translator: Backtrace:
+08-30 10:40:08.928 25139 25139 E tango_translator:   0x869c7
+08-30 10:40:08.928 25139 25139 E tango_translator:   0x1b42f
+08-30 10:40:08.928 25139 25139 E tango_translator:   0x45223
+08-30 10:40:08.928 25139 25139 E tango_translator:   0x586c3
+08-30 10:40:08.928 25139 25139 E tango_translator:   0x71bcf
+08-30 10:40:08.928 25139 25139 E tango_translator:   0x8b2b3
+08-30 10:40:13.945 25151 25151 E tango_translator: === Tango internal error ===
+08-30 10:40:13.945 25151 25151 E tango_translator: pid = 25151, tid = 25151
+08-30 10:40:13.945 25151 25151 E tango_translator: Version: v2.0.4
+08-30 10:40:13.945 25151 25151 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:13.945 25151 25151 E tango_translator: Comm: app_process32
+08-30 10:40:13.945 25151 25151 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:13.945 25151 25151 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:13.945 25151 25151 E tango_translator: 
+08-30 10:40:13.945 25151 25151 E tango_translator: Backtrace:
+08-30 10:40:13.945 25151 25151 E tango_translator:   0x869c7
+08-30 10:40:13.945 25151 25151 E tango_translator:   0x1b42f
+08-30 10:40:13.945 25151 25151 E tango_translator:   0x45223
+08-30 10:40:13.945 25151 25151 E tango_translator:   0x586c3
+08-30 10:40:13.945 25151 25151 E tango_translator:   0x71bcf
+08-30 10:40:13.945 25151 25151 E tango_translator:   0x8b2b3
+08-30 10:40:18.964 25158 25158 E tango_translator: === Tango internal error ===
+08-30 10:40:18.964 25158 25158 E tango_translator: pid = 25158, tid = 25158
+08-30 10:40:18.964 25158 25158 E tango_translator: Version: v2.0.4
+08-30 10:40:18.964 25158 25158 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:18.964 25158 25158 E tango_translator: Comm: app_process32
+08-30 10:40:18.964 25158 25158 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:18.964 25158 25158 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:18.964 25158 25158 E tango_translator: 
+08-30 10:40:18.964 25158 25158 E tango_translator: Backtrace:
+08-30 10:40:18.964 25158 25158 E tango_translator:   0x869c7
+08-30 10:40:18.964 25158 25158 E tango_translator:   0x1b42f
+08-30 10:40:18.964 25158 25158 E tango_translator:   0x45223
+08-30 10:40:18.964 25158 25158 E tango_translator:   0x586c3
+08-30 10:40:18.964 25158 25158 E tango_translator:   0x71bcf
+08-30 10:40:18.964 25158 25158 E tango_translator:   0x8b2b3
+--------- beginning of main
+08-30 10:40:22.460  2224  2391 I ActivityTaskManager: Displayed com.taobao.taobao/com.taobao.browser.BrowserActivity for user 0: +1s329ms
+08-30 10:40:23.973 26472 26472 E tango_translator: === Tango internal error ===
+08-30 10:40:23.973 26472 26472 E tango_translator: pid = 26472, tid = 26472
+08-30 10:40:23.973 26472 26472 E tango_translator: Version: v2.0.4
+08-30 10:40:23.973 26472 26472 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:23.973 26472 26472 E tango_translator: Comm: app_process32
+08-30 10:40:23.973 26472 26472 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:23.973 26472 26472 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:23.973 26472 26472 E tango_translator: 
+08-30 10:40:23.973 26472 26472 E tango_translator: Backtrace:
+08-30 10:40:23.973 26472 26472 E tango_translator:   0x869c7
+08-30 10:40:23.973 26472 26472 E tango_translator:   0x1b42f
+08-30 10:40:23.973 26472 26472 E tango_translator:   0x45223
+08-30 10:40:23.973 26472 26472 E tango_translator:   0x586c3
+08-30 10:40:23.973 26472 26472 E tango_translator:   0x71bcf
+08-30 10:40:23.973 26472 26472 E tango_translator:   0x8b2b3
+08-30 10:40:25.789 26611 26611 I .taobao:channel: Using CollectorTypeCC GC.
+08-30 10:40:25.793 26611 26611 E .taobao:channel: Not starting debugger since process cannot load the jdwp agent.
+08-30 10:40:25.872 26611 26611 W System  : ClassLoader referenced unknown path: 
+08-30 10:40:25.872 26611 26611 W .taobao:channel: Unsupported class loader
+08-30 10:40:25.884 26611 26611 E RemoteSo.RSoLite: fetch(), lib = tbreakpad, now targetLibs = [tbreakpad]
+08-30 10:40:25.884 26611 26611 E RemoteSo.RSoLite: fetch(), data expired, currentApkPath == recordApkPath :/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/base.apk
+08-30 10:40:25.884 26611 26611 E RemoteSo.RSoLite: fetch(), success libPath=/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/96706d62ba9ea091671127291d90f73e/libtbreakpad.so
+08-30 10:40:25.884 26611 26611 E RemoteSo.RSoLite: fetch(), lib = tunwindstack, now targetLibs = [tbreakpad, tunwindstack]
+08-30 10:40:25.884 26611 26611 E RemoteSo.RSoLite: fetch(), data expired, currentApkPath == recordApkPath :/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/base.apk
+08-30 10:40:25.884 26611 26611 E RemoteSo.RSoLite: fetch(), success libPath=/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/58c84ed74cc3a72b6c8b4dcef8d8390e/libtunwindstack.so
+08-30 10:40:25.884 26611 26611 E TCrash  : NativeUncaughtCatcher:->/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/96706d62ba9ea091671127291d90f73e/libtbreakpad.so
+08-30 10:40:25.884 26611 26611 E TCrash  : NativeUncaughtCatcher:->/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/58c84ed74cc3a72b6c8b4dcef8d8390e/libtunwindstack.so
+08-30 10:40:25.885 26611 26611 E TCrash  : TCrashMonitor:->CRASH_TYPE->TCrash2->native
+08-30 10:40:25.886 26611 26611 E RemoteSo.RSoLite: fetch(), lib = tbreakpad, now targetLibs = [tbreakpad, tunwindstack]
+08-30 10:40:25.886 26611 26611 E RemoteSo.RSoLite: fetch(), data expired, currentApkPath == recordApkPath :/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/base.apk
+08-30 10:40:25.886 26611 26611 E RemoteSo.RSoLite: fetch(), success libPath=/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/96706d62ba9ea091671127291d90f73e/libtbreakpad.so
+08-30 10:40:25.886 26611 26611 E RemoteSo.RSoLite: fetch(), lib = tunwindstack, now targetLibs = [tbreakpad, tunwindstack]
+08-30 10:40:25.886 26611 26611 E RemoteSo.RSoLite: fetch(), data expired, currentApkPath == recordApkPath :/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/base.apk
+08-30 10:40:25.886 26611 26611 E RemoteSo.RSoLite: fetch(), success libPath=/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/58c84ed74cc3a72b6c8b4dcef8d8390e/libtunwindstack.so
+08-30 10:40:25.889 26611 26611 E TBreakPad: TBreakpadNativeBridge:->load so->/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/96706d62ba9ea091671127291d90f73e/libtbreakpad.so
+08-30 10:40:25.889 26611 26611 E TBreakPad: TBreakpadNativeBridge:->true
+08-30 10:40:25.889 26611 26611 I TBreakPad: version 1.0.3-SNAPSHOT
+08-30 10:40:25.890 26611 26611 I TBreakPad: /data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/58c84ed74cc3a72b6c8b4dcef8d8390e/libtunwindstack.so 1
+08-30 10:40:25.890 26611 26611 I TBreakPad: support anr true
+08-30 10:40:25.890 26611 26611 E TCrash  : TBreakPadCore:->init
+08-30 10:40:25.893 26611 26746 E .taobao:channel: Attempt to load writable dex file: /data/user/0/com.taobao.taobao/files/instant-patch/dex-temp/reload00x113a.jar
+08-30 10:40:25.895 26611 26746 E InstantPatcher: Got the patcher class class com.android.alibaba.ip.runtime.AppPatchesLoaderImpl
+08-30 10:40:25.895 26611 26746 E InstantPatcher: Got the patcher instance com.android.alibaba.ip.runtime.AppPatchesLoaderImpl@e02b09
+08-30 10:40:25.895 26611 26746 E InstantPatcher: Got the list of classes 
+08-30 10:40:25.895 26611 26746 E InstantPatcher: class com.taobao.android.detail2.core.mainpic.MainPicContainer
+08-30 10:40:25.896 26611 26746 E InstantPatcher: patch success
+08-30 10:40:25.909 26611 26611 W System.err: java.lang.IllegalArgumentException: DynamicFeatureManager is not inited
+08-30 10:40:25.909 26611 26611 W System.err: 	at tb.q48.a(Taobao:18)
+08-30 10:40:25.909 26611 26611 W System.err: 	at tb.q48.d(Taobao:25)
+08-30 10:40:25.909 26611 26611 W System.err: 	at tb.fx4.o(Taobao:102)
+08-30 10:40:25.909 26611 26611 W System.err: 	at tb.fx4.n(Taobao:86)
+08-30 10:40:25.909 26611 26611 W System.err: 	at tb.zgg.a(Taobao:40)
+08-30 10:40:25.909 26611 26611 W System.err: 	at tb.x42.b(Taobao:35)
+08-30 10:40:25.909 26611 26611 W System.err: 	at tb.s9t.run(Taobao:22)
+08-30 10:40:25.909 26611 26611 W System.err: 	at com.taobao.tao.TaobaoApplication.attachBaseContext(Taobao:142)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.app.Application.attach(Application.java:392)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.app.Instrumentation.newApplication(Instrumentation.java:1283)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1502)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1439)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:7800)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2619)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.os.Looper.loopOnce(Looper.java:226)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.os.Looper.loop(Looper.java:328)
+08-30 10:40:25.909 26611 26611 W System.err: 	at android.app.ActivityThread.main(ActivityThread.java:9159)
+08-30 10:40:25.909 26611 26611 W System.err: 	at java.lang.reflect.Method.invoke(Native Method)
+08-30 10:40:25.909 26611 26611 W System.err: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:586)
+08-30 10:40:25.909 26611 26611 W System.err: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1099)
+08-30 10:40:25.910 26611 26611 E BundleInfoManager: generate info from generator
+08-30 10:40:25.910 26611 26611 E ApplicationInvoker: successfully invoke start application com.taobao.tao.TaoApplication
+08-30 10:40:25.912 26611 26611 E TBAnrProfiler: ANR Early Init com.taobao.taobao:channel
+08-30 10:40:25.912 26611 26611 E Bootstrap: lifeCycle#constuctor#com.taobao.tao.TaobaoApplication@5bc30a3
+08-30 10:40:25.913 26611 26611 E BootstrapMode: is current device type tablet or fold ? false
+08-30 10:40:25.913 26611 26611 E TaoNGNextAppDelegate: lifeCycle#bindApp
+08-30 10:40:25.913 26611 26611 E AMSService: delegate successfully
+08-30 10:40:25.914 26611 26611 E Bootstrap: lifeCycle#attachBaseContext
+08-30 10:40:25.914 26611 26611 E TaoNGNextAppDelegate: lifeCycle#attachBaseContext
+08-30 10:40:25.915 26611 26611 E TaoNGNextAppDelegate: lifeCycle#createInitialContext
+08-30 10:40:25.918 26611 26611 E Bootstrap: lifeCycle#onCreate
+08-30 10:40:25.918 26611 26611 E TaoNGNextAppDelegate: lifeCycle#onCreate
+08-30 10:40:25.924 26611 26611 E ATmHNGNext: handle(what=164, when=179807703)
+08-30 10:40:25.924 26611 26611 E ATmHNGNext: handle(what=114, when=179807708)
+08-30 10:40:25.924 26611 26611 E ATmHNGNext: deal(what=114, when=179807708)
+08-30 10:40:25.925 26611 26611 E Dispatchers: create Dispatcher with type=Service, msg.what=114, process=com.taobao.taobao:channel
+08-30 10:40:25.925 26611 26611 E PollingDispatcher: enqueue(what=114)
+08-30 10:40:25.925 26611 26611 E TaoNGNextAppDelegate: lifeCycle#launch
+08-30 10:40:25.926 26611 26611 E ATmHNGNext: handle(what=121, when=179807709)
+08-30 10:40:25.926 26611 26611 E ATmHNGNext: deal(what=121, when=179807709)
+08-30 10:40:25.926 26611 26611 E PollingDispatcher: enqueue(what=121,res=true,size=2)
+08-30 10:40:25.926 26611 26777 E PollingDispatcher: run#app#attachBaseContext
+08-30 10:40:25.926 26611 26777 E SchedulerDeffer: enter stage c-a
+08-30 10:40:25.929 26611 26789 W System.err: java.lang.IllegalArgumentException: DynamicFeatureManager is not inited
+08-30 10:40:25.930 26611 26611 E ATmHNGNext: handle(what=100001, when=179807718)
+08-30 10:40:25.930 26611 26611 E ATmHNGNext: deal(what=100001, when=179807718)
+08-30 10:40:25.930 26611 26611 E PollingDispatcher: enqueue(what=100001,res=true,size=3)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.q48.a(Taobao:18)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.q48.d(Taobao:25)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.fx4.o(Taobao:102)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.fx4.n(Taobao:86)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.zgg.a(Taobao:40)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.a1f.p(Taobao:25)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.mss.n(Taobao:37)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.mss.m(Taobao:48)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.mss.b(Taobao:1)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.nhg.l(Taobao:74)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.nhg.b(Taobao:1)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.gft$a.a(Taobao:61)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.gft$a.call(Taobao:1)
+08-30 10:40:25.930 26611 26789 W System.err: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-30 10:40:25.930 26611 26789 W System.err: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+08-30 10:40:25.930 26611 26789 W System.err: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-30 10:40:25.930 26611 26789 W System.err: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-30 10:40:25.930 26611 26789 W System.err: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-30 10:40:25.930 26611 26789 W System.err: 	at tb.k35$a$a.run(Taobao:36)
+08-30 10:40:25.930 26611 26789 W System.err: 	at java.lang.Thread.run(Thread.java:1042)
+08-30 10:40:25.933 26611 26813 E ValarMorghulis: s
+08-30 10:40:25.933 26611 26810 E awcn.ABSwitchUtils:  [ABGlobal] featureName:Use_Virtual_Thread_Enable_AB_OPT status:false
+08-30 10:40:25.933 26611 26810 E awcn.ABSwitchUtils:  [ABGlobal] featureName:Remote_So_AB_Enable status:false
+08-30 10:40:25.934 26611 26810 E awcn.ABSwitchUtils:  [ABGlobal] featureName:Net_Support_Feature_AB_Enable status:false
+08-30 10:40:25.935 26611 26813 W ziparchive: Unable to open '/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/lib/arm64/libsgmain.dm': No such file or directory
+08-30 10:40:25.935 26611 26813 W ziparchive: Unable to open '/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/lib/arm64/libsgmain.dm': No such file or directory
+08-30 10:40:25.936 26611 26810 E awcn.AwcnConfig:  [setHttp3DisabledWhiteList] http3DisabledWhiteList:
+08-30 10:40:25.936 26611 26810 E awcn.AwcnConfig:  AwcnConfig initCoreSp fail!  t:java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer
+08-30 10:40:25.938 26611 26814 W System.err: java.lang.ClassNotFoundException: com.taobao.login4android.debugtools.DebugToolsInitializer
+08-30 10:40:25.938 26611 26814 W System.err: 	at java.lang.Class.classForName(Native Method)
+08-30 10:40:25.938 26611 26814 W System.err: 	at java.lang.Class.forName(Class.java:536)
+08-30 10:40:25.938 26611 26814 W System.err: 	at java.lang.Class.forName(Class.java:467)
+08-30 10:40:25.938 26611 26814 W System.err: 	at com.taobao.login4android.init.LoginInitializer.tryToAttachDebugTools(Taobao:5)
+08-30 10:40:25.938 26611 26814 W System.err: 	at com.taobao.login4android.init.LoginInitializer.init(Taobao:122)
+08-30 10:40:25.938 26611 26814 W System.err: 	at tb.q1f.p(Taobao:30)
+08-30 10:40:25.938 26611 26814 W System.err: 	at tb.mss.n(Taobao:37)
+08-30 10:40:25.938 26611 26814 W System.err: 	at tb.mss.m(Taobao:48)
+08-30 10:40:25.938 26611 26814 W System.err: 	at tb.mss.b(Taobao:1)
+08-30 10:40:25.938 26611 26814 W System.err: 	at tb.nhg.l(Taobao:74)
+08-30 10:40:25.938 26611 26814 W System.err: 	at tb.nhg.b(Taobao:1)
+08-30 10:40:25.938 26611 26814 W System.err: 	at tb.gft$a.a(Taobao:61)
+08-30 10:40:25.938 26611 26814 W System.err: 	at tb.gft$a.call(Taobao:1)
+08-30 10:40:25.938 26611 26814 W System.err: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-30 10:40:25.938 26611 26814 W System.err: 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+08-30 10:40:25.938 26611 26810 E awcn.NetworkStatusMonitor:  use getNetworkInfo!
+08-30 10:40:25.938 26611 26814 W System.err: 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-30 10:40:25.938 26611 26814 W System.err: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-30 10:40:25.938 26611 26814 W System.err: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-30 10:40:25.938 26611 26814 W System.err: 	at tb.k35$a$a.run(Taobao:36)
+08-30 10:40:25.938 26611 26814 W System.err: 	at java.lang.Thread.run(Thread.java:1042)
+08-30 10:40:25.938 26611 26814 W System.err: Caused by: java.lang.ClassNotFoundException: com.taobao.login4android.debugtools.DebugToolsInitializer
+08-30 10:40:25.938 26611 26814 W System.err: 	... 20 more
+08-30 10:40:25.940 26611 26810 E awcn.NetworkStatusMonitor:  [initNetworkStatus] isLastNone = true
+08-30 10:40:25.940 26611 26810 E awcn.NetworkStatusMonitor:  use getNetworkInfo!
+08-30 10:40:25.941 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=android.net.conn.CONNECTIVITY_CHANGE flg=0x4200010 (has extras) }
+08-30 10:40:25.942 26611 26834 E tnetsdk.UtilTool:  [isABGlobalFeatureOpened]| featureName:tnet_io_thread_opt status:true
+08-30 10:40:25.942 26611 26834 E tnetsdk.SwitchConfig:  [setOneBranchColdEnable] enable=true|
+08-30 10:40:25.942 26611 26834 E tnetsdk.SwitchConfig:  [setMergeBranchColdEnable] enable=false|
+08-30 10:40:25.942 26611 26810 E awcn.NetworkStatusMonitor:  [registerCellularNetworkCallback]
+08-30 10:40:25.942 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=android.intent.action.PROXY_CHANGE flg=0x24000010 (has extras) }
+08-30 10:40:25.942 26611 26834 E tnetsdk.SoInstallMgrSdk:  loadTnet so| cost:0 succ:true
+08-30 10:40:25.943 26611 26834 E tnetsdk.SoInstallMgrSdk:  disable load quic| enable:true process:com.taobao.taobao:channel
+08-30 10:40:25.943 26611 26834 E tnetsdk.SpdyAgent:  [setAccsSslCallback] cb null|
+08-30 10:40:25.943 26611 26834 E tnetsdk.SpdyAgent: |[seq:[tnetInit]]  core cost:2| thread:1
+08-30 10:40:25.944 26611 26834 E awcn.Ipv6Detector:  startIpv6Detect uniqueId = error
+08-30 10:40:25.944 26611 26834 E awcn.Inet64Util:  startIpStackDetect ip stack:1 detectType:udp_connect
+08-30 10:40:25.944 26611 26834 E awcn.NetworkStatusMonitor:  use getNetworkInfo!
+08-30 10:40:25.945 26611 26810 E awcn.NetworkStatusMonitor:  [RUM] registerWifiSignalCallback success
+08-30 10:40:25.945 26611 26810 E awcn.Utils:  ProcessStatistic =[StrategyStatistic] ret='1'newRet='1'costTime='0', isProcessNameUpdateEnable='true
+08-30 10:40:25.945 26611 26838 E [tnetsdk.libeasy]:  NAL_init_Tnet:998(tid:520495078576) io_thread_num=1, one_branch_cold=1, merge_branch_cold=0|
+08-30 10:40:25.945 26611 26838 E [tnetsdk.libeasy]:  easy_boringssl_global_init:170(tid:520495078576) channel disable bssl plugin load|
+08-30 10:40:25.945 26611 26838 E [tnetsdk.libeasy]:  easy_eio_start:226(tid:520495078576) |mem_opt=1|stack_old=1015808|stack_new=524288|p_thread_attr=0x792fec9430|
+08-30 10:40:25.946 26611 26835 E awcn.NetworkStatusMonitor:  network onAvailable network:163
+08-30 10:40:25.947 26611 26835 E awcn.NetworkStatusMonitor:  TRANSPORT_CELLULAR onAvailable network:168
+08-30 10:40:25.947 26611 26835 E awcn.NetworkStatusMonitor:  TRANSPORT_CELLULAR onCapabilitiesChanged validated:true
+08-30 10:40:25.947 26611 26810 E awcn.StrategySerializeHelper:  strategyPreFolder path:/data/user/0/com.taobao.taobao/files/new_awcn_pre_strategy/version_34
+08-30 10:40:25.947 26611 26810 E awcn.StrategySerializeHelper:  strategyPreFolder removeInvalidFile path:/data/user/0/com.taobao.taobao/files/new_awcn_pre_strategy/version_34
+08-30 10:40:25.948 26611 26840 E tnetsdk.SwitchConfig:  http3_opt_enable=true|
+08-30 10:40:25.949 26611 26840 E tnetsdk.SwitchConfig:  quicOpt=true|
+08-30 10:40:25.949 26611 26840 E tnetsdk.SwitchConfig:  jniOpt=true|
+08-30 10:40:25.949 26611 26840 E tnetsdk.SwitchConfig:  slightsslEmptyBufFix=false|
+08-30 10:40:25.949 26611 26840 E tnetsdk.SwitchConfig:  [mp config] ,reinjSRTTFactor=1.2,enableIpv6=true,bindNetOpt=1|
+08-30 10:40:25.949 26611 26840 E tnetsdk.SwitchConfig:  [setConnectOptionConfig] | type:picture option:EPTO, hostsList:[heic.alicdn.com, gw.alicdn.com]
+08-30 10:40:25.949 26611 26840 E tnetsdk.UtilTool:  [isABGlobalFeatureOpened]| featureName:tnet_connect_fast_timeout_ab_enable status:true
+08-30 10:40:25.949 26611 26840 E tnetsdk.UtilTool:  [isABGlobalFeatureOpened]| featureName:tnet_request_read_idle_timeout_ab_enable status:false
+08-30 10:40:25.949 26611 26840 E tnetsdk.UtilTool:  [isABGlobalFeatureOpened]| featureName:tnet_body_read_idle_timeout_ab_exp status:false
+08-30 10:40:25.949 26611 26849 E awcn.StrategySerializeHelper:  get online StrategyFile
+08-30 10:40:25.949 26611 26840 E tnetsdk.UtilTool:  [isABGlobalFeatureOpened]| featureName:tnet_amdc_mp_disable status:false
+08-30 10:40:25.949 26611 26840 E tnetsdk.UtilTool:  [isABGlobalFeatureOpened]| featureName:quic_connect_option_picture_enable status:false
+08-30 10:40:25.950 26611 26840 E tnetsdk.UtilTool:  [isABGlobalFeatureOpened]| featureName:tnet_fec_enable status:false
+08-30 10:40:25.950 26611 26840 E tnetsdk.UtilTool:  [isABGlobalFeatureOpened]| featureName:tnet_cert_verifier_opt_enable status:false
+08-30 10:40:25.950 26611 26840 E tnetsdk.UtilTool:  [isABGlobalFeatureOpened]| featureName:tnet_stream_fast_path status:true
+08-30 10:40:25.950 26611 26803 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=android.net.conn.CONNECTIVITY_CHANGE flg=0x4200010 (has extras) }
+08-30 10:40:25.952 26611 26849 E awcn.SerializeHelper:  [new][amdc_file]restore end. file:/data/user/0/com.taobao.taobao/files/new_awcn_strategy/version_34/channel/NewStrategyConfig_version_34 size:6660 cost:2
+08-30 10:40:25.955 26611 26840 E tnetsdk.NetWorkStatusUtil:  registerCellularNetwork success|
+08-30 10:40:25.957 26611 26840 E tnetsdk.NetWorkStatusUtil:  registerWifiNetwork success|
+08-30 10:40:25.957 26611 26840 E tnetsdk.NetWorkStatusUtil:  [registerNetwork]| succ:true errCode:0
+08-30 10:40:25.957 26611 26840 E tnetsdk.SpdyAgent: |[seq:[tnetInit]]  Async task cost:10| spTime:10
+08-30 10:40:25.958 26611 26835 E awcn.NetworkStatusMonitor:  [RUM] wifi signal! rssi:-32 signalLevel:4
+08-30 10:40:25.958 26611 26835 E tnetsdk.NetWorkStatusUtil:  TRANSPORT_CELLULAR onAvailable| cellularNetwork:168
+08-30 10:40:25.959 26611 26835 E tnetsdk.NetWorkStatusUtil:  TRANSPORT_WIFI onAvailable| wifiNetwork:163
+08-30 10:40:25.959 26611 26849 E awcn.StrategyTable:  sendAmdcRequest, sc null evnMode:0 host:amdc.m.taobao.com uniqueId:cn.WIFI.100025_440100
+08-30 10:40:25.959 26611 26849 E awcn.HttpDispatcher:  sendAmdcRequest  st:0 fs:false vp:false cf:-1 len:1
+08-30 10:40:25.959 26611 26849 E awcn.AmdcThreadPoolExecutor:  first or force amdc! 
+08-30 10:40:25.959 26611 26849 E awcn.StrategyInfoHolder:  [amdc_file] restore loadFile 2, filename= cn.WIFI.100025_440100
+08-30 10:40:25.959 26611 26849 E awcn.StrategySerializeHelper:  get online StrategyFile
+08-30 10:40:25.959 26611 26849 E awcn.SerializeHelper:  [new][amdc_file]restore end. file:/data/user/0/com.taobao.taobao/files/new_awcn_strategy/version_34/channel/cn.WIFI.100025_440100 size:46124 cost:0
+08-30 10:40:25.960 26611 26813 E ValarMorghulis: e
+08-30 10:40:25.960 26611 26849 E awcn.StrategyInfoHolder:  [amdc_file] FILEIO loadFile uniqueId:cn.WIFI.100025_440100
+08-30 10:40:25.960 26611 26849 E awcn.NetworkStatusMonitor:  use getNetworkInfo! network:168
+08-30 10:40:25.961 26611 26874 E amdc.DispatchParamBuilder: |[seq:AMDC1] amdc param l:false time:1788057625960
+08-30 10:40:25.962 26611 26874 E amdc.DispatchParamBuilder: |[seq:AMDC1] amdc sign null
+08-30 10:40:25.962 26611 26882 E DataReportJniBridge: registerWindVaneListenerBridge invoke success !!!
+08-30 10:40:25.963 26611 26849 E awcn.StrategyInfoHolder:  [amdc_file] restore loadFile 22, cellUniqueId= cn.5G.100026_440100
+08-30 10:40:25.963 26611 26849 E awcn.StrategySerializeHelper:  get online StrategyFile
+08-30 10:40:25.963 26611 26849 E awcn.SerializeHelper:  [new][amdc_file]restore end. file:/data/user/0/com.taobao.taobao/files/new_awcn_strategy/version_34/channel/cn.5G.100026_440100 size:2508 cost:0
+08-30 10:40:25.963 26611 26849 E awcn.StrategyInfoHolder:  [amdc_file] FILEIO loadFile uniqueId:cn.5G.100026_440100
+08-30 10:40:25.963 26611 26849 E awcn.StrategyInfoHolder:  [amdc_file] end loading strategy files
+08-30 10:40:25.970 26611 26886 I DpmTcmClient: RegisterTcmMonitor from: $Proxy2
+08-30 10:40:25.993 26611 26777 E SchedulerDeffer: leave stage c-a
+08-30 10:40:25.994 26611 26777 E PollingDispatcher: run#app#onCreate
+08-30 10:40:25.994 26611 26777 E SchedulerDeffer: enter stage c-create
+08-30 10:40:25.994 26611 26777 E NAccs   : Launcher_InitAgooLifecycle init
+08-30 10:40:25.995 26611 26789 E tiga.TigaChannelLauncher:  [tiga][launcher] TigaChannelLauncher init! isTigaInit:true
+08-30 10:40:25.996 26611 26811 E awcn.GlobalAppRuntimeInfo:   CurrentProcess:com.taobao.taobao:channel TargetProcess:com.taobao.taobao
+08-30 10:40:25.996 26611 26983 E TLog.InitTLog: InitTLogForTaobao, enter...
+08-30 10:40:25.996 26611 26789 E tiga.RuntimeUtils:  thread created! name:Tiga Worker1
+08-30 10:40:25.998 26611 26810 E NAccs   : Launcher_InitAccs initImpl
+08-30 10:40:25.998 26611 26983 I System.out: RemoteSo.Initializer.name=tb.z8f
+08-30 10:40:25.998 26611 26983 E RemoteSo.default: RSo init logger tracker, start
+08-30 10:40:26.001 26611 26988 I pie     : [/home/admin/.emas/build/54916787/workspace/pie/tracing/stacktrace.hpp:58] getCurrentLibName:/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/lib/arm64/libpie_dynamic.so
+08-30 10:40:26.002 26611 26988 I AKI     : [INFO:binding.cpp(108)] module:libpie_dynamic.so,RegisterClass: JSBind
+08-30 10:40:26.002 26611 26988 I AKI     : [INFO:binding.cpp(108)] module:libpie_dynamic.so,RegisterClass: CacheService
+08-30 10:40:26.004 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.004 26611 26988 E tiga    : [tiga_log:init:69] Load TLog library successfully
+08-30 10:40:26.004 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.004 26611 26988 E tiga    : [tiga_native_jni:Java_com_taobao_android_tiga_TigaJniBridge_nativeTigaNativeInit:388] [tiga] nativeTigaNativeInit: initialization completed
+08-30 10:40:26.004 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.004 26611 26988 E tiga    : [tiga_configuration:setEnvironment:69] set-envrionment: 0 -> 0
+08-30 10:40:26.005 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.005 26611 26988 E tiga    : [tiga_file_manager:TIGAFileManager:62] create TIGAFileManager (0x79dc662370)
+08-30 10:40:26.005 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.005 26611 26988 E tiga    : [tiga_file_manager:setCacheDirectory:152] set cache directory: env=0 | /data/user/0/com.taobao.taobao/files/0/ (0x79dc662370)
+08-30 10:40:26.005 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.005 26611 26988 E tiga    : [tiga_file_manager:setCacheDirectory:152] set cache directory: env=1 | /data/user/0/com.taobao.taobao/files/1/ (0x79dc662370)
+08-30 10:40:26.005 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.005 26611 26988 E tiga    : [tiga_file_manager:setCacheDirectory:152] set cache directory: env=2 | /data/user/0/com.taobao.taobao/files/2/ (0x79dc662370)
+08-30 10:40:26.005 26611 26988 I pie     : [/home/admin/.emas/build/54916787/workspace/pie/init.cpp:395] pie init start
+08-30 10:40:26.005 26611 26988 I pie     : [/home/admin/.emas/build/54916787/workspace/pie/init.cpp:397] pie init end
+08-30 10:40:26.005 26611 26988 E pie     : success name = pie_dynamic success = true cost = 0
+08-30 10:40:26.006 26611 26988 I pie     : [/home/admin/.emas/build/54916787/workspace/pie/init.cpp:203] set env=/data/user/0/com.taobao.taobao/cache
+08-30 10:40:26.006 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.006 26611 26988 E tiga    : [tiga_java_bridge:SetChannelProcess:137] [tiga] SetInitParam isChannel=1
+08-30 10:40:26.009 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.009 26611 26988 E tiga    : [tiga_java_bridge:Start:545] [tiga] Start 0x7a9c6a4350
+08-30 10:40:26.009 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.009 26611 26988 E tiga    : [tiga_metrics:tiga_register_metrics_callbacks:211] register metrics callback: 0x794d87b140 | 0x794d87db90 | 0x794d87e9ec | 0x794d87f380
+08-30 10:40:26.009 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.009 26611 26988 E tiga    : [tiga_service_impl:start:61] service-start begin...
+08-30 10:40:26.009 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.009 26611 26988 E tiga    : [tiga_data_model:deserialize:672] deserialize file [ /data/user/0/com.taobao.taobao/files/0/tiga_cache_v2 ]
+08-30 10:40:26.009 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.009 26611 26988 E tiga    : [tiga_data_model:deserialize:708] deserialize task-count: 0
+08-30 10:40:26.009 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.009 26611 26988 E tiga    : [tiga_data_model:deserialize:731] deserialize labeling-count: 0
+08-30 10:40:26.009 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.009 26611 26988 E tiga    : [tiga_data_model:deserialize:746] deserialize: T=0, ret=1 | Tc=0, cnt=0 | Tl=0, cnt=0 | Tcs=0, csv=2171
+08-30 10:40:26.010 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.010 26611 26988 E tiga    : [tiga_cc_model:deserialize:472] deserialize cc-cache file [ /data/user/0/com.taobao.taobao/files/0/tiga_cc_cache_v0 ]
+08-30 10:40:26.010 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.010 26611 26988 E tiga    : [tiga_cc_model:deserialize:499] deserialize cc-cache with invalid service count: 0
+08-30 10:40:26.010 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.010 26611 26988 E tiga    : [tiga_cc_model:TIGACommonChangingModel:77] set expire-timer ignore: is_channel=1 | ttl_min=2880
+08-30 10:40:26.010 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.010 26611 26988 E tiga    : [tiga_service_impl:getLabeling:167] [tiga] GetLabeling cc_label is NULL
+08-30 10:40:26.010 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.010 26611 26988 E tiga    : [tiga_service_impl:notifyLabeling:493] attempt notify labeling ignore with empty content: tag= | all=1 | source=2
+08-30 10:40:26.010 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:26.010 26611 26988 E tiga    : [tiga_data_model:attemptNotifyChangingExpired:551] attempt notify all expired tasks:
+08-30 10:40:26.010 26611 26988 E AliHALogEngine: TLog have not init!!!
+08-30 10:40:28.014 26611 26633 W ratelimit: Single process limit 50/s drop 285 lines.
+08-30 10:40:28.014 26611 26633 I .taobao:channel: Background concurrent copying GC freed 1007608(50MB) AllocSpace objects, 381(15MB) LOS objects, 49% free, 9776KB(RS:5952KB + LOS:3824KB)/19MB, paused 65us,60us total 131.769ms
+08-30 10:40:28.018 26611 26637 W System  : A resource failed to call AbstractCursor.close. 
+08-30 10:40:28.989 27100 27100 E tango_translator: === Tango internal error ===
+08-30 10:40:28.989 27100 27100 E tango_translator: pid = 27100, tid = 27100
+08-30 10:40:28.989 27100 27100 E tango_translator: Version: v2.0.4
+08-30 10:40:28.989 27100 27100 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:28.989 27100 27100 E tango_translator: Comm: app_process32
+08-30 10:40:28.989 27100 27100 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:28.989 27100 27100 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:28.989 27100 27100 E tango_translator: 
+08-30 10:40:28.989 27100 27100 E tango_translator: Backtrace:
+08-30 10:40:28.989 27100 27100 E tango_translator:   0x869c7
+08-30 10:40:28.989 27100 27100 E tango_translator:   0x1b42f
+08-30 10:40:28.989 27100 27100 E tango_translator:   0x45223
+08-30 10:40:28.989 27100 27100 E tango_translator:   0x586c3
+08-30 10:40:28.989 27100 27100 E tango_translator:   0x71bcf
+08-30 10:40:28.989 27100 27100 E tango_translator:   0x8b2b3
+08-30 10:40:28.990 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:28.992 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:28.995 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:28.998 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:28.999 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.002 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.003 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.005 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.005 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.006 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.007 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.008 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.009 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.010 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.011 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.012 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.013 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.014 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.015 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:29.016 26611 26806 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.alibaba.analytics.config.change flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:40:30.205 30074 30252 I mars::stn: [longlink_connect_monitor.cc:566, OnHeartbeatAlarmReceived]:longlink_progress on_heartbeat_alarm, time: 385426974, is_noop_timeout:false
+08-30 10:40:30.255 30074 30711 I mars::stn: [longlink_connect_monitor.cc:560, OnHeartbeatAlarmSet]:longlink_progress on_heartbeat_set, time: 385427024, time interval:580000
+08-30 10:40:30.262 30074 30711 I mars::stn: [longlink_connect_monitor.cc:560, OnHeartbeatAlarmSet]:longlink_progress on_heartbeat_set, time: 385427030, time interval:580000
+08-30 10:40:30.341 30074 30123 W tencent.mm:push: Profile data size exceeds 500000 bytes. It has 556564 bytes.
+08-30 10:40:30.363 30074 30123 W tencent.mm:push: Couldn't lock the profile file /data/user/0/com.tencent.mm/tinker/patch-33113a60/dex/oat/tinker_classN.apk.cur.prof: Failed to lock file '/data/user/0/com.tencent.mm/tinker/patch-33113a60/dex/oat/tinker_classN.apk.cur.prof': Try again
+08-30 10:40:30.363 30074 30123 W tencent.mm:push: Could not forcefully load profile /data/user/0/com.tencent.mm/tinker/patch-33113a60/dex/oat/tinker_classN.apk.cur.prof
+08-30 10:40:34.006 27197 27197 E tango_translator: === Tango internal error ===
+08-30 10:40:34.006 27197 27197 E tango_translator: pid = 27197, tid = 27197
+08-30 10:40:34.006 27197 27197 E tango_translator: Version: v2.0.4
+08-30 10:40:34.006 27197 27197 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:34.006 27197 27197 E tango_translator: Comm: app_process32
+08-30 10:40:34.006 27197 27197 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:34.006 27197 27197 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:34.006 27197 27197 E tango_translator: 
+08-30 10:40:34.006 27197 27197 E tango_translator: Backtrace:
+08-30 10:40:34.006 27197 27197 E tango_translator:   0x869c7
+08-30 10:40:34.006 27197 27197 E tango_translator:   0x1b42f
+08-30 10:40:34.006 27197 27197 E tango_translator:   0x45223
+08-30 10:40:34.006 27197 27197 E tango_translator:   0x586c3
+08-30 10:40:34.006 27197 27197 E tango_translator:   0x71bcf
+08-30 10:40:34.006 27197 27197 E tango_translator:   0x8b2b3
+08-30 10:40:35.272 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ZCache"
+08-30 10:40:35.272 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ConfigInit"
+08-30 10:40:35.274 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ZCache"
+08-30 10:40:35.274 26611 26873 W SQLiteLog: (28) double-quoted string literal: "CacheInit"
+08-30 10:40:35.276 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ZCache"
+08-30 10:40:35.276 26611 26873 W SQLiteLog: (28) double-quoted string literal: "VisitPerf"
+08-30 10:40:35.277 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ZCache"
+08-30 10:40:35.277 26611 26873 W SQLiteLog: (28) double-quoted string literal: "AppVisit"
+08-30 10:40:35.278 26611 26873 W SQLiteLog: (28) double-quoted string literal: "elastic_schedule"
+08-30 10:40:35.278 26611 26873 W SQLiteLog: (28) double-quoted string literal: "trigger_execute"
+08-30 10:40:35.280 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ZCache"
+08-30 10:40:35.280 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ConfigUpdate"
+08-30 10:40:35.281 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ZCache"
+08-30 10:40:35.281 26611 26873 W SQLiteLog: (28) double-quoted string literal: "RequestQueue"
+08-30 10:40:35.282 26611 26873 W SQLiteLog: (28) double-quoted string literal: "tb_location"
+08-30 10:40:35.282 26611 26873 W SQLiteLog: (28) double-quoted string literal: "trace"
+08-30 10:40:35.284 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ZCache"
+08-30 10:40:35.284 26611 26873 W SQLiteLog: (28) double-quoted string literal: "CacheVisit"
+08-30 10:40:35.285 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ZCache"
+08-30 10:40:35.285 26611 26873 W SQLiteLog: (28) double-quoted string literal: "CacheUpdate"
+08-30 10:40:35.285 26611 26873 W SQLiteLog: (28) double-quoted string literal: "networkPrefer"
+08-30 10:40:35.285 26611 26873 W SQLiteLog: (28) double-quoted string literal: "conn_stat_xnet"
+08-30 10:40:35.286 26611 26873 W SQLiteLog: (28) double-quoted string literal: "networkPrefer"
+08-30 10:40:35.286 26611 26873 W SQLiteLog: (28) double-quoted string literal: "session_xnet"
+08-30 10:40:35.287 26611 26873 W SQLiteLog: (28) double-quoted string literal: "networkPrefer"
+08-30 10:40:35.287 26611 26873 W SQLiteLog: (28) double-quoted string literal: "network_xnet"
+08-30 10:40:35.289 26611 26873 W SQLiteLog: (28) double-quoted string literal: "DeviceEvaluator"
+08-30 10:40:35.289 26611 26873 W SQLiteLog: (28) double-quoted string literal: "DeviceInfo"
+08-30 10:40:35.290 26611 26873 W SQLiteLog: (28) double-quoted string literal: "falco"
+08-30 10:40:35.290 26611 26873 W SQLiteLog: (28) double-quoted string literal: "falco_gc"
+08-30 10:40:35.291 26611 26873 W SQLiteLog: (28) double-quoted string literal: "networkPrefer"
+08-30 10:40:35.291 26611 26873 W SQLiteLog: (28) double-quoted string literal: "AbnormalFlowMonitor"
+08-30 10:40:35.292 26611 26873 W SQLiteLog: (28) double-quoted string literal: "mtopsdk"
+08-30 10:40:35.292 26611 26873 W SQLiteLog: (28) double-quoted string literal: "mtopSiteType"
+08-30 10:40:35.292 26611 26873 W SQLiteLog: (28) double-quoted string literal: "falco"
+08-30 10:40:35.292 26611 26873 W SQLiteLog: (28) double-quoted string literal: "falco_snapshot"
+08-30 10:40:35.293 26611 26873 W SQLiteLog: (28) double-quoted string literal: "mtopsdk"
+08-30 10:40:35.293 26611 26873 W SQLiteLog: (28) double-quoted string literal: "jsStats"
+08-30 10:40:35.293 26611 26873 W SQLiteLog: (28) double-quoted string literal: "Yixiu"
+08-30 10:40:35.293 26611 26873 W SQLiteLog: (28) double-quoted string literal: "ExperimentActivateStat"
+08-30 10:40:35.294 26611 26873 W SQLiteLog: (28) double-quoted string literal: "Yixiu"
+08-30 10:40:35.294 26611 26873 W SQLiteLog: (28) double-quoted string literal: "TrackStat"
+08-30 10:40:35.294 26611 26873 W SQLiteLog: (28) double-quoted string literal: "Yixiu"
+08-30 10:40:35.294 26611 26873 W SQLiteLog: (28) double-quoted string literal: "DownloadStatV2"
+08-30 10:40:35.294 26611 26873 W SQLiteLog: (28) double-quoted string literal: "update_cppinlinepatch"
+08-30 10:40:35.294 26611 26873 W SQLiteLog: (28) double-quoted string literal: "cppinlinepatch"
+08-30 10:40:35.295 26611 26873 W SQLiteLog: (28) double-quoted string literal: "elastic_schedule"
+08-30 10:40:35.295 26611 26873 W SQLiteLog: (28) double-quoted string literal: "task_execute"
+08-30 10:40:35.296 26611 26873 W SQLiteLog: (28) double-quoted string literal: "MUSAppMonitor"
+08-30 10:40:35.296 26611 26873 W SQLiteLog: (28) double-quoted string literal: "prepare"
+08-30 10:40:36.304 26611 26611 W ratelimit: Single process limit 50/s drop 151 lines.
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, key=null, proc=com.taobao.taobao:channel
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, key=OpenLitSafe, proc=com.taobao.taobao:channel
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, key=OpenLogcatCrash, proc=com.taobao.taobao:channel
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, key=delDupAnr, proc=com.taobao.taobao:channel
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, key=maxKeepActivity, proc=com.taobao.taobao:channel
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, key=forbid-jsi-dump, proc=com.taobao.taobao:channel
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, key=autoReleaseMemory, proc=com.taobao.taobao:channel
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, key=OptAppExitAnr, proc=com.taobao.taobao:channel
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, val=true, proc=com.taobao.taobao:channel
+08-30 10:40:36.304 26611 26611 E SwitchMonitor: switcher value changed, key=LongMainThreadDuration, proc=com.taobao.taobao:channel
+08-30 10:40:36.305 26611 26611 E SwitchMonitor: switcher value changed, key=supportTCrash2Again2, proc=com.taobao.taobao:channel
+08-30 10:40:36.305 26611 26611 E SwitchMonitor: switcher value changed, key=shortDump, proc=com.taobao.taobao:channel
+08-30 10:40:36.305 26611 26611 E SwitchMonitor: switcher value changed, key=useT21, proc=com.taobao.taobao:channel
+08-30 10:40:36.305 26611 26611 E SwitchMonitor: switcher value changed, key=ignoreAnr, proc=com.taobao.taobao:channel
+08-30 10:40:36.305 26611 26611 E SwitchMonitor: switcher value changed, key=addMoreBlackInfo, proc=com.taobao.taobao:channel
+08-30 10:40:36.305 26611 26611 E SwitchMonitor: switcher value changed, key=SendPercent, proc=com.taobao.taobao:channel
+08-30 10:40:36.305 26611 26611 E SwitchMonitor: switcher value changed, key=ANRPercent, proc=com.taobao.taobao:channel
+08-30 10:40:36.329 26611 26958 E TLogConfigReceiver: tlogDestroy is: falsetlogSwitch is : true  tlogLevel is : ERROR  tlogModule is : off
+08-30 10:40:36.329 26611 26958 E TLogConfigReceiver: change tlog level : ERROR
+08-30 10:40:36.329 26611 26958 E TLogConfigReceiver: tlog model : off
+08-30 10:40:36.329 26611 26958 E TLogConfigReceiver: change tlog start up sampling : 10
+08-30 10:40:36.332 26611 26958 E TLogConfigReceiver: tlog_mini_blocks : 10
+08-30 10:40:36.332 26611 26958 E TLogConfigReceiver: tlog_orphan_recovery_enabled : true
+08-30 10:40:36.332 26611 26958 E TLogConfigReceiver: [orange]tlog_switch: fileVersion=9, tlogMaxSize=50, utSampleRate=10000, fileStatisticsRate=8000, bufferSize=600, scanUpload=true, multiProcessNotify=null, udfSwitch=null, useZstd=true, realtimeEnable=true, interceptEnable=true, sliceConfig=true:5:400:3:2, mainOpt=true, channelNoZstd=null
+08-30 10:40:39.027 27456 27456 E tango_translator: === Tango internal error ===
+08-30 10:40:39.027 27456 27456 E tango_translator: pid = 27456, tid = 27456
+08-30 10:40:39.027 27456 27456 E tango_translator: Version: v2.0.4
+08-30 10:40:39.027 27456 27456 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:39.027 27456 27456 E tango_translator: Comm: app_process32
+08-30 10:40:39.027 27456 27456 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:39.027 27456 27456 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:39.027 27456 27456 E tango_translator: 
+08-30 10:40:39.027 27456 27456 E tango_translator: Backtrace:
+08-30 10:40:39.027 27456 27456 E tango_translator:   0x869c7
+08-30 10:40:39.027 27456 27456 E tango_translator:   0x1b42f
+08-30 10:40:39.027 27456 27456 E tango_translator:   0x45223
+08-30 10:40:39.027 27456 27456 E tango_translator:   0x586c3
+08-30 10:40:39.027 27456 27456 E tango_translator:   0x71bcf
+08-30 10:40:39.027 27456 27456 E tango_translator:   0x8b2b3
+08-30 10:40:44.049 27506 27506 E tango_translator: === Tango internal error ===
+08-30 10:40:44.049 27506 27506 E tango_translator: pid = 27506, tid = 27506
+08-30 10:40:44.049 27506 27506 E tango_translator: Version: v2.0.4
+08-30 10:40:44.049 27506 27506 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:44.049 27506 27506 E tango_translator: Comm: app_process32
+08-30 10:40:44.049 27506 27506 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:44.049 27506 27506 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:44.049 27506 27506 E tango_translator: 
+08-30 10:40:44.049 27506 27506 E tango_translator: Backtrace:
+08-30 10:40:44.049 27506 27506 E tango_translator:   0x869c7
+08-30 10:40:44.049 27506 27506 E tango_translator:   0x1b42f
+08-30 10:40:44.049 27506 27506 E tango_translator:   0x45223
+08-30 10:40:44.049 27506 27506 E tango_translator:   0x586c3
+08-30 10:40:44.049 27506 27506 E tango_translator:   0x71bcf
+08-30 10:40:44.049 27506 27506 E tango_translator:   0x8b2b3
+08-30 10:40:49.071 27550 27550 E tango_translator: === Tango internal error ===
+08-30 10:40:49.071 27550 27550 E tango_translator: pid = 27550, tid = 27550
+08-30 10:40:49.071 27550 27550 E tango_translator: Version: v2.0.4
+08-30 10:40:49.071 27550 27550 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:49.071 27550 27550 E tango_translator: Comm: app_process32
+08-30 10:40:49.071 27550 27550 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:49.071 27550 27550 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:49.071 27550 27550 E tango_translator: 
+08-30 10:40:49.071 27550 27550 E tango_translator: Backtrace:
+08-30 10:40:49.071 27550 27550 E tango_translator:   0x869c7
+08-30 10:40:49.071 27550 27550 E tango_translator:   0x1b42f
+08-30 10:40:49.071 27550 27550 E tango_translator:   0x45223
+08-30 10:40:49.071 27550 27550 E tango_translator:   0x586c3
+08-30 10:40:49.071 27550 27550 E tango_translator:   0x71bcf
+08-30 10:40:49.071 27550 27550 E tango_translator:   0x8b2b3
+08-30 10:40:54.090 27574 27574 E tango_translator: === Tango internal error ===
+08-30 10:40:54.090 27574 27574 E tango_translator: pid = 27574, tid = 27574
+08-30 10:40:54.090 27574 27574 E tango_translator: Version: v2.0.4
+08-30 10:40:54.090 27574 27574 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:54.090 27574 27574 E tango_translator: Comm: app_process32
+08-30 10:40:54.090 27574 27574 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:54.090 27574 27574 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:54.090 27574 27574 E tango_translator: 
+08-30 10:40:54.090 27574 27574 E tango_translator: Backtrace:
+08-30 10:40:54.090 27574 27574 E tango_translator:   0x869c7
+08-30 10:40:54.090 27574 27574 E tango_translator:   0x1b42f
+08-30 10:40:54.090 27574 27574 E tango_translator:   0x45223
+08-30 10:40:54.090 27574 27574 E tango_translator:   0x586c3
+08-30 10:40:54.090 27574 27574 E tango_translator:   0x71bcf
+08-30 10:40:54.090 27574 27574 E tango_translator:   0x8b2b3
+08-30 10:40:56.222 26611 26886 W SQLiteLog: (28) double-quoted string literal: "accs"
+08-30 10:40:56.222 26611 26886 W SQLiteLog: (28) double-quoted string literal: "data_receive"
+08-30 10:40:56.225 26611 26886 W SQLiteLog: (28) double-quoted string literal: "BC"
+08-30 10:40:56.225 26611 26886 W SQLiteLog: (28) double-quoted string literal: "login"
+08-30 10:40:56.227 26611 26886 W SQLiteLog: (28) double-quoted string literal: "IMPAAS_GAEA_dt_gaea"
+08-30 10:40:56.227 26611 26886 W SQLiteLog: (28) double-quoted string literal: "IMPAAS_GAEA_lwp_connect"
+08-30 10:40:56.228 26611 26886 W SQLiteLog: (28) double-quoted string literal: "IMPAAS_AIMSDK_AUTH"
+08-30 10:40:56.228 26611 26886 W SQLiteLog: (28) double-quoted string literal: "IMPAAS_AIMSDK_LoginTime"
+08-30 10:40:56.230 26611 26886 W SQLiteLog: (28) double-quoted string literal: "IMPAAS_GAEA_dt_gaea"
+08-30 10:40:56.230 26611 26886 W SQLiteLog: (28) double-quoted string literal: "IMPAAS_GAEA_idl_result"
+08-30 10:40:56.231 26611 26886 W SQLiteLog: (28) double-quoted string literal: "IMPAAS_GAEA_dt_gaea"
+08-30 10:40:56.231 26611 26886 W SQLiteLog: (28) double-quoted string literal: "IMPAAS_GAEA_lwp_transaction"
+08-30 10:40:56.232 26611 26886 W SQLiteLog: (28) double-quoted string literal: "ApkUpdater"
+08-30 10:40:56.233 26611 26886 W SQLiteLog: (28) double-quoted string literal: "PreDownloadStart"
+08-30 10:40:56.234 26611 26886 W SQLiteLog: (28) double-quoted string literal: "ApkUpdater"
+08-30 10:40:56.234 26611 26886 W SQLiteLog: (28) double-quoted string literal: "PreDownloadFinish"
+08-30 10:40:56.235 26611 26886 W SQLiteLog: (28) double-quoted string literal: "ApkUpdater"
+08-30 10:40:56.235 26611 26886 W SQLiteLog: (28) double-quoted string literal: "PreDownloadInstallApk"
+08-30 10:40:56.236 26611 26886 W SQLiteLog: (28) double-quoted string literal: "ApkUpdater"
+08-30 10:40:56.236 26611 26886 W SQLiteLog: (28) double-quoted string literal: "ClearApkFiles"
+08-30 10:40:56.237 26611 26886 W SQLiteLog: (28) double-quoted string literal: "ApkUpdater"
+08-30 10:40:56.237 26611 26886 W SQLiteLog: (28) double-quoted string literal: "GrayDownloadStart"
+08-30 10:40:56.238 26611 26886 W SQLiteLog: (28) double-quoted string literal: "ApkUpdater"
+08-30 10:40:56.238 26611 26886 W SQLiteLog: (28) double-quoted string literal: "GrayDownloadFinish"
+08-30 10:40:56.240 26611 26886 W SQLiteLog: (28) double-quoted string literal: "ApkUpdater"
+08-30 10:40:56.240 26611 26886 W SQLiteLog: (28) double-quoted string literal: "GrayClearApkFiles"
+08-30 10:40:56.241 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.241 26611 26886 W SQLiteLog: (28) double-quoted string literal: "init_task"
+08-30 10:40:56.242 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.242 26611 26886 W SQLiteLog: (28) double-quoted string literal: "auto_clear"
+08-30 10:40:56.242 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.242 26611 26886 W SQLiteLog: (28) double-quoted string literal: "clear_expired_files"
+08-30 10:40:56.243 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.243 26611 26886 W SQLiteLog: (28) double-quoted string literal: "clear_expired_files_failed"
+08-30 10:40:56.244 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.244 26611 26886 W SQLiteLog: (28) double-quoted string literal: "clear_matching_files"
+08-30 10:40:56.245 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.245 26611 26886 W SQLiteLog: (28) double-quoted string literal: "clear_exception"
+08-30 10:40:56.245 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.245 26611 26886 W SQLiteLog: (28) double-quoted string literal: "biz_clear_size"
+08-30 10:40:56.246 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.246 26611 26886 W SQLiteLog: (28) double-quoted string literal: "biz_all_path"
+08-30 10:40:56.246 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.246 26611 26886 W SQLiteLog: (28) double-quoted string literal: "files_scan_time"
+08-30 10:40:56.247 26611 26886 W SQLiteLog: (28) double-quoted string literal: "cache_cleaner"
+08-30 10:40:56.247 26611 26886 W SQLiteLog: (28) double-quoted string literal: "clean_time"
+08-30 10:40:56.248 26611 26886 W SQLiteLog: (28) double-quoted string literal: "RuntimePermission"
+08-30 10:40:56.248 26611 26886 W SQLiteLog: (28) double-quoted string literal: "BizPermissionReq"
+08-30 10:40:56.248 26611 26886 W SQLiteLog: (28) double-quoted string literal: "RuntimePermission"
+08-30 10:40:56.248 26611 26886 W SQLiteLog: (28) double-quoted string literal: "BizPermissionCheck"
+08-30 10:40:59.110 27625 27625 E tango_translator: === Tango internal error ===
+08-30 10:40:59.110 27625 27625 E tango_translator: pid = 27625, tid = 27625
+08-30 10:40:59.110 27625 27625 E tango_translator: Version: v2.0.4
+08-30 10:40:59.110 27625 27625 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:40:59.110 27625 27625 E tango_translator: Comm: app_process32
+08-30 10:40:59.110 27625 27625 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:40:59.110 27625 27625 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:40:59.110 27625 27625 E tango_translator: 
+08-30 10:40:59.110 27625 27625 E tango_translator: Backtrace:
+08-30 10:40:59.110 27625 27625 E tango_translator:   0x869c7
+08-30 10:40:59.110 27625 27625 E tango_translator:   0x1b42f
+08-30 10:40:59.110 27625 27625 E tango_translator:   0x45223
+08-30 10:40:59.110 27625 27625 E tango_translator:   0x586c3
+08-30 10:40:59.110 27625 27625 E tango_translator:   0x71bcf
+08-30 10:40:59.110 27625 27625 E tango_translator:   0x8b2b3
+08-30 10:41:04.124 27648 27648 E tango_translator: === Tango internal error ===
+08-30 10:41:04.124 27648 27648 E tango_translator: pid = 27648, tid = 27648
+08-30 10:41:04.124 27648 27648 E tango_translator: Version: v2.0.4
+08-30 10:41:04.124 27648 27648 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:04.124 27648 27648 E tango_translator: Comm: app_process32
+08-30 10:41:04.124 27648 27648 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:04.124 27648 27648 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:04.124 27648 27648 E tango_translator: 
+08-30 10:41:04.124 27648 27648 E tango_translator: Backtrace:
+08-30 10:41:04.124 27648 27648 E tango_translator:   0x869c7
+08-30 10:41:04.124 27648 27648 E tango_translator:   0x1b42f
+08-30 10:41:04.124 27648 27648 E tango_translator:   0x45223
+08-30 10:41:04.124 27648 27648 E tango_translator:   0x586c3
+08-30 10:41:04.124 27648 27648 E tango_translator:   0x71bcf
+08-30 10:41:04.124 27648 27648 E tango_translator:   0x8b2b3
+08-30 10:41:09.145 27675 27675 E tango_translator: === Tango internal error ===
+08-30 10:41:09.145 27675 27675 E tango_translator: pid = 27675, tid = 27675
+08-30 10:41:09.145 27675 27675 E tango_translator: Version: v2.0.4
+08-30 10:41:09.145 27675 27675 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:09.145 27675 27675 E tango_translator: Comm: app_process32
+08-30 10:41:09.145 27675 27675 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:09.145 27675 27675 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:09.145 27675 27675 E tango_translator: 
+08-30 10:41:09.145 27675 27675 E tango_translator: Backtrace:
+08-30 10:41:09.145 27675 27675 E tango_translator:   0x869c7
+08-30 10:41:09.145 27675 27675 E tango_translator:   0x1b42f
+08-30 10:41:09.145 27675 27675 E tango_translator:   0x45223
+08-30 10:41:09.145 27675 27675 E tango_translator:   0x586c3
+08-30 10:41:09.145 27675 27675 E tango_translator:   0x71bcf
+08-30 10:41:09.145 27675 27675 E tango_translator:   0x8b2b3
+08-30 10:41:14.157 27688 27688 E tango_translator: === Tango internal error ===
+08-30 10:41:14.157 27688 27688 E tango_translator: pid = 27688, tid = 27688
+08-30 10:41:14.157 27688 27688 E tango_translator: Version: v2.0.4
+08-30 10:41:14.157 27688 27688 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:14.157 27688 27688 E tango_translator: Comm: app_process32
+08-30 10:41:14.157 27688 27688 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:14.157 27688 27688 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:14.157 27688 27688 E tango_translator: 
+08-30 10:41:14.157 27688 27688 E tango_translator: Backtrace:
+08-30 10:41:14.157 27688 27688 E tango_translator:   0x869c7
+08-30 10:41:14.157 27688 27688 E tango_translator:   0x1b42f
+08-30 10:41:14.157 27688 27688 E tango_translator:   0x45223
+08-30 10:41:14.157 27688 27688 E tango_translator:   0x586c3
+08-30 10:41:14.157 27688 27688 E tango_translator:   0x71bcf
+08-30 10:41:14.157 27688 27688 E tango_translator:   0x8b2b3
+08-30 10:41:19.168 27733 27733 E tango_translator: === Tango internal error ===
+08-30 10:41:19.168 27733 27733 E tango_translator: pid = 27733, tid = 27733
+08-30 10:41:19.168 27733 27733 E tango_translator: Version: v2.0.4
+08-30 10:41:19.168 27733 27733 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:19.168 27733 27733 E tango_translator: Comm: app_process32
+08-30 10:41:19.168 27733 27733 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:19.168 27733 27733 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:19.168 27733 27733 E tango_translator: 
+08-30 10:41:19.168 27733 27733 E tango_translator: Backtrace:
+08-30 10:41:19.168 27733 27733 E tango_translator:   0x869c7
+08-30 10:41:19.168 27733 27733 E tango_translator:   0x1b42f
+08-30 10:41:19.168 27733 27733 E tango_translator:   0x45223
+08-30 10:41:19.168 27733 27733 E tango_translator:   0x586c3
+08-30 10:41:19.168 27733 27733 E tango_translator:   0x71bcf
+08-30 10:41:19.168 27733 27733 E tango_translator:   0x8b2b3
+08-30 10:41:19.204 27736 27736 I flags_health_check: ServerConfigurableFlagsReset reset_mode value: 1
+08-30 10:41:19.205 27736 27736 I flags_health_check: ServerConfigurableFlagsReset updatable crashing detected, resetting flags.
+08-30 10:41:21.853 31545 31560 I tencent.mm:push: Background concurrent copying GC freed 107105(4625KB) AllocSpace objects, 91(1820KB) LOS objects, 49% free, 7167KB(RS:5227KB + LOS:1940KB)/13MB, paused 172us,83us total 319.665ms
+08-30 10:41:24.192 27776 27776 E tango_translator: === Tango internal error ===
+08-30 10:41:24.192 27776 27776 E tango_translator: pid = 27776, tid = 27776
+08-30 10:41:24.192 27776 27776 E tango_translator: Version: v2.0.4
+08-30 10:41:24.192 27776 27776 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:24.192 27776 27776 E tango_translator: Comm: app_process32
+08-30 10:41:24.192 27776 27776 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:24.192 27776 27776 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:24.192 27776 27776 E tango_translator: 
+08-30 10:41:24.192 27776 27776 E tango_translator: Backtrace:
+08-30 10:41:24.192 27776 27776 E tango_translator:   0x869c7
+08-30 10:41:24.192 27776 27776 E tango_translator:   0x1b42f
+08-30 10:41:24.192 27776 27776 E tango_translator:   0x45223
+08-30 10:41:24.192 27776 27776 E tango_translator:   0x586c3
+08-30 10:41:24.192 27776 27776 E tango_translator:   0x71bcf
+08-30 10:41:24.192 27776 27776 E tango_translator:   0x8b2b3
+08-30 10:41:26.067 26611 26772 W ratelimit: Single process limit 50/s drop 35 lines.
+08-30 10:41:26.067 26611 26772 E Utils   : getMemoryInfoAM time:59
+08-30 10:41:29.211 27856 27856 E tango_translator: === Tango internal error ===
+08-30 10:41:29.211 27856 27856 E tango_translator: pid = 27856, tid = 27856
+08-30 10:41:29.211 27856 27856 E tango_translator: Version: v2.0.4
+08-30 10:41:29.211 27856 27856 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:29.211 27856 27856 E tango_translator: Comm: app_process32
+08-30 10:41:29.211 27856 27856 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:29.211 27856 27856 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:29.211 27856 27856 E tango_translator: 
+08-30 10:41:29.211 27856 27856 E tango_translator: Backtrace:
+08-30 10:41:29.211 27856 27856 E tango_translator:   0x869c7
+08-30 10:41:29.211 27856 27856 E tango_translator:   0x1b42f
+08-30 10:41:29.211 27856 27856 E tango_translator:   0x45223
+08-30 10:41:29.211 27856 27856 E tango_translator:   0x586c3
+08-30 10:41:29.211 27856 27856 E tango_translator:   0x71bcf
+08-30 10:41:29.211 27856 27856 E tango_translator:   0x8b2b3
+08-30 10:41:34.226 27869 27869 E tango_translator: === Tango internal error ===
+08-30 10:41:34.226 27869 27869 E tango_translator: pid = 27869, tid = 27869
+08-30 10:41:34.226 27869 27869 E tango_translator: Version: v2.0.4
+08-30 10:41:34.226 27869 27869 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:34.226 27869 27869 E tango_translator: Comm: app_process32
+08-30 10:41:34.226 27869 27869 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:34.226 27869 27869 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:34.226 27869 27869 E tango_translator: 
+08-30 10:41:34.226 27869 27869 E tango_translator: Backtrace:
+08-30 10:41:34.226 27869 27869 E tango_translator:   0x869c7
+08-30 10:41:34.226 27869 27869 E tango_translator:   0x1b42f
+08-30 10:41:34.226 27869 27869 E tango_translator:   0x45223
+08-30 10:41:34.226 27869 27869 E tango_translator:   0x586c3
+08-30 10:41:34.226 27869 27869 E tango_translator:   0x71bcf
+08-30 10:41:34.226 27869 27869 E tango_translator:   0x8b2b3
+08-30 10:41:39.246 27920 27920 E tango_translator: === Tango internal error ===
+08-30 10:41:39.246 27920 27920 E tango_translator: pid = 27920, tid = 27920
+08-30 10:41:39.246 27920 27920 E tango_translator: Version: v2.0.4
+08-30 10:41:39.246 27920 27920 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:39.246 27920 27920 E tango_translator: Comm: app_process32
+08-30 10:41:39.246 27920 27920 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:39.246 27920 27920 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:39.246 27920 27920 E tango_translator: 
+08-30 10:41:39.246 27920 27920 E tango_translator: Backtrace:
+08-30 10:41:39.246 27920 27920 E tango_translator:   0x869c7
+08-30 10:41:39.246 27920 27920 E tango_translator:   0x1b42f
+08-30 10:41:39.246 27920 27920 E tango_translator:   0x45223
+08-30 10:41:39.246 27920 27920 E tango_translator:   0x586c3
+08-30 10:41:39.246 27920 27920 E tango_translator:   0x71bcf
+08-30 10:41:39.246 27920 27920 E tango_translator:   0x8b2b3
+08-30 10:41:44.264 27938 27938 E tango_translator: === Tango internal error ===
+08-30 10:41:44.264 27938 27938 E tango_translator: pid = 27938, tid = 27938
+08-30 10:41:44.264 27938 27938 E tango_translator: Version: v2.0.4
+08-30 10:41:44.264 27938 27938 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:44.264 27938 27938 E tango_translator: Comm: app_process32
+08-30 10:41:44.264 27938 27938 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:44.264 27938 27938 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:44.264 27938 27938 E tango_translator: 
+08-30 10:41:44.264 27938 27938 E tango_translator: Backtrace:
+08-30 10:41:44.264 27938 27938 E tango_translator:   0x869c7
+08-30 10:41:44.264 27938 27938 E tango_translator:   0x1b42f
+08-30 10:41:44.264 27938 27938 E tango_translator:   0x45223
+08-30 10:41:44.264 27938 27938 E tango_translator:   0x586c3
+08-30 10:41:44.264 27938 27938 E tango_translator:   0x71bcf
+08-30 10:41:44.264 27938 27938 E tango_translator:   0x8b2b3
+08-30 10:41:49.284 27955 27955 E tango_translator: === Tango internal error ===
+08-30 10:41:49.284 27955 27955 E tango_translator: pid = 27955, tid = 27955
+08-30 10:41:49.284 27955 27955 E tango_translator: Version: v2.0.4
+08-30 10:41:49.284 27955 27955 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:49.284 27955 27955 E tango_translator: Comm: app_process32
+08-30 10:41:49.284 27955 27955 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:49.284 27955 27955 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:49.284 27955 27955 E tango_translator: 
+08-30 10:41:49.284 27955 27955 E tango_translator: Backtrace:
+08-30 10:41:49.284 27955 27955 E tango_translator:   0x869c7
+08-30 10:41:49.284 27955 27955 E tango_translator:   0x1b42f
+08-30 10:41:49.284 27955 27955 E tango_translator:   0x45223
+08-30 10:41:49.284 27955 27955 E tango_translator:   0x586c3
+08-30 10:41:49.284 27955 27955 E tango_translator:   0x71bcf
+08-30 10:41:49.284 27955 27955 E tango_translator:   0x8b2b3
+08-30 10:41:54.283 28063 28063 E tango_translator: === Tango internal error ===
+08-30 10:41:54.283 28063 28063 E tango_translator: pid = 28063, tid = 28063
+08-30 10:41:54.283 28063 28063 E tango_translator: Version: v2.0.4
+08-30 10:41:54.283 28063 28063 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:54.283 28063 28063 E tango_translator: Comm: app_process32
+08-30 10:41:54.283 28063 28063 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:54.283 28063 28063 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:54.283 28063 28063 E tango_translator: 
+08-30 10:41:54.283 28063 28063 E tango_translator: Backtrace:
+08-30 10:41:54.283 28063 28063 E tango_translator:   0x869c7
+08-30 10:41:54.283 28063 28063 E tango_translator:   0x1b42f
+08-30 10:41:54.283 28063 28063 E tango_translator:   0x45223
+08-30 10:41:54.283 28063 28063 E tango_translator:   0x586c3
+08-30 10:41:54.283 28063 28063 E tango_translator:   0x71bcf
+08-30 10:41:54.283 28063 28063 E tango_translator:   0x8b2b3
+08-30 10:41:54.289 26611 26873 W SQLiteLog: (28) double-quoted string literal: "Adaemon"
+08-30 10:41:54.289 26611 26873 W SQLiteLog: (28) double-quoted string literal: "processMemStat"
+08-30 10:41:54.290 26611 26873 W SQLiteLog: (28) double-quoted string literal: "falco"
+08-30 10:41:54.291 26611 26873 W SQLiteLog: (28) double-quoted string literal: "falco_touch"
+08-30 10:41:54.291 26611 26873 W SQLiteLog: (28) double-quoted string literal: "networkPrefer"
+08-30 10:41:54.292 26611 26873 W SQLiteLog: (28) double-quoted string literal: "pageAvgFlow"
+08-30 10:41:54.486 28117 28117 I libc    : SetHeapTaggingLevel: tag level set to 0
+08-30 10:41:54.489 28117 28117 I :widgetProvider: Using CollectorTypeCC GC.
+08-30 10:41:54.494 28117 28117 E :widgetProvider: Not starting debugger since process cannot load the jdwp agent.
+08-30 10:41:54.553 28117 28117 W System  : ClassLoader referenced unknown path: 
+08-30 10:41:54.553 28117 28117 W :widgetProvider: Unsupported class loader
+08-30 10:41:54.566 28117 28117 E RemoteSo.RSoLite: fetch(), lib = tbreakpad, now targetLibs = [tbreakpad]
+08-30 10:41:54.566 28117 28117 E RemoteSo.RSoLite: fetch(), data expired, currentApkPath == recordApkPath :/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/base.apk
+08-30 10:41:54.566 28117 28117 E RemoteSo.RSoLite: fetch(), success libPath=/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/96706d62ba9ea091671127291d90f73e/libtbreakpad.so
+08-30 10:41:54.566 28117 28117 E RemoteSo.RSoLite: fetch(), lib = tunwindstack, now targetLibs = [tbreakpad, tunwindstack]
+08-30 10:41:54.566 28117 28117 E RemoteSo.RSoLite: fetch(), data expired, currentApkPath == recordApkPath :/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/base.apk
+08-30 10:41:54.566 28117 28117 E RemoteSo.RSoLite: fetch(), success libPath=/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/58c84ed74cc3a72b6c8b4dcef8d8390e/libtunwindstack.so
+08-30 10:41:54.566 28117 28117 E TCrash  : NativeUncaughtCatcher:->/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/96706d62ba9ea091671127291d90f73e/libtbreakpad.so
+08-30 10:41:54.566 28117 28117 E TCrash  : NativeUncaughtCatcher:->/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/58c84ed74cc3a72b6c8b4dcef8d8390e/libtunwindstack.so
+08-30 10:41:54.567 28117 28117 E TCrash  : TCrashMonitor:->CRASH_TYPE->TCrash2->native
+08-30 10:41:54.568 28117 28117 E RemoteSo.RSoLite: fetch(), lib = tbreakpad, now targetLibs = [tbreakpad, tunwindstack]
+08-30 10:41:54.568 28117 28117 E RemoteSo.RSoLite: fetch(), data expired, currentApkPath == recordApkPath :/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/base.apk
+08-30 10:41:54.568 28117 28117 E RemoteSo.RSoLite: fetch(), success libPath=/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/96706d62ba9ea091671127291d90f73e/libtbreakpad.so
+08-30 10:41:54.568 28117 28117 E RemoteSo.RSoLite: fetch(), lib = tunwindstack, now targetLibs = [tbreakpad, tunwindstack]
+08-30 10:41:54.568 28117 28117 E RemoteSo.RSoLite: fetch(), data expired, currentApkPath == recordApkPath :/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/base.apk
+08-30 10:41:54.568 28117 28117 E RemoteSo.RSoLite: fetch(), success libPath=/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/58c84ed74cc3a72b6c8b4dcef8d8390e/libtunwindstack.so
+08-30 10:41:54.570 28117 28117 E TBreakPad: TBreakpadNativeBridge:->load so->/data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/96706d62ba9ea091671127291d90f73e/libtbreakpad.so
+08-30 10:41:54.570 28117 28117 E TBreakPad: TBreakpadNativeBridge:->true
+08-30 10:41:54.570 28117 28117 I TBreakPad: version 1.0.3-SNAPSHOT
+08-30 10:41:54.571 28117 28117 I TBreakPad: /data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/58c84ed74cc3a72b6c8b4dcef8d8390e/libtunwindstack.so 1
+08-30 10:41:54.571 28117 28117 I TBreakPad: support anr true
+08-30 10:41:54.572 28117 28117 E TCrash  : TBreakPadCore:->init
+08-30 10:41:54.575 28117 28194 E :widgetProvider: Attempt to load writable dex file: /data/user/0/com.taobao.taobao/files/instant-patch/dex-temp/reload00x113a.jar
+08-30 10:41:54.577 28117 28194 E InstantPatcher: Got the patcher class class com.android.alibaba.ip.runtime.AppPatchesLoaderImpl
+08-30 10:41:54.577 28117 28194 E InstantPatcher: Got the patcher instance com.android.alibaba.ip.runtime.AppPatchesLoaderImpl@e02b09
+08-30 10:41:54.577 28117 28194 E InstantPatcher: Got the list of classes 
+08-30 10:41:54.577 28117 28194 E InstantPatcher: class com.taobao.android.detail2.core.mainpic.MainPicContainer
+08-30 10:41:54.577 28117 28194 E InstantPatcher: patch success
+08-30 10:41:54.591 28117 28117 W System.err: java.lang.IllegalArgumentException: DynamicFeatureManager is not inited
+08-30 10:41:54.591 28117 28117 W System.err: 	at tb.q48.a(Taobao:18)
+08-30 10:41:54.591 28117 28117 W System.err: 	at tb.q48.d(Taobao:25)
+08-30 10:41:54.591 28117 28117 W System.err: 	at tb.fx4.o(Taobao:102)
+08-30 10:41:54.591 28117 28117 W System.err: 	at tb.fx4.n(Taobao:86)
+08-30 10:41:54.591 28117 28117 W System.err: 	at tb.zgg.a(Taobao:40)
+08-30 10:41:54.592 28117 28117 W System.err: 	at tb.x42.b(Taobao:35)
+08-30 10:41:54.592 28117 28117 W System.err: 	at tb.s9t.run(Taobao:22)
+08-30 10:41:54.592 28117 28117 W System.err: 	at com.taobao.tao.TaobaoApplication.attachBaseContext(Taobao:142)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.app.Application.attach(Application.java:392)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.app.Instrumentation.newApplication(Instrumentation.java:1283)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1502)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.app.LoadedApk.makeApplicationInner(LoadedApk.java:1439)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.app.ActivityThread.handleBindApplication(ActivityThread.java:7800)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2619)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.os.Handler.dispatchMessage(Handler.java:106)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.os.Looper.loopOnce(Looper.java:226)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.os.Looper.loop(Looper.java:328)
+08-30 10:41:54.592 28117 28117 W System.err: 	at android.app.ActivityThread.main(ActivityThread.java:9159)
+08-30 10:41:54.592 28117 28117 W System.err: 	at java.lang.reflect.Method.invoke(Native Method)
+08-30 10:41:54.592 28117 28117 W System.err: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:586)
+08-30 10:41:54.592 28117 28117 W System.err: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:1099)
+08-30 10:41:54.592 28117 28117 E BundleInfoManager: generate info from generator
+08-30 10:41:54.593 28117 28117 E ApplicationInvoker: successfully invoke start application com.taobao.tao.TaoApplication
+08-30 10:41:54.594 28117 28117 E TBAnrProfiler: ANR Early Init com.taobao.taobao:widgetProvider
+08-30 10:41:54.594 28117 28117 E Bootstrap: lifeCycle#constuctor#com.taobao.tao.TaobaoApplication@5bc30a3
+08-30 10:41:54.595 28117 28117 E BootstrapMode: is current device type tablet or fold ? false
+08-30 10:41:54.595 28117 28117 E TaoNGNextAppDelegate: lifeCycle#bindApp
+08-30 10:41:54.595 28117 28117 E AMSService: delegate successfully
+08-30 10:41:54.596 28117 28117 E Bootstrap: lifeCycle#attachBaseContext
+08-30 10:41:54.596 28117 28117 E TaoNGNextAppDelegate: lifeCycle#attachBaseContext
+08-30 10:41:54.597 28117 28117 E TaoNGNextAppDelegate: lifeCycle#createInitialContext
+08-30 10:41:54.599 28117 28117 E Bootstrap: lifeCycle#onCreate
+08-30 10:41:54.599 28117 28117 E TaoNGNextAppDelegate: lifeCycle#onCreate
+08-30 10:41:54.602 28117 28117 E ATmHNGNext: handle(what=114, when=179896303)
+08-30 10:41:54.602 28117 28117 E ATmHNGNext: deal(what=114, when=179896303)
+08-30 10:41:54.602 28117 28117 E Dispatchers: create Dispatcher with type=Service, msg.what=114, process=com.taobao.taobao:widgetProvider
+08-30 10:41:54.614 28117 28117 E PollingDispatcher: enqueue(what=114)
+08-30 10:41:54.614 28117 28117 E TaoNGNextAppDelegate: lifeCycle#launch
+08-30 10:41:54.614 28117 28117 E ATmHNGNext: handle(what=121, when=179896303)
+08-30 10:41:54.614 28117 28117 E ATmHNGNext: deal(what=121, when=179896303)
+08-30 10:41:54.615 28117 28117 E PollingDispatcher: enqueue(what=121,res=true,size=2)
+08-30 10:41:54.615 28117 28117 E ATmHNGNext: handle(what=164, when=179896385)
+08-30 10:41:54.616 28117 28225 E PollingDispatcher: run#app#attachBaseContext
+08-30 10:41:54.621 28117 28225 E SchedulerDeffer: enter stage wdg-a
+08-30 10:41:54.736 28117 28241 E AVFSAdapterManager: - AVFSAdapterManager initialize: mInitialized=true
+08-30 10:41:54.758 28117 28225 E SchedulerDeffer: leave stage wdg-a
+08-30 10:41:54.758 28117 28225 E PollingDispatcher: run#app#onCreate
+08-30 10:41:54.759 28117 28225 E SchedulerDeffer: enter stage wdg-create
+08-30 10:41:54.769 28117 28262 E awcn.GlobalAppRuntimeInfo:   CurrentProcess:com.taobao.taobao:widgetProvider TargetProcess:com.taobao.taobao
+08-30 10:41:54.784 28117 28262 E awcn.ABSwitchUtils:  [ABGlobal] featureName:Use_Virtual_Thread_Enable_AB_OPT status:false
+08-30 10:41:54.784 28117 28262 E awcn.ABSwitchUtils:  [ABGlobal] featureName:Remote_So_AB_Enable status:false
+08-30 10:41:54.787 28117 28262 E awcn.ABSwitchUtils:  [ABGlobal] featureName:Net_Support_Feature_AB_Enable status:false
+08-30 10:41:54.788 28117 28263 E TLog.InitTLog: InitTLogForTaobao, enter...
+08-30 10:41:54.802 28117 28262 E awcn.AwcnConfig:  [setHttp3DisabledWhiteList] http3DisabledWhiteList:
+08-30 10:41:54.802 28117 28262 E awcn.AwcnConfig:  AwcnConfig initCoreSp fail!  t:java.lang.ClassCastException: java.lang.Long cannot be cast to java.lang.Integer
+08-30 10:41:54.824 28117 28237 E SwitchMonitor: switcher value obtained val=true, abVal=true, proc=com.taobao.taobao:widgetProvider
+08-30 10:41:54.827 28117 28263 I System.out: RemoteSo.Initializer.name=tb.z8f
+08-30 10:41:54.827 28117 28225 E SchedulerDeffer: leave stage wdg-create
+08-30 10:41:54.827 28117 28225 E TaoNGNextAppDelegate: lifeCycle#launched
+08-30 10:41:54.827 28117 28225 E PollingDispatcher: run#Service(what=114) started, cost before=213ms
+08-30 10:41:54.827 28117 28225 E PollingDispatcher: dequeue(what=114)
+08-30 10:41:54.828 28117 28225 E PollingDispatcher: run#Service(what=114) finished, cost total=213ms
+08-30 10:41:54.828 28117 28117 E PollingDispatcher: handle(what=114)
+08-30 10:41:54.828 28117 28117 E PollingDispatcher: run#Service(what=114)
+08-30 10:41:54.829 28117 28263 E RemoteSo.default: RSo init logger tracker, start
+08-30 10:41:54.832 28117 28117 E PollingDispatcher: dequeue(what=121)
+08-30 10:41:54.834 28117 28117 E PollingDispatcher: handle(what=121)
+08-30 10:41:54.834 28117 28117 E PollingDispatcher: run#Service(what=121)
+08-30 10:41:54.839 28117 28117 E PollingDispatcher: message queue is empty now, dispatched=true
+08-30 10:41:54.839 28117 28237 E TCrash  : TCrashMonitor:->LastCrash->10/-1->ApplicationExitInfo(timestamp=2026/8/30 10:40 pid=23907 realUid=10250 packageUid=10250 definingUid=10250 user=0 process=com.taobao.taobao:widgetProvider reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0 importance=400 pss=111MB rss=214MB description=stop com.taobao.taobao due to stop by 25162 state=empty trace=null
+08-30 10:41:54.993 28117 28285 E Parcel  : Class not found when unmarshalling: anet.channel.strategy.ProxyStrategy
+08-30 10:41:54.993 28117 28285 E Parcel  : java.lang.ClassNotFoundException: anet.channel.strategy.ProxyStrategy
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at java.lang.Class.classForName(Native Method)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at java.lang.Class.forName(Class.java:536)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readParcelableCreatorInternal(Parcel.java:4992)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readParcelableInternal(Parcel.java:4875)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readValue(Parcel.java:4635)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readValue(Parcel.java:4404)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readMapInternal(Parcel.java:5322)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readMapInternal(Parcel.java:5314)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readMap(Parcel.java:3259)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.IPConnStrategy.<init>(Taobao:27)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.IPConnStrategy$1.createFromParcel(Taobao:2)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.IPConnStrategy$1.createFromParcel(Taobao:1)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readParcelableInternal(Parcel.java:4884)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readValue(Parcel.java:4635)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readValue(Parcel.java:4404)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readListInternal(Parcel.java:5413)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readList(Parcel.java:3291)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyEntity.<init>(Taobao:35)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyEntity$1.createFromParcel(Taobao:2)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyEntity$1.createFromParcel(Taobao:1)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readParcelableInternal(Parcel.java:4884)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readParcelable(Parcel.java:4846)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyCollection.<init>(Taobao:66)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyCollection$1.createFromParcel(Taobao:2)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyCollection$1.createFromParcel(Taobao:1)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readParcelableInternal(Parcel.java:4884)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readValue(Parcel.java:4635)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readValue(Parcel.java:4404)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readMapInternal(Parcel.java:5322)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readMapInternal(Parcel.java:5314)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at android.os.Parcel.readMap(Parcel.java:3259)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyTable.<init>(Taobao:11)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyTable$2.createFromParcel(Taobao:2)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyTable$2.createFromParcel(Taobao:1)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyInfoHolder.createStrategyTable(Taobao:37)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyInfoHolder.loadFile(Taobao:69)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at anet.channel.strategy.StrategyInfoHolder$1.run(Taobao:139)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:487)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:307)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+08-30 10:41:54.993 28117 28285 E Parcel  : 	at java.lang.Thread.run(Thread.java:1042)
+08-30 10:41:54.993 28117 28285 E Parcel  : Caused by: java.lang.ClassNotFoundException: anet.channel.strategy.ProxyStrategy
+08-30 10:41:54.993 28117 28285 E Parcel  : 	... 43 more
+08-30 10:41:55.007 28117 28287 I DpmTcmClient: RegisterTcmMonitor from: $Proxy2
+08-30 10:41:55.100 28117 28263 E TLogConfig: isBetaApk, no, type is invalid
+08-30 10:41:55.107 28117 28263 E TLog.TLogThreadPool: TLogThreadPool constructor done.
+08-30 10:41:55.114 26611 26651 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=com.taobao.aranger.CONNECT flg=0x10 pkg=com.taobao.taobao (has extras) }
+08-30 10:41:55.115 28117 28263 E TLogStatistics: TLog statistic ut_enable=true, file_enable=true, randomRate=4121, configRate=10000, fileRate=8000
+08-30 10:41:55.116 28117 28263 E TLOG.TLogNative: loadLibrary AliHALogEngine
+08-30 10:41:55.160 28117 28263 E AliHALogEngine: Try to dynamic load zstd lib from /data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/2bec635308ac99025c182032dea87dbf/libzstd.so
+08-30 10:41:55.160 28117 28263 E AliHALogEngine: Load zstd lib from: /data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/2bec635308ac99025c182032dea87dbf/libzstd.so
+08-30 10:41:55.160 28117 28263 E AliHALogEngine: The zstd lib version: 1.5.2
+08-30 10:41:55.160 28117 28263 E AliHALogEngine: fun_ZSTD_compressBound: 0x794da578a8, fun_ZSTD_compress: 0x794da5b6f8, fun_ZSTD_isError: 0x794da54040, fun_ZSTD_minCLevel: 0x794da5826c, fun_ZSTD_maxCLevel: 0x794da58274
+08-30 10:41:55.160 28117 28263 E AliHALogEngine: Use zstd!
+08-30 10:41:55.161 28117 28263 E AliHALogEngine: LogConfig Init. file_version=9, buffer_size=614400, kLogMaxLength=512000, max_sharding_size=52428800, log_dir=/storage/emulated/0/Android/data/com.taobao.taobao/files/tdata_v9, cache_dir=/data/user/0/com.taobao.taobao/files/tlog_v9, log_level=1, zstd_level=7, use_slice_log=1, max_slice_size=5242880, total_slice_size=419430400, max_log_day=3, log_suffix_=.data
+08-30 10:41:55.161 28117 28263 E AliHALogEngine: [V2.1] v2_engine::Init called
+08-30 10:41:55.161 28117 28263 E AliHALogEngine: [V2.1] Initializing 1 writers
+08-30 10:41:55.161 28117 28263 E AliHALogEngine: LogFile::Init Start, cache_identify=default, log_identify=default
+08-30 10:41:55.227 28117 28280 E ValarMorghulis: s
+08-30 10:41:55.318 28117 28280 W ziparchive: Unable to open '/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/lib/arm64/libsgmain.dm': No such file or directory
+08-30 10:41:55.318 28117 28280 W ziparchive: Unable to open '/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/lib/arm64/libsgmain.dm': No such file or directory
+08-30 10:41:55.321 28117 28263 E AliHALogEngine: cache mmap address: 0x7938756000, size: 614400
+08-30 10:41:55.342 28117 28263 E AliHALogEngine: LogFile::Init Done, cache_identify=default, log_identify=default
+08-30 10:41:55.346 28117 28263 E AliHALogEngine: [V2.1] v2_engine::Init Done with 1 writers
+08-30 10:41:55.346 28117 28263 E AliHALogEngine: [Dispatch] Init via builtin engine
+08-30 10:41:55.346 28117 28263 E TLOG.TLogNative: Init TLOG at process 28117 result 1
+08-30 10:41:55.359 28117 28263 E TLOG    : tlog init end! Config: TLogVer: 9, Debuggable: false, LogLevel: E, CacheSize: 600K, LogMaxSize: 50M,UseSlice: true, SliceSize: 5M, TotalSlice: 400M, SliceScope: 2H, MaxLogDay: 3, UseZstd: true, ZstdLevel: 7, MainProcess: false, CacheDir: /data/user/0/com.taobao.taobao/files/tlog_v9, mainProcessOpt: true, zstdPath: /data/user/0/com.taobao.taobao/files/swallows/arm64-v8a/2bec635308ac99025c182032dea87dbf/libzstd.so
+08-30 10:41:55.397 28117 28280 E ValarMorghulis: e
+08-30 10:41:55.409 28117 28409 E DataReportJniBridge: registerWindVaneListenerBridge invoke success !!!
+08-30 10:41:55.521 28117 28403 I pie     : [/home/admin/.emas/build/54916787/workspace/pie/tracing/stacktrace.hpp:58] getCurrentLibName:/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/lib/arm64/libpie_dynamic.so
+08-30 10:41:55.522 28117 28403 I AKI     : [INFO:binding.cpp(108)] module:libpie_dynamic.so,RegisterClass: JSBind
+08-30 10:41:55.522 28117 28403 I AKI     : [INFO:binding.cpp(108)] module:libpie_dynamic.so,RegisterClass: CacheService
+08-30 10:41:55.524 28117 28403 E tiga    : [tiga_log:init:69] Load TLog library successfully
+08-30 10:41:55.524 28117 28403 E tiga    : [tiga_native_jni:Java_com_taobao_android_tiga_TigaJniBridge_nativeTigaNativeInit:388] [tiga] nativeTigaNativeInit: initialization completed
+08-30 10:41:55.693 28117 28403 W System.err: java.lang.ClassNotFoundException: Didn't find class "com.alibaba.wireless.security.sgextsdk.sgsecfont.SecFontMain" on path: DexPathList[[zip file "/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/lib/arm64/libsgmain.so"],nativeLibraryDirectories=[/data/app/~~bSwXqcDiP-a-GWfJVpQslA==/com.taobao.taobao-J5ZbitiWh1zr75HsXaVYwA==/lib/arm64, /data/user/0/com.taobao.taobao/app_SGLib/app_1787937951, /system/lib64, /system_ext/lib64]]
+08-30 10:41:55.693 28117 28403 W System.err: 	at dalvik.system.BaseDexClassLoader.findClass(BaseDexClassLoader.java:259)
+08-30 10:41:55.693 28117 28403 W System.err: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:379)
+08-30 10:41:55.693 28117 28403 W System.err: 	at java.lang.ClassLoader.loadClass(ClassLoader.java:312)
+08-30 10:41:55.693 28117 28403 W System.err: 	at com.alibaba.wireless.security.middletierplugin.в.б(Unknown Source:80)
+08-30 10:41:55.693 28117 28403 W System.err: 	at com.alibaba.wireless.security.middletierplugin.SecurityGuardMiddleTierPlugin.onPluginLoaded(Unknown Source:69)
+08-30 10:41:55.693 28117 28403 W System.err: 	at com.alibaba.wireless.security.mainplugin.SecurityGuardMainPlugin$б.run(Unknown Source:406)
+08-30 10:41:55.754 26611 26651 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=action_notify_local_broadcast flg=0x10 (has extras) }
+08-30 10:41:55.756 26611 26651 E LoadedApk: performReceive() called targeting raw IIntentReceiver for Intent { act=action_notify_local_broadcast flg=0x10 (has extras) }
+08-30 10:41:55.782 28117 28281 E ValarMorghulis: f
+08-30 10:41:55.782  2224  2391 I ActivityTaskManager: Displayed com.taobao.taobao/com.taobao.browser.BrowserActivity for user 0: +170ms
+08-30 10:41:55.939 28117 28412 W libc    : Access denied finding property "wifi.interface"
+08-30 10:41:55.947 28117 28412 W libc    : Access denied finding property "ro.debuggable"
+08-30 10:41:55.947 28117 28412 W libc    : Access denied finding property "ro.secure"
+08-30 10:41:55.948 28117 28412 W Settings: Setting adb_enabled has moved from android.provider.Settings.Secure to android.provider.Settings.Global.
+08-30 10:41:56.777 28117 28280 I WebViewFactory: Loading com.google.android.webview version 147.0.7727.137 (code 772713703)
+08-30 10:41:56.790 28117 28280 I cr_WVCFactoryProvider: version=147.0.7727.137 (772713703) minSdkVersion=29 multiprocess=true packageId=127 splits=<none>
+08-30 10:41:56.800 28117 28280 I cr_LibraryLoader: Successfully loaded native library
+08-30 10:41:56.800 28117 28280 I cr_CachingUmaRecorder: Flushed 16 samples from 16 histograms, 0 samples were dropped.
+08-30 10:41:57.331 28117 28133 W System  : A resource failed to call AbstractCursor.close. 
+08-30 10:41:57.331 28117 28133 W System  : A resource failed to call close. 
+08-30 10:41:57.331 28117 28133 W System  : A resource failed to call close. 
+08-30 10:41:57.334 26611 26637 W System  : A resource failed to call close. 
+08-30 10:41:57.674 28117 28459 I x-n-x   : UT数据上报校验开关未开启
+08-30 10:41:57.895 26611 26873 W SQLiteLog: (28) double-quoted string literal: "networkPrefer"
+08-30 10:41:57.895 26611 26873 W SQLiteLog: (28) double-quoted string literal: "caton_fg_total_monitor"
+08-30 10:41:57.897 26611 26873 W SQLiteLog: (28) double-quoted string literal: "DesktopWidget"
+08-30 10:41:57.900 26611 26873 W SQLiteLog: (28) double-quoted string literal: "widgetState"
+08-30 10:41:57.901 26611 26873 W SQLiteLog: (28) double-quoted string literal: "DesktopWidget"
+08-30 10:41:57.901 26611 26873 W SQLiteLog: (28) double-quoted string literal: "widgetPerf"
+08-30 10:41:57.902 26611 26873 W SQLiteLog: (28) double-quoted string literal: "networkPrefer"
+08-30 10:41:57.905 26611 26873 W SQLiteLog: (28) double-quoted string literal: "BgFlowReportMonitor"
+08-30 10:41:59.309 28665 28665 E tango_translator: === Tango internal error ===
+08-30 10:41:59.309 28665 28665 E tango_translator: pid = 28665, tid = 28665
+08-30 10:41:59.309 28665 28665 E tango_translator: Version: v2.0.4
+08-30 10:41:59.309 28665 28665 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:41:59.309 28665 28665 E tango_translator: Comm: app_process32
+08-30 10:41:59.309 28665 28665 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:41:59.309 28665 28665 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:41:59.309 28665 28665 E tango_translator: 
+08-30 10:41:59.309 28665 28665 E tango_translator: Backtrace:
+08-30 10:41:59.309 28665 28665 E tango_translator:   0x869c7
+08-30 10:41:59.309 28665 28665 E tango_translator:   0x1b42f
+08-30 10:41:59.309 28665 28665 E tango_translator:   0x45223
+08-30 10:41:59.309 28665 28665 E tango_translator:   0x586c3
+08-30 10:41:59.309 28665 28665 E tango_translator:   0x71bcf
+08-30 10:41:59.309 28665 28665 E tango_translator:   0x8b2b3
+08-30 10:42:04.312 28689 28689 E tango_translator: === Tango internal error ===
+08-30 10:42:04.312 28689 28689 E tango_translator: pid = 28689, tid = 28689
+08-30 10:42:04.312 28689 28689 E tango_translator: Version: v2.0.4
+08-30 10:42:04.312 28689 28689 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:42:04.312 28689 28689 E tango_translator: Comm: app_process32
+08-30 10:42:04.312 28689 28689 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:42:04.312 28689 28689 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:42:04.312 28689 28689 E tango_translator: 
+08-30 10:42:04.312 28689 28689 E tango_translator: Backtrace:
+08-30 10:42:04.312 28689 28689 E tango_translator:   0x869c7
+08-30 10:42:04.312 28689 28689 E tango_translator:   0x1b42f
+08-30 10:42:04.312 28689 28689 E tango_translator:   0x45223
+08-30 10:42:04.312 28689 28689 E tango_translator:   0x586c3
+08-30 10:42:04.312 28689 28689 E tango_translator:   0x71bcf
+08-30 10:42:04.312 28689 28689 E tango_translator:   0x8b2b3
+08-30 10:42:09.339 28711 28711 E tango_translator: === Tango internal error ===
+08-30 10:42:09.339 28711 28711 E tango_translator: pid = 28711, tid = 28711
+08-30 10:42:09.339 28711 28711 E tango_translator: Version: v2.0.4
+08-30 10:42:09.339 28711 28711 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:42:09.339 28711 28711 E tango_translator: Comm: app_process32
+08-30 10:42:09.339 28711 28711 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:42:09.339 28711 28711 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:42:09.339 28711 28711 E tango_translator: 
+08-30 10:42:09.339 28711 28711 E tango_translator: Backtrace:
+08-30 10:42:09.339 28711 28711 E tango_translator:   0x869c7
+08-30 10:42:09.339 28711 28711 E tango_translator:   0x1b42f
+08-30 10:42:09.339 28711 28711 E tango_translator:   0x45223
+08-30 10:42:09.339 28711 28711 E tango_translator:   0x586c3
+08-30 10:42:09.339 28711 28711 E tango_translator:   0x71bcf
+08-30 10:42:09.339 28711 28711 E tango_translator:   0x8b2b3
+08-30 10:42:14.354 28726 28726 E tango_translator: === Tango internal error ===
+08-30 10:42:14.354 28726 28726 E tango_translator: pid = 28726, tid = 28726
+08-30 10:42:14.354 28726 28726 E tango_translator: Version: v2.0.4
+08-30 10:42:14.354 28726 28726 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:42:14.354 28726 28726 E tango_translator: Comm: app_process32
+08-30 10:42:14.354 28726 28726 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:42:14.354 28726 28726 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:42:14.354 28726 28726 E tango_translator: 
+08-30 10:42:14.354 28726 28726 E tango_translator: Backtrace:
+08-30 10:42:14.354 28726 28726 E tango_translator:   0x869c7
+08-30 10:42:14.354 28726 28726 E tango_translator:   0x1b42f
+08-30 10:42:14.354 28726 28726 E tango_translator:   0x45223
+08-30 10:42:14.354 28726 28726 E tango_translator:   0x586c3
+08-30 10:42:14.354 28726 28726 E tango_translator:   0x71bcf
+08-30 10:42:14.354 28726 28726 E tango_translator:   0x8b2b3
+08-30 10:42:19.364 28743 28743 E tango_translator: === Tango internal error ===
+08-30 10:42:19.364 28743 28743 E tango_translator: pid = 28743, tid = 28743
+08-30 10:42:19.364 28743 28743 E tango_translator: Version: v2.0.4
+08-30 10:42:19.364 28743 28743 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:42:19.364 28743 28743 E tango_translator: Comm: app_process32
+08-30 10:42:19.364 28743 28743 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:42:19.364 28743 28743 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:42:19.364 28743 28743 E tango_translator: 
+08-30 10:42:19.364 28743 28743 E tango_translator: Backtrace:
+08-30 10:42:19.364 28743 28743 E tango_translator:   0x869c7
+08-30 10:42:19.364 28743 28743 E tango_translator:   0x1b42f
+08-30 10:42:19.364 28743 28743 E tango_translator:   0x45223
+08-30 10:42:19.364 28743 28743 E tango_translator:   0x586c3
+08-30 10:42:19.364 28743 28743 E tango_translator:   0x71bcf
+08-30 10:42:19.364 28743 28743 E tango_translator:   0x8b2b3
+08-30 10:42:24.376 28761 28761 E tango_translator: === Tango internal error ===
+08-30 10:42:24.376 28761 28761 E tango_translator: pid = 28761, tid = 28761
+08-30 10:42:24.376 28761 28761 E tango_translator: Version: v2.0.4
+08-30 10:42:24.376 28761 28761 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:42:24.376 28761 28761 E tango_translator: Comm: app_process32
+08-30 10:42:24.376 28761 28761 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:42:24.376 28761 28761 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:42:24.376 28761 28761 E tango_translator: 
+08-30 10:42:24.376 28761 28761 E tango_translator: Backtrace:
+08-30 10:42:24.376 28761 28761 E tango_translator:   0x869c7
+08-30 10:42:24.376 28761 28761 E tango_translator:   0x1b42f
+08-30 10:42:24.376 28761 28761 E tango_translator:   0x45223
+08-30 10:42:24.376 28761 28761 E tango_translator:   0x586c3
+08-30 10:42:24.376 28761 28761 E tango_translator:   0x71bcf
+08-30 10:42:24.376 28761 28761 E tango_translator:   0x8b2b3
+08-30 10:42:29.398 28782 28782 E tango_translator: === Tango internal error ===
+08-30 10:42:29.398 28782 28782 E tango_translator: pid = 28782, tid = 28782
+08-30 10:42:29.398 28782 28782 E tango_translator: Version: v2.0.4
+08-30 10:42:29.398 28782 28782 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:42:29.398 28782 28782 E tango_translator: Comm: app_process32
+08-30 10:42:29.398 28782 28782 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:42:29.398 28782 28782 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:42:29.398 28782 28782 E tango_translator: 
+08-30 10:42:29.398 28782 28782 E tango_translator: Backtrace:
+08-30 10:42:29.398 28782 28782 E tango_translator:   0x869c7
+08-30 10:42:29.398 28782 28782 E tango_translator:   0x1b42f
+08-30 10:42:29.398 28782 28782 E tango_translator:   0x45223
+08-30 10:42:29.398 28782 28782 E tango_translator:   0x586c3
+08-30 10:42:29.398 28782 28782 E tango_translator:   0x71bcf
+08-30 10:42:29.398 28782 28782 E tango_translator:   0x8b2b3
+08-30 10:42:34.399 28788 28788 E tango_translator: === Tango internal error ===
+08-30 10:42:34.399 28788 28788 E tango_translator: pid = 28788, tid = 28788
+08-30 10:42:34.399 28788 28788 E tango_translator: Version: v2.0.4
+08-30 10:42:34.399 28788 28788 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:42:34.399 28788 28788 E tango_translator: Comm: app_process32
+08-30 10:42:34.399 28788 28788 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:42:34.399 28788 28788 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:42:34.399 28788 28788 E tango_translator: 
+08-30 10:42:34.399 28788 28788 E tango_translator: Backtrace:
+08-30 10:42:34.399 28788 28788 E tango_translator:   0x869c7
+08-30 10:42:34.399 28788 28788 E tango_translator:   0x1b42f
+08-30 10:42:34.399 28788 28788 E tango_translator:   0x45223
+08-30 10:42:34.399 28788 28788 E tango_translator:   0x586c3
+08-30 10:42:34.399 28788 28788 E tango_translator:   0x71bcf
+08-30 10:42:34.399 28788 28788 E tango_translator:   0x8b2b3
+08-30 10:42:39.417 28817 28817 E tango_translator: === Tango internal error ===
+08-30 10:42:39.417 28817 28817 E tango_translator: pid = 28817, tid = 28817
+08-30 10:42:39.417 28817 28817 E tango_translator: Version: v2.0.4
+08-30 10:42:39.417 28817 28817 E tango_translator: BuildID: c8c3bc6b73454f3802867b26fe53a30efa6bbe47
+08-30 10:42:39.417 28817 28817 E tango_translator: Comm: app_process32
+08-30 10:42:39.417 28817 28817 E tango_translator: Cmdline: /system/bin/tango_translator /system/bin/app_process32 /system/bin/app_process32 -Xzygote /system/bin --zygote --socket-name=zygote_secondary --enable-lazy-preload
+08-30 10:42:39.417 28817 28817 E tango_translator: panicked at 'License expired on 2024-01-07T04:22:41Z', src/tango/license.rs:294:22
+08-30 10:42:39.417 28817 28817 E tango_translator: 
+08-30 10:42:39.417 28817 28817 E tango_translator: Backtrace:
+08-30 10:42:39.417 28817 28817 E tango_translator:   0x869c7
+08-30 10:42:39.417 28817 28817 E tango_translator:   0x1b42f
+08-30 10:42:39.417 28817 28817 E tango_translator:   0x45223
+08-30 10:42:39.417 28817 28817 E tango_translator:   0x586c3
+08-30 10:42:39.417 28817 28817 E tango_translator:   0x71bcf
+08-30 10:42:39.417 28817 28817 E tango_translator:   0x8b2b3

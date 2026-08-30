@@ -349,7 +349,8 @@ class TaskEditActivity : AppCompatActivity() {
             "高德地图" to "com.autonavi.minimap",
             "钉钉" to "com.alibaba.android.dingtalk",
             "闲鱼" to "com.taobao.idlefish",
-            "淘宝" to "com.taobao.taobao",
+            // 淘宝主入口需用显式组件（Welcome 启动页，外部可启动，自动进主界面）
+            "淘宝" to "com.taobao.taobao/com.taobao.tao.welcome.Welcome",
             "抖音" to "com.ss.android.ugc.aweme",
         )
     }
