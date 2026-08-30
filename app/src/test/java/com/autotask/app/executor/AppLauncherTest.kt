@@ -82,4 +82,32 @@ class AppLauncherTest {
         val result = AppLauncher.launch(context, t, requireOverlay = false)
         assertTrue("显式组件启动应成功: ${result.reason}", result.ok)
     }
+
+    // ---------- 网址/深链目标 ----------
+
+    @Test
+    fun isUrlInput_validFormats() {
+        assertTrue(AppLauncher.isUrlInput("https://m.taobao.com"))
+        assertTrue(AppLauncher.isUrlInput("taobao://home"))
+        assertTrue(AppLauncher.isUrlInput("tbopen://m.taobao.com/tbopen/index.html"))
+    }
+
+    @Test
+    fun isUrlInput_invalidFormats() {
+        assertFalse(AppLauncher.isUrlInput("com.taobao.taobao"))
+        assertFalse(AppLauncher.isUrlInput(""))
+        assertFalse(AppLauncher.isUrlInput("http://")) // 只有 scheme 没有内容
+    }
+
+    @Test
+    fun launch_urlTarget_doesNotCrash() {
+        // 网址目标：构建 ACTION_VIEW intent（Robolectric 无 scheme handler 时行为不定，只验证不崩溃）
+        val t = task().copy(
+            targetPackage = "",
+            targetActivity = "",
+            targetUrl = "https://example.com",
+        )
+        AppLauncher.launch(context, t, requireOverlay = false)
+        assertTrue("URL 目标启动路径应正常执行", true)
+    }
 }

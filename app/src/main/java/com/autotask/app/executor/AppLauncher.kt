@@ -48,13 +48,18 @@ object AppLauncher {
     }
 
     /**
-     * 构建启动 Intent（三级策略）：
+     * 构建启动 Intent：
+     * 0. 网址/深链目标（如 https://m.taobao.com、taobao://home）→ ACTION_VIEW
      * 1. 显式组件（已解析出 activity 名时）
      * 2. launcher intent（正常应用）
      * 3. 隐式 + setPackage（vivo 等系统隐藏应用的唯一路径：
      *    查询 API 被系统过滤，但 startActivity 由系统解析，不受影响）
      */
     private fun buildLaunchIntent(pm: PackageManager, task: Task): Intent? {
+        if (task.targetUrl.isNotBlank()) {
+            // 深链启动：按 scheme 路由给声明处理权的应用（如淘宝 taobao://、https 由淘宝优先处理）
+            return Intent(Intent.ACTION_VIEW, android.net.Uri.parse(task.targetUrl))
+        }
         if (task.targetActivity.isNotBlank()) {
             return Intent().setClassName(task.targetPackage, task.targetActivity)
         }
@@ -62,6 +67,13 @@ object AppLauncher {
         return Intent(Intent.ACTION_MAIN)
             .addCategory(Intent.CATEGORY_LAUNCHER)
             .setPackage(task.targetPackage)
+    }
+
+    /** 是否为合法的网址/深链输入（含 scheme:// 且 scheme 后还有内容） */
+    fun isUrlInput(input: String): Boolean {
+        val trimmed = input.trim()
+        val idx = trimmed.indexOf("://")
+        return idx > 0 && idx < trimmed.length - 3
     }
 
     /**

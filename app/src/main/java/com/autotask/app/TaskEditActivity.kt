@@ -29,6 +29,7 @@ class TaskEditActivity : AppCompatActivity() {
     private var taskId: Long = NEW_TASK_ID
     private var targetPackage: String = ""
     private var targetActivity: String = ""
+    private var targetUrl: String = ""
     private var hour: Int = 8
     private var minute: Int = 0
 
@@ -78,6 +79,7 @@ class TaskEditActivity : AppCompatActivity() {
         binding.etName.setText(task.name)
         targetPackage = task.targetPackage
         targetActivity = task.targetActivity
+        targetUrl = task.targetUrl
         hour = task.hour
         minute = task.minute
         binding.spMode.setSelection(task.scheduleMode.ordinal)
@@ -110,6 +112,7 @@ class TaskEditActivity : AppCompatActivity() {
             appPickerLauncher.launch(Intent(this, AppPickerActivity::class.java))
         }
         binding.btnInputPackage.setOnClickListener { showPackageInputDialog() }
+        binding.btnInputUrl.setOnClickListener { showUrlInputDialog() }
         binding.btnTestLaunch.setOnClickListener { testLaunch() }
         binding.btnPickTime.setOnClickListener {
             TimePickerDialog(this, { _, h, m ->
@@ -218,7 +221,7 @@ class TaskEditActivity : AppCompatActivity() {
      * 用于保存前确认应用能否被成功打开。
      */
     private fun testLaunch() {
-        if (targetPackage.isEmpty()) {
+        if (targetPackage.isEmpty() && targetUrl.isEmpty()) {
             Toast.makeText(this, R.string.task_validate_target, Toast.LENGTH_SHORT).show()
             return
         }
@@ -227,6 +230,7 @@ class TaskEditActivity : AppCompatActivity() {
             name = getString(R.string.task_test_launch_name),
             targetPackage = targetPackage,
             targetActivity = targetActivity,
+            targetUrl = targetUrl,
             scheduleMode = ScheduleMode.ONCE,
             hour = 0,
             minute = 0,
@@ -240,7 +244,49 @@ class TaskEditActivity : AppCompatActivity() {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
     }
 
+    /**
+     * 输入网址/深链目标（如 https://m.taobao.com、taobao://home）。
+     * 支持任意 scheme，系统按 scheme 路由给声明处理权的应用。
+     */
+    private fun showUrlInputDialog() {
+        val input = android.widget.EditText(this).apply {
+            hint = getString(R.string.task_target_url_hint)
+            inputType = android.text.InputType.TYPE_CLASS_TEXT or
+                android.text.InputType.TYPE_TEXT_VARIATION_URI
+            setSingleLine(true)
+            if (targetUrl.isNotEmpty()) {
+                setText(targetUrl)
+                setSelection(targetUrl.length)
+            }
+        }
+        AlertDialog.Builder(this)
+            .setTitle(R.string.task_target_input_url)
+            .setMessage(R.string.task_target_url_desc)
+            .setView(input)
+            .setPositiveButton(android.R.string.ok) { _, _ ->
+                val url = input.text?.toString()?.trim().orEmpty()
+                if (!com.autotask.app.executor.AppLauncher.isUrlInput(url)) {
+                    Toast.makeText(this, R.string.task_target_url_invalid, Toast.LENGTH_SHORT).show()
+                    return@setPositiveButton
+                }
+                targetUrl = url
+                targetPackage = ""
+                targetActivity = ""
+                renderTarget()
+            }
+            .setNegativeButton(android.R.string.cancel, null)
+            .show()
+    }
+
     private fun renderTarget() {
+        if (targetUrl.isNotEmpty()) {
+            // 网址目标：主行显示网址，副行显示"网址深链"
+            binding.tvTarget.text = targetUrl
+            binding.tvTargetComponent.visibility = View.VISIBLE
+            binding.tvTargetComponent.text = getString(R.string.task_target_url_type)
+            binding.btnTestLaunch.isEnabled = true
+            return
+        }
         binding.tvTarget.text = if (targetPackage.isEmpty()) {
             getString(R.string.task_target_empty)
         } else {
@@ -327,7 +373,7 @@ class TaskEditActivity : AppCompatActivity() {
             Toast.makeText(this, R.string.task_validate_name, Toast.LENGTH_SHORT).show()
             return
         }
-        if (targetPackage.isEmpty()) {
+        if (targetPackage.isEmpty() && targetUrl.isEmpty()) {
             Toast.makeText(this, R.string.task_validate_target, Toast.LENGTH_SHORT).show()
             return
         }
@@ -348,6 +394,7 @@ class TaskEditActivity : AppCompatActivity() {
             name = name,
             targetPackage = targetPackage,
             targetActivity = targetActivity,
+            targetUrl = targetUrl,
             scheduleMode = mode,
             hour = hour,
             minute = minute,

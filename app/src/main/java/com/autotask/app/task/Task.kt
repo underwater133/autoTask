@@ -31,6 +31,8 @@ data class Task(
     val name: String,
     val targetPackage: String,
     val targetActivity: String = "",
+    /** 网址/深链目标（如 https://m.taobao.com 或 taobao://home），非空时优先于包名启动 */
+    val targetUrl: String = "",
     val scheduleMode: ScheduleMode,
     val hour: Int,
     val minute: Int,

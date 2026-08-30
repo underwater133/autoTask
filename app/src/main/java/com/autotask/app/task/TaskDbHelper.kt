@@ -12,13 +12,14 @@ class TaskDbHelper(context: Context) :
 
     companion object {
         private const val DB_NAME = "autotask.db"
-        private const val DB_VERSION = 1
+        private const val DB_VERSION = 2
 
         const val TABLE_TASKS = "tasks"
         const val COL_ID = "id"
         const val COL_NAME = "name"
         const val COL_TARGET_PACKAGE = "target_package"
         const val COL_TARGET_ACTIVITY = "target_activity"
+        const val COL_TARGET_URL = "target_url"
         const val COL_SCHEDULE_MODE = "schedule_mode"
         const val COL_HOUR = "hour"
         const val COL_MINUTE = "minute"
@@ -28,7 +29,7 @@ class TaskDbHelper(context: Context) :
         const val COL_NEXT_TRIGGER_AT = "next_trigger_at"
 
         val ALL_COLUMNS = arrayOf(
-            COL_ID, COL_NAME, COL_TARGET_PACKAGE, COL_TARGET_ACTIVITY,
+            COL_ID, COL_NAME, COL_TARGET_PACKAGE, COL_TARGET_ACTIVITY, COL_TARGET_URL,
             COL_SCHEDULE_MODE, COL_HOUR, COL_MINUTE, COL_WEEK_DAYS,
             COL_ENABLED, COL_CREATED_AT, COL_NEXT_TRIGGER_AT
         )
@@ -42,6 +43,7 @@ class TaskDbHelper(context: Context) :
                 $COL_NAME TEXT NOT NULL,
                 $COL_TARGET_PACKAGE TEXT NOT NULL,
                 $COL_TARGET_ACTIVITY TEXT NOT NULL DEFAULT '',
+                $COL_TARGET_URL TEXT NOT NULL DEFAULT '',
                 $COL_SCHEDULE_MODE INTEGER NOT NULL,
                 $COL_HOUR INTEGER NOT NULL,
                 $COL_MINUTE INTEGER NOT NULL,
@@ -55,8 +57,9 @@ class TaskDbHelper(context: Context) :
     }
 
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
-        // 暂无迁移需求；后续版本按需实现
-        db.execSQL("DROP TABLE IF EXISTS $TABLE_TASKS")
-        onCreate(db)
+        if (oldVersion < 2) {
+            // v1 → v2：新增网址目标列（保留既有任务数据）
+            db.execSQL("ALTER TABLE $TABLE_TASKS ADD COLUMN $COL_TARGET_URL TEXT NOT NULL DEFAULT ''")
+        }
     }
 }

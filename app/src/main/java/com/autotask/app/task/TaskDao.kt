@@ -68,6 +68,7 @@ class TaskDao(context: Context) {
         put(TaskDbHelper.COL_NAME, task.name)
         put(TaskDbHelper.COL_TARGET_PACKAGE, task.targetPackage)
         put(TaskDbHelper.COL_TARGET_ACTIVITY, task.targetActivity)
+        put(TaskDbHelper.COL_TARGET_URL, task.targetUrl)
         put(TaskDbHelper.COL_SCHEDULE_MODE, task.scheduleMode.dbValue)
         put(TaskDbHelper.COL_HOUR, task.hour)
         put(TaskDbHelper.COL_MINUTE, task.minute)
@@ -82,6 +83,7 @@ class TaskDao(context: Context) {
         name = c.getString(c.getColumnIndexOrThrow(TaskDbHelper.COL_NAME)),
         targetPackage = c.getString(c.getColumnIndexOrThrow(TaskDbHelper.COL_TARGET_PACKAGE)),
         targetActivity = c.getString(c.getColumnIndexOrThrow(TaskDbHelper.COL_TARGET_ACTIVITY)),
+        targetUrl = c.getString(c.getColumnIndexOrThrow(TaskDbHelper.COL_TARGET_URL)),
         scheduleMode = ScheduleMode.fromDb(c.getInt(c.getColumnIndexOrThrow(TaskDbHelper.COL_SCHEDULE_MODE))),
         hour = c.getInt(c.getColumnIndexOrThrow(TaskDbHelper.COL_HOUR)),
         minute = c.getInt(c.getColumnIndexOrThrow(TaskDbHelper.COL_MINUTE)),
