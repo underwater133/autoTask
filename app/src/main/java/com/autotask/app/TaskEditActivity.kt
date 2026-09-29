@@ -324,30 +324,26 @@ class TaskEditActivity : AppCompatActivity() {
         fun intent(context: Context, taskId: Long): Intent =
             Intent(context, TaskEditActivity::class.java).putExtra(EXTRA_TASK_ID, taskId)
 
-        /** 常用应用包名速查表（按名称排序） */
+        /** 常用应用包名速查表（按名称排序）。仅收录真机实测「已安装且可拉起」的应用 */
         private val COMMON_PACKAGES = linkedMapOf(
-            "WPS Office" to "cn.wps.moffice_eng",
             "QQ" to "com.tencent.mobileqq",
             "QQ音乐" to "com.tencent.qqmusic",
-            "Chrome" to "com.android.chrome",
             "Keep" to "com.gotokeep.keep",
             "京东" to "com.jingdong.app.mall",
-            "今日头条" to "com.ss.android.article.news",
             "哔哩哔哩" to "tv.danmaku.bili",
             "小红书" to "com.xingin.xhs",
             "微博" to "com.sina.weibo",
             "微信" to "com.tencent.mm",
+            "企业微信" to "com.tencent.wework",
             "拼多多" to "com.xunmeng.pinduoduo",
             "支付宝" to "com.eg.android.AlipayGphone",
             "百度网盘" to "com.baidu.netdisk",
-            "百度地图" to "com.baidu.BaiduMap",
             "知乎" to "com.zhihu.android",
-            "网易云音乐" to "com.netease.cloudmusic",
             "美团" to "com.sankuai.meituan",
-            "饿了么" to "me.ele",
             "飞书" to "com.ss.android.lark",
             "高德地图" to "com.autonavi.minimap",
-            "钉钉" to "com.alibaba.android.dingtalk",
+            // 钉钉真实包名是 rimet，不是 com.alibaba.android.dingtalk（真机实测）
+            "钉钉" to "com.alibaba.android.rimet",
             "闲鱼" to "com.taobao.idlefish",
             // 淘宝主入口需用显式组件（Welcome 启动页，外部可启动，自动进主界面）
             "淘宝" to "com.taobao.taobao/com.taobao.tao.welcome.Welcome",

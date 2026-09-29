@@ -30,6 +30,22 @@
     <!-- 任务失败震动提醒 -->
     <uses-permission android:name="android.permission.VIBRATE" />
 
+    <!--
+      Android 11+ 包可见性（package visibility）：
+      不声明 queries 时，第三方 App 对本应用完全不可见，后果是——
+        1) PackageManager.getLaunchIntentForPackage() 对第三方 App 一律返回 null
+        2) 隐式 startActivity 抛 ActivityNotFoundException: No Activity found to handle Intent
+        3) 应用选择器(queryIntentActivities)只能枚举到预装系统应用
+      （显式组件 setClassName 不受影响，这就是"淘宝能用、其他都不能用"的原因）
+      声明带 launcher 入口的可见性即可覆盖"到点打开指定 App"的全部场景。
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
